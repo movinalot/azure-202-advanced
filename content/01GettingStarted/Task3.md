@@ -1,58 +1,74 @@
 ---
-title: "Task 3 - Licensing and FGSP"
-menuTitle: "Task 3 - Licensing and FGSP"
+title: "Task 3 - FGSP Setup"
+menuTitle: "Task 3 - FGSP Setup"
 weight: 15
 ---
 
-## License NVA's and enable FGSP
+## FGSP Setup
 
-1. Once the NVA's are deployed the next step is to license the NVA. Instructors will be licensing the NVA's from Fortimanager. The following command is reference only do not complete this as part of your lab. 
+After FortiGate deployment is completed the next step is to configure **FortiGate Session Life Support** [FGSP](https://docs.fortinet.com/document/fortigate/7.4.4/administration-guide/869218/fgsp-basic-peer-setup) on both FortiGates to enable session sync to support the  Active-Active architecture.
 
-```exec vm-license <token>```
+{{% notice tip %}}You will open a browser session to each FortiGate, the FortiGate GUI defaults to a 5 minute "Idle timeout". Avoid continually logging in by setting the idle timeout to 60 minutes in **System--> Settings:Administration Settings:Idle timeout**{{% /notice %}}
 
-The NVA's will reboot. 
+1. ***Access*** FortiGate CLIs.
 
-2. We need to enable FGSP on both FortiGate's since NVA's are depoyed in Active-Active setup and we need session sync. 
+    - ***Navigate*** to your Hub
+    - ***Click*** Network Virtual Appliance in the left-hand navigation
+    - ***Click*** "Click here" link under "Instances info" in the right-hand "Network Virtual Appliances" pane
+    - ***Note*** FortiGate Public IP and Private IP addresses
+    - ***Open*** a browser tab to each FortiGate using the Public IP address of each FortiGate
 
-On FGT-A CLI, configure the peer IP in which this device will peer with.
+    ![fgsp1](../images/fgsp1.jpg)
+    ![fgsp2](../images/fgsp2.jpg)
 
-{{% notice warning %}}Please copy this code blocks into notepad and edit the PeerIP address, remove the comment before you paste it on FortiGate{{% /notice %}} 
+1. ***Configure*** FGSP
 
-```
-config system standalone-cluster
-    config cluster-peer
-        edit 1
-            set peerip x.x.x.x (this will be the port2 Private IP address of peer FGT-B)
-        next
+    - ***Open*** a CLI session on each FortiGate
+
+    {{% notice warning %}}Replace **x.x.x.x** with the port2 private IP address of the other FortiGate ending with **_1**. Copy these CLI commands to notepad or similar tool to update the *peerip* address.{{% /notice %}}
+
+    On FortiGate ending with **_0** configure the peerip address with the port2 private IP address of the FortiGate ending with **_1**.
+
+    ``` bash
+    config system standalone-cluster
+        config cluster-peer
+            edit 1
+                set peerip x.x.x.x
+            next
+        end
+        set standalone-group-id 1
+        set group-member-id 1
     end
-    set standalone-group-id 1
-    set group-member-id 1
-end
-```
+    ```
 
-3. Once you paste the above content, you will see a prompt like below. select Y. 
+1. ***Answer*** "**y**" to the "Do you want to continue? (y/n)" prompt
 
-    **vwanXX-sdfw-wdmc4mms~000 (standalone-cluster) # end**
-    
-    **Changing standalone-group-id or group-member-id will potentially affect FGSP traffic.**
-    **Please first make sure the member is isolated from FGSP cluster properly.**
-    **Do you want to continue? (y/n)y**
+    **Changing standalone-group-id or group-member-id will potentially affect FGSP traffic.**</br>
+    **Please first make sure the member is isolated from FGSP cluster properly.**</br>
+    **Do you want to continue? (y/n)**</br>
 
-On FGT-B CLI, configure the peer IP in which this device will peer with:
+    {{% notice warning %}}Notice that the **group-member-id** is **2** in the CLI commands below{{% /notice %}}
 
-```
-config system standalone-cluster
-    config cluster-peer
-        edit 1
-            set peerip x.x.x.x (this will be the port2 Private IP address of peer FGT-A)
-        next
+    On FortiGate ending with **_1** configure the peerip address with the port2 private IP address of the FortiGate ending with **_1**.
+
+    ``` bash
+    config system standalone-cluster
+        config cluster-peer
+            edit 1
+                set peerip x.x.x.x
+            next
+        end
+        set standalone-group-id 1
+        set group-member-id 2
     end
-    set standalone-group-id 1
-    set group-member-id 2
-end
-```
+    ```
 
-4. You will see same prompt like Step 3. Select Y again. 
+1. ***Answer*** "**y**" to the "Do you want to continue? (y/n)" prompt
 
+    **Changing standalone-group-id or group-member-id will potentially affect FGSP traffic.**</br>
+    **Please first make sure the member is isolated from FGSP cluster properly.**</br>
+    **Do you want to continue? (y/n)**</br>
 
+FGSP is now configured and the FortiGates will share session information.
 
+Continue to the next task to verify that there is no connectivity between the VMs running in the Spoke VNETs.
