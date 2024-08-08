@@ -1,46 +1,91 @@
 ---
-title: "Task 2 - NVA deployment in VWAN hub"
-menuTitle: "Task 2 - NVA deployment"
+title: "Task 2 - FortiGate NVA deployment in VWAN hub"
+menuTitle: "Task 2 - FortiGate NVA deployment"
 weight: 10
 ---
 
-1. Click on VWAN in the resources that are already deployed. 
+1. ***Click*** on VWAN **vwanXX-eastus_VWAN** in your Resource Group. **XX** is the number of your allocated environment.
 
-![vwan1](../images/vwan1.png)
+    ![vwan1](../images/vwan1.jpg)
 
-2. Navigate to click on Hubs on the left hand secrtion. A hub in East US is already deployed. The HUB deployment usually takes about 30-40 minutes and in the view of time allocated this has been done already.
+1. ***Click*** on "Hubs" in the "Connectivity" section of the left-hand navigation. A hub in EastUS has already been deployed.
 
-![vwan2](../images/vwan2.png)
+    ![vwan2](../images/vwan2.jpg)
 
-3. Click on the Hub and check information about Hub name, region, IP address allocated to hub. 
+1. ***Click*** on the Hub
 
+1. ***View*** information about Hub
 
-4. Check to make sure Hub routing status: provisioned and Hub status: Succeeded before you continue to other steps.  Note: please move on to the next step only if provisioned with green checks. 
+- Name
+- Location (Region)
+- Private Address Space
 
-![vwan3](../images/vwan3.png)
+1. ***Check*** statuses
 
-5. Click on the NVA option under third party providers > Create Network appliance.
+- Hub status: **Succeeded**
+- Routing status: **Provisioned**
 
-![vwan5](../images/vwan5.png)
+    ![vwan3](../images/vwan3.jpg)
 
-6. Select fortinet-sdwan-and-ngfw , Create. proceed to leave site to redirect to Marketplace. 
+> Note: please move on to the next step only if Hub and Routing status have green checks.
 
-![vwan6](../images/vwan6.png)
+1. ***Click*** on "Network Virtual Appliance in the "Third party providers" section of the left-hand navigation.
+1. ***Click*** the button "Create network virtual appliance"
+1. ***Select*** fortinet-sdwan-and-ngfw
+1. ***Click*** "Create". proceed to leave site to redirect to Marketplace.
 
-7. On the marketplace you should see a page like below. click create. 
+- If a warning is displayed about "Leaving" the **site** or **page** ***Click*** the "Leave" button
 
-![vwan7](../images/vwan7.png)
+    ![vwan4](../images/vwan4.jpg)
 
-8. In the NVA creation step1: Set the Resource group to **vwanXX-training** (Reminder: XX is the lab allocated to you), Make sure the region is set to **East US** , Application name: vwan**XX**SDWANNGFW (**XX is the lab number**), Click next
+1. ***Click*** "Create" on the Marketplace listing for "**Azure Virtual WAN Secured by Fortinet FortiGate**"
 
-![vwan8](../images/vwan8.png)
+    ![vwan5](../images/vwan5.jpg)
 
-9. In the NVA creation step2: Slect the VWAN hub in your Resource group - **vHub1_eastus_VHUB**, Fortigate admin username to ```fortixperts``` password to ```Fortixperts2024!```, Fortigate prefix to **vwan_XX_**, Version to **7.4.0** and Fortimanger IP ```20.124.208.29``` Serial number ```FMVMELTM23000854```
+1. **Basics Tab values**
 
-![vwan9](../images/vwan9.png)
+- ***Select*** Resource Group - **vwanXX-training** -- **Be sure to select your Resource Group**
+- ***Select*** Region - East US -- **Should already be defaulted to the correct region**
+- ***Enter*** FortiGate administrative username - ```fortixperts```
+- ***Enter***  password - ```Fortixperts2024!```
+- ***Confirm*** password - ```Fortixperts2024!```
+- ***Enter*** FortiGate Name Prefix - **vwanXX** -- **Be sure to enter your allocated environment number for XX.**
+- ***Select*** FortiGate License Type - "Pay As you Go (PAYG)"
+- ***Select*** FortiGate Image Version - "7.4.X" -- **Be sure to select the highest 7.4 version.**
+- ***Select*** Azure vWan deployment type - "SDWAN + NGFW (Hybrid)"
+- ***Enter*** Application Name - vwanXX -- **Be sure to enter your allocated environment number for XX.**
+- ***Update*** Managed Resource Group - Append "_vwanXX" to the provided name -- **Be sure to enter your allocated environment number for XX.**
+- ***Click*** "Next"
 
-10. In the final step, make sure to scroll down to agree to the terms and conditions. Click Create. 
+    ![vwan6](../images/vwan6.jpg)
 
-![vwan10](../images/vwan10.png)
+1. **FortiGate in Virtual WAN Specific Parameters Tab values**
 
-11. this will take 15 minutes to get deployed. So we can now use this time to grab a Coffee ;) and relax! 
+- ***Select*** Virtual WAN Hub - select vwanXX-vHub1_eastus -- **Be sure to enter your allocated environment number for XX.**
+- ***Leave*** all other items as is
+- ***Click*** "Next"
+
+    ![vwan7](../images/vwan7.jpg)
+
+1. **PublicIP Verification Tab values**
+
+- ***Click*** "Next"
+
+    ![vwan8](../images/vwan8.jpg)
+
+1. **Tags Tab values**
+
+- ***Click*** "Next"
+
+    ![vwan9](../images/vwan9.jpg)
+
+1. **Review + create Tab values**
+
+- ***Scroll*** down to agree to the terms and conditions
+- ***Click*** "Create"
+
+    ![vwan10](../images/vwan10.jpg)
+
+1. The FortiGate NVAs take about 15 minutes to deploy.
+
+> Grab a refreshment ;) and relax!

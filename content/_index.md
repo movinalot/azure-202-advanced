@@ -18,6 +18,6 @@ This session is "__Public Cloud - 202 - Secured Azure FortiGate Integrated vWAN 
 - Secure East/West network traffic - Spoke-to-Spoke
 - Secure North/South network traffic - Internal-to-External
 
-### The Bonus Goals
+### The Bonus Goal
 
 - Configure IPSec Tunnels for Secure Branch access to Azure Virtual WAN spoke workloads
