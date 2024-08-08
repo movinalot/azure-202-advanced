@@ -1,6 +1,6 @@
 ---
 title: "Task 2 - FortiGate NVA deployment in VWAN hub"
-menuTitle: "Task 2 - FortiGate NVA deployment"
+menuTitle: "Task 2 - FortiGate deployment"
 weight: 10
 ---
 
@@ -16,25 +16,25 @@ weight: 10
 
 1. ***View*** information about Hub
 
-- Name
-- Location (Region)
-- Private Address Space
+    - Name
+    - Location (Region)
+    - Private Address Space
 
 1. ***Check*** statuses
 
-- Hub status: **Succeeded**
-- Routing status: **Provisioned**
+    - Hub status: **Succeeded**
+    - Routing status: **Provisioned**
 
     ![vwan3](../images/vwan3.jpg)
 
-> Note: please move on to the next step only if Hub and Routing status have green checks.
+    {{% notice warning %}}Note: please move on to the next step **only** if Hub and Routing status have green checks.{{% /notice %}}
 
 1. ***Click*** on "Network Virtual Appliance in the "Third party providers" section of the left-hand navigation.
 1. ***Click*** the button "Create network virtual appliance"
 1. ***Select*** fortinet-sdwan-and-ngfw
 1. ***Click*** "Create". proceed to leave site to redirect to Marketplace.
 
-- If a warning is displayed about "Leaving" the **site** or **page** ***Click*** the "Leave" button
+    - If a warning is displayed about "Leaving" the **site** or **page** ***Click*** the "Leave" button
 
     ![vwan4](../images/vwan4.jpg)
 
@@ -44,48 +44,49 @@ weight: 10
 
 1. **Basics Tab values**
 
-- ***Select*** Resource Group - **vwanXX-training** -- **Be sure to select your Resource Group**
-- ***Select*** Region - East US -- **Should already be defaulted to the correct region**
-- ***Enter*** FortiGate administrative username - ```fortixperts```
-- ***Enter***  password - ```Fortixperts2024!```
-- ***Confirm*** password - ```Fortixperts2024!```
-- ***Enter*** FortiGate Name Prefix - **vwanXX** -- **Be sure to enter your allocated environment number for XX.**
-- ***Select*** FortiGate License Type - "Pay As you Go (PAYG)"
-- ***Select*** FortiGate Image Version - "7.4.X" -- **Be sure to select the highest 7.4 version.**
-- ***Select*** Azure vWan deployment type - "SDWAN + NGFW (Hybrid)"
-- ***Enter*** Application Name - vwanXX -- **Be sure to enter your allocated environment number for XX.**
-- ***Update*** Managed Resource Group - Append "_vwanXX" to the provided name -- **Be sure to enter your allocated environment number for XX.**
-- ***Click*** "Next"
+    - ***Select*** Resource Group - **vwanXX-training** -- **Be sure to select your Resource Group**
+    - ***Select*** Region - East US -- **Should already be defaulted to the correct region**
+    - ***Enter*** FortiGate administrative username - ```fortixperts```
+    - ***Enter***  password - ```Fortixperts2024!```
+    - ***Confirm*** password - ```Fortixperts2024!```
+    - ***Enter*** FortiGate Name Prefix - **vwanXX** -- **Be sure to enter your allocated environment number for XX.**
+    - ***Select*** FortiGate License Type - "Pay As you Go (PAYG)"
+    - ***Select*** FortiGate Image Version - "7.4.X" -- **Be sure to select the highest 7.4 version.**
+    - ***Select*** Azure vWan deployment type - "SDWAN + NGFW (Hybrid)"
+    - ***Enter*** Application Name - vwanXX -- **Be sure to enter your allocated environment number for XX.**
+    - ***Update*** Managed Resource Group - Append "_vwanXX" to the provided name -- **Be sure to enter your allocated environment number for XX.**
+    - ***Click*** "Next"
 
     ![vwan6](../images/vwan6.jpg)
 
 1. **FortiGate in Virtual WAN Specific Parameters Tab values**
 
-- ***Select*** Virtual WAN Hub - select vwanXX-vHub1_eastus -- **Be sure to enter your allocated environment number for XX.**
-- ***Leave*** all other items as is
-- ***Click*** "Next"
+    - ***Select*** Virtual WAN Hub - select vwanXX-vHub1_eastus -- **Be sure to enter your allocated environment number for XX.**
+    - ***Leave*** all other items as is
+    - ***Click*** "Next"
 
     ![vwan7](../images/vwan7.jpg)
 
 1. **PublicIP Verification Tab values**
 
-- ***Click*** "Next"
+    - ***Click*** "Next"
 
     ![vwan8](../images/vwan8.jpg)
 
 1. **Tags Tab values**
 
-- ***Click*** "Next"
+    - ***Click*** "Next"
 
     ![vwan9](../images/vwan9.jpg)
 
 1. **Review + create Tab values**
 
-- ***Scroll*** down to agree to the terms and conditions
-- ***Click*** "Create"
+    - ***Scroll*** down to agree to the terms and conditions
+    - ***Click*** "Create"
 
     ![vwan10](../images/vwan10.jpg)
 
-1. The FortiGate NVAs take about 15 minutes to deploy.
+    {{% notice info %}}The FortiGate NVAs take about 15 minutes to deploy. Grab a refreshment and relax! You will see the screen belows when the deployment is progressing and complete.{{% /notice %}}
 
-> Grab a refreshment ;) and relax!
+    ![vwan11](../images/vwan11.jpg)
+    ![vwan12](../images/vwan12.jpg)
