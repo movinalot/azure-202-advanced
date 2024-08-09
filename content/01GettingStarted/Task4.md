@@ -1,10 +1,12 @@
 ---
-title: "Task 4 - Confirm no traffic route between Spoke VNETS"
-menuTitle: "Task 4 - VNET-to-VNET traffic"
+title: "Confirm no traffic route between Spoke VNETS"
+menuTitle: "Task 4 - VNET-to-VNET Traffic"
 weight: 20
 ---
 
-## Spoke Virtual Networks (VNETs) and Virtual Machines (VMs)
+## Task 4
+
+### Spoke Virtual Networks (VNETs) and Virtual Machines (VMs)
 
 1. ***View*** the Spoke VNETs Address Space
 

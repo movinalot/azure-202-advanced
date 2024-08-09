@@ -1,78 +1,87 @@
 ---
-title: "Task 5 - BGP establishment,Confirm hub Routing Table"
-menuTitle: "Task 5 - BGP and more!"
+title: "Establish BGP and Routing Intent"
+menuTitle: "Task 5 - BGP & Routing Intent"
 weight: 25
 ---
 
-#### BGP  
+## Task 5
 
+### BGP Setup
 
-1. Confirming the private address space of the vWAN hub
-The private address space of the vWAN hub is needed to create a summary route from the private address range to the secondary interfaces of the FortiGate NVAs, unless there is a more specific, connected route to establish BGP peering. The BGP peers are already configured and ready to go online after the route is enabled.
+1. ***Confirm*** Private address space of the vWAN hub
 
+    The private address space of the vWAN hub is needed to create a summary route from the private address range to the secondary interfaces of the FortiGate NVAs to establish BGP peering. The BGP peers are already configured and ready to go online after the route is enabled.
 
-2. To confirm the private address space of the vWAN hub:
-    - On Azure portal, select the virtual WAN hub.
-    - On the Overview pane, note the Private address space.
+    - ***Navigate*** to your Hub **vwanXX-eastus_VWAN**
+    - ***View*** Hub Address space
 
-    ![bgp1](../images/bgp1.png)
+    ![bgp1](../images/bgp1.jpg)
 
+1. ***Determine*** FortiGate NVA port2 Gateway
 
-3. Retrieving subnet information from FortiGate NVAs
-We will connect to the CLI for one of the managed FortiGate NVAs and look at port2 to locate and note the first IP address of the subnet on the FortiGate. The first IP address will be the local gateway for communicating with the virtual WAN hub routers.
+    Static routes are needed on the FortiGates to enable BGP, a component required to setup the static route is the gateway address of the FortiGate's port2 interface.
 
-    To retrieve the subnet information from FortiGate NVAs:
-    connect to the CLI for one of the FortiGates by using SSH or by logging to Web UI and locating the IP address under Network >> interfaces. 
+    Every subnet in Azure uses the first address in the subnet as the gateway. For example, in the subnet 10.1.1.0/24 Azure uses 10.1.1.1 as the subnet gateway.
 
-    In the CLI console, run the ```get system interface command```, and look at the results for port2.
+    - ***Open*** each FortiGate in a browser
+    - ***Click*** on Network
+    - ***Click*** on Interfaces
+    - ***View*** the assigned address of port2 and determine the gateway
 
     In the following example, the first IP of the subnet is 10.1.112.1.
 
-    (In this example, the administrator's IP address is 10.1.112.5, and they have a /25 mask, which makes the network address 10.1.112.0, and the first IP, which Azure assigns to the virtual switch, is 10.1.112.1)
+    In the screenshot below the port2 IP address is 10.1.112.5/255.255.255.128 or a /25 mask, which makes the network address 10.1.112.0 and the first IP, which Azure assigns as the gateway, is 10.1.112.1
 
- ![bgp2](../images/bgp2.png)
+    ![bgp2](../images/bgp2.jpg)
 
+1. ***Configure*** Static Routes on each FortiGate
 
-4. Configuring the static route on each FortiGate NVA
-On each FortiGate VM, configure static routing to the virtual hub routers through the virtual switch. While creating static routes, we also need a route to respond to the Azure load balancer probes, which come in from IP address 168.63.129.16.
+    Two static routes are required on each FortiGate
 
-5. To configure the static route on each FortiGate NVA:
-From FortiManager, connect to the CLI for one of the FortiGates by using SSH.
-Run the following commands on a FortiGate NVA in the device group:
-config router static
-    edit 0 
-        set dst 10.1.0.0/16
-        set gateway 10.1.112.1
-        set device port2
-    next
-    edit 0
-        set dst 168.63.129.16/32
-        set distance 5
-        set gateway 10.1.112.1
-        set device port2
-end
+    - A static route to the virtual hub routers through the gateway of port2
+    - A Static route for the internal Azure load balancer probes
 
-6. Repeat the commands on each FortiGate NVA in the device group.
-Verifying BGP communication between FortiGate NVAs
-After configuring the static route on all FortiGate NVAs, BGP peering is automatically enabled, and you can verify BGP communication.
+    - ***Click*** Network
+    - ***Click*** Static Routes
+    - ***Click*** Create New
 
-To verify BGP communication between FortiGate NVAs:
-On the FortiGate NVA, run the ```get router info bgp summary``` command.
+    [bgp3](../images/bgp3.jpg)
 
+    - ***Enter*** Destination - `10.1.0.0/16`
+    - ***Enter*** Gateway Address - `10.1.112.1`
+    - ***Select*** Interface - **port2**
+    - ***Click*** "OK"
 
-If configured correctly, the address space from the Peering a vNET to the virtual WAN hub section should be propagated as well.
+    Repeat the process to add a static route for the load balancer probe
 
-Please follow [fortinetdocs ](https://docs.fortinet.com/document/fortigate-public-cloud/7.4.0/azure-vwan-ngfw-deployment-guide/860717/configuring-static-routes-and-enabling-bgp-on-fortigate-nvas "Fortinet documents") for more information. 
+    - ***Enter*** Destination - `168.63.129.16/32`
+    - ***Enter*** Gateway Address - `10.1.112.1`
+    - ***Select*** Interface - **port2**
+    - ***Enter*** Administrative Distance - `5`
+    - ***Click*** "OK"
 
-#### Routing Intent
+1. ***Repeat*** the commands on the other FortiGate
 
-1. Enable routing intent on the Hub once the bgp is up. 
+    [bgp4](../images/bgp4.jpg)
+    [bgp5](../images/bgp5.jpg)
 
-2. Routing Intent and Routing Policies allow you to configure the Virtual WAN hub to forward Internet-bound and Private (Point-to-site VPN, Site-to-site VPN, ExpressRoute, Virtual Network and Network Virtual Appliance) Traffic to an Azure Firewall, Next-Generation Firewall Network Virtual Appliance (NGFW-NVA) or security software-as-a-service (SaaS) solution deployed in the virtual hub.
+1. ***Verify*** BGP communication between FortiGate NVAs
 
-3. To enable routing intent on Azure VWAN hub , VWAN >> VWAN Hub >> click on Hub >> Routing intent and Routing policies and set the internet traffic, private traffic to the NVA group deployed as shown below. 
+    After configuring the static routes on both FortiGates BGP peering is automatically enabled. Verify BGP communication between FortiGate NVAs in the CLI.
+
+    - **Open** FortiGate CLI
+    - **Run** CLI command `get router info bgp summary`
+
+    More information about FortiGate static routes and BGP can be found in [Fortinet documents](https://docs.fortinet.com/document/fortigate-public-cloud/7.4.0/azure-vwan-ngfw-deployment-guide/860717/configuring-static-routes-and-enabling-bgp-on-fortigate-nvas).
+
+### Enable Routing Intent
+
+1. Enable routing intent on the Hub once the bgp is up.
+
+1. Routing Intent and Routing Policies allow you to configure the Virtual WAN hub to forward Internet-bound and Private (Point-to-site VPN, Site-to-site VPN, ExpressRoute, Virtual Network and Network Virtual Appliance) Traffic to an Azure Firewall, Next-Generation Firewall Network Virtual Appliance (NGFW-NVA) or security software-as-a-service (SaaS) solution deployed in the virtual hub.
+
+1. To enable routing intent on Azure VWAN hub , VWAN >> VWAN Hub >> click on Hub >> Routing intent and Routing policies and set the internet traffic, private traffic to the NVA group deployed as shown below.
 
 ![bgp3](../images/bgp3.png)
 
 {{% notice info %}} Make sure to click save if not routing policy will not be updated.{{% /notice %}}
-

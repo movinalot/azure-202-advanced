@@ -1,10 +1,12 @@
 ---
-title: "Task 3 - FGSP Setup"
+title: "FGSP Setup"
 menuTitle: "Task 3 - FGSP Setup"
 weight: 15
 ---
 
-## FGSP Setup
+## Task 3
+
+### FGSP Setup
 
 After FortiGate deployment is completed the next step is to configure **FortiGate Session Life Support** [FGSP](https://docs.fortinet.com/document/fortigate/7.4.4/administration-guide/869218/fgsp-basic-peer-setup) on both FortiGates to enable session sync to support the  Active-Active architecture.
 
@@ -12,7 +14,7 @@ After FortiGate deployment is completed the next step is to configure **FortiGat
 
 1. ***Access*** FortiGate CLIs.
 
-    - ***Navigate*** to your Hub
+    - ***Navigate*** to your Hub **vwanXX-eastus_VWAN**
     - ***Click*** Network Virtual Appliance in the left-hand navigation
     - ***Click*** "Click here" link under "Instances info" in the right-hand "Network Virtual Appliances" pane
     - ***Note*** FortiGate Public IP and Private IP addresses

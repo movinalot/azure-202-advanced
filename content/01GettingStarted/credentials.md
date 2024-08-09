@@ -1,9 +1,8 @@
 ---
-title: "Lab Credentials"
+title: "Environment Access Information / Credentials"
 menuTitle: "Access Information"
 weight: 35
 ---
-
 
 **Azure Portal Login:**
 
