@@ -1,10 +1,12 @@
 ---
-title: "Task 1 - Portal Login "
-menuTitle: "Task 1 - Preflight check"
+title: "Portal Login"
+menuTitle: "Task 1 - Preflight Check"
 weight: 5
 ---
 
-## Login to Portal
+## Task 1
+
+### Login to Portal
 
 1. ***Navigate*** to [Azureportal](https://portal.azure.com "Azure Portal")
 1. ***Login*** with provided credentials
@@ -34,7 +36,7 @@ Before moving on to the next task, please read below:
     - **vwanXX-eastus_VWAN**
 
   - Virtual Hub (VHUB)
-    - **vHub1-eastus_VHUB**
+    - **vwanXX-vHub1_eastus**
 
   - Virtual Networks (VNETS)
     - **Spoke1-vHub1_VNET**

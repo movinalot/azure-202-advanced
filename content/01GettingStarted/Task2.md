@@ -1,8 +1,12 @@
 ---
-title: "Task 2 - FortiGate NVA deployment in VWAN hub"
-menuTitle: "Task 2 - FortiGate deployment"
+title: "FortiGate NVA deployment in VWAN hub"
+menuTitle: "Task 2 - FortiGate Deployment"
 weight: 10
 ---
+
+## Task 2
+
+### FortiGate Deployment
 
 1. ***Click*** on VWAN **vwanXX-eastus_VWAN** in your Resource Group. **XX** is the number of your allocated environment.
 
