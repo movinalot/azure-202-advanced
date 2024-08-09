@@ -27,7 +27,7 @@ After FortiGate deployment is completed the next step is to configure **FortiGat
 
     {{% notice warning %}}Replace **x.x.x.x** with the port2 private IP address of the other FortiGate ending with **_1**. Copy these CLI commands to notepad or similar tool to update the *peerip* address.{{% /notice %}}
 
-    On FortiGate ending with **_0** configure the peerip address with the port2 private IP address of the FortiGate ending with **_1**.
+- On FortiGate ending with **_0** configure the peerip address with the port2 private IP address of the FortiGate ending with **_1**.
 
     ``` bash
     config system standalone-cluster
@@ -49,7 +49,7 @@ After FortiGate deployment is completed the next step is to configure **FortiGat
 
     {{% notice warning %}}Notice that the **group-member-id** is **2** in the CLI commands below{{% /notice %}}
 
-    On FortiGate ending with **_1** configure the peerip address with the port2 private IP address of the FortiGate ending with **_1**.
+- On FortiGate ending with **_1** configure the peerip address with the port2 private IP address of the FortiGate ending with **_1**.
 
     ``` bash
     config system standalone-cluster
