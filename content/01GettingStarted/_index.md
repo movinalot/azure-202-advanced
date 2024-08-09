@@ -1,6 +1,6 @@
 ---
-title: "Chapter 1 Secure vWAN Lab - Overview"
-menuTitle: "Chapter 1: Overview"
+title: "Chapter 1 Secure Azure VWAN"
+menuTitle: "Chapter 1: Deploy and Verify"
 weight: 10
 ---
 

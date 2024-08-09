@@ -62,3 +62,5 @@ weight: 20
     - `ping 8.8.8.8`
 
     Both ping tests will fail, these resources are unable to access each other and resources on the Internet.
+
+Continue to Task 5

@@ -73,4 +73,4 @@ After FortiGate deployment is completed the next step is to configure **FortiGat
 
 FGSP is now configured and the FortiGates will share session information.
 
-Continue to the next task to verify that there is no connectivity between the VMs running in the Spoke VNETs.
+Continue to Task 4

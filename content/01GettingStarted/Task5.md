@@ -93,3 +93,4 @@ Routing Intent and Routing Policies allow you to configure the Virtual WAN hub t
 
     ![bgp7](../images/bgp7.jpg)
 
+Continue to Task 6
