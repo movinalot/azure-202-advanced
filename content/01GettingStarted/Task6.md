@@ -10,7 +10,7 @@ weight: 30
 
 FortiGates are ready to inspect network traffic. Network traffic is coming from or going to workloads in the Spoke VNETs. In order for the FortiGates to managed the traffic the Spoke VNETs must be peered to the VWAN Hub.
 
-1. Peer Spoke1 VNET to hub
+1. ***Peer*** Spoke1 VNET to hub
 
     - ***Navigate*** to your Virtual Wan - **vwanXX-eastus_VWAN**
     - ***Click*** "Virtual network connections"
@@ -24,7 +24,7 @@ FortiGates are ready to inspect network traffic. Network traffic is coming from 
 
     ![peering1](../images/peering1.jpg)
 
-1. Peer Spoke2 VNET to hub
+1. ***Peer*** Spoke2 VNET to hub
 
     - ***Navigate*** to your Virtual Wan - **vwanXX-eastus_VWAN**
     - ***Click*** "Virtual network connections"
@@ -36,32 +36,58 @@ FortiGates are ready to inspect network traffic. Network traffic is coming from 
     - ***Select*** - "Virtual Network" - Spoke 2's VNET - **Spoke2-vHub1_VNET**
     - ***Click*** - "Create"
 
+    {{% notice info %}}VNET Peering takes a few minutes to complete. Status can be reviewed by ***Clicking*** Refresh{{% /notice %}}
+
     ![peering2](../images/peering2.jpg)
 
-1. Click Add connection at the top and fill in the details for both Spoke1 and Spoke2 as shown below.
+### Verification
 
-![bgp5](../images/bgp5.png)
+Routes and routeing are the key for users to access workloads in an Azure VNET and for those workloads to be able to access resources outside of their VNET. At this point routes and routing should be set within the Azure environment and in the FortiGate NVAs.
 
-1. Once the peering is complete, the VCN table should like below.
+From the perspective of the FortiGate a decision will be made to send traffic to a specific port based on FortiGate Policy. Once the traffic leaves teh FortiGate's port it is up to Azure to forward the traffic.
 
-![bgp6](../images/bgp6.png)
+Where traffic will be sent in Azure can be determined by viewing the effective Routes associated to a particular networking service.
 
-### Time to verify your work
+- What routes do the FortiGates know about now?
+- What are the effective routes of the Hub
+- What are the effective routes of the Linux VMs in the Spoke VNETs?
 
-1. Check the Hub default route table. To check the effective routes, VWAN >> East US - hub >> Effective Routes. 
+1. ***View*** each FortiGate's Route Table
 
-The default route and RFC1918 routes will have NVA group as next hop.
+    - ***Open*** each FortiGate in a browser
+    - **Open** FortiGate CLI
+    - **Run** CLI command `get router info routing-table all`
 
-![bgp7](../images/bgp7.png)
+    ![routing1](../images/routing1.jpg)
 
-1. on the Fortigate, we can see that Hub will be BGP advertising VNET's to Fortigate. You can use `get router info routing-table all`
+    The output shows that BGP routes have been learned for the two Spoke VNETs that were peered to the Hub
 
-![bgp8](../images/bgp8.png)
+1. ***View*** the Hub Effective Routes in the default Route Table.
 
-1. Check the effective routes on Spoke Virtual machines by clicking Effective routes on Linux VM's NIC.
+    - ***Navigate*** to your Virtual Wan - **vwanXX-eastus_VWAN**
+    - ***Click*** - "Network Settings"
+    - ***Click*** - "Route Tables"
+    - ***Click*** - "Effective Routes"
+    - ***Select*** - "Choose resource type" "Route Tables"
+    - ***Select*** - "Resource" "Default"
 
-![bgp9](../images/bgp9.png)
+    All Effective Routes should have the FortiGate NVA group as next hop.
 
-The effective routes next Hop IP is the IP address of Internal Load balancer that gets deployed along with managed application.
+    ![routing2](../images/routing2.jpg)
+
+1. View the Effective Routes on Spoke Linux Virtual Machines
+
+    - ***Navigate*** to your Linux Virtual Machine **Linux-Spoke1-VM**
+    - ***Click*** - "Network settings"
+    - ***Click*** - "Linux-Spoke1_nic1"
+    - ***Click*** - "Effective Routes"
+
+    - Repeat for **Linux-Spoke2-VM**
+
+    ![routing3](../images/routing3jpg)
+    ![routing4](../images/routing4.jpg)
+    ![routing5](../images/routing5.jpg)
+
+    The effective route's next Hop IP is the IP address of Internal Load balancer is deployed with the FortiGate NVAs.
 
 Continue to Chapter 2

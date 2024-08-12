@@ -1,5 +1,5 @@
 ---
-title: "Establish BGP and Routing Intent"
+title: "BGP Setup and Routing Intent"
 menuTitle: "Task 5 - BGP & Routing Intent"
 weight: 25
 ---
