@@ -48,3 +48,5 @@ Before moving on to the next task, please read below:
     - **Linux-Spoke2-VM**
     - **Linux-Branch-VM**
     - **FortiGate-Branch-VM**
+
+Continue to Task 2

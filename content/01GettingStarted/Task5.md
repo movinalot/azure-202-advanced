@@ -1,5 +1,5 @@
 ---
-title: "Establish BGP and Routing Intent"
+title: "BGP Setup and Routing Intent"
 menuTitle: "Task 5 - BGP & Routing Intent"
 weight: 25
 ---
@@ -67,21 +67,30 @@ weight: 25
 
 1. ***Verify*** BGP communication between FortiGate NVAs
 
-    After configuring the static routes on both FortiGates BGP peering is automatically enabled. Verify BGP communication between FortiGate NVAs in the CLI.
+    After configuring the static routes on both FortiGates BGP peering is automatically enabled.
+
+    - ***Verify*** BGP communication between FortiGate NVAs in the CLI.
 
     - **Open** FortiGate CLI
     - **Run** CLI command `get router info bgp summary`
+
+    [bgp6](../images/bgp6.jpg)
 
     More information about FortiGate static routes and BGP can be found in [Fortinet documents](https://docs.fortinet.com/document/fortigate-public-cloud/7.4.0/azure-vwan-ngfw-deployment-guide/860717/configuring-static-routes-and-enabling-bgp-on-fortigate-nvas).
 
 ### Enable Routing Intent
 
-1. Enable routing intent on the Hub once the bgp is up.
+Routing Intent and Routing Policies allow you to configure the Virtual WAN hub to forward Internet-bound and Private (Point-to-site VPN, Site-to-site VPN, ExpressRoute, Virtual Network and Network Virtual Appliance) Traffic to an Azure Firewall, Next-Generation Firewall Network Virtual Appliance (NGFW-NVA) or security software-as-a-service (SaaS) solution deployed in the virtual hub.
 
-1. Routing Intent and Routing Policies allow you to configure the Virtual WAN hub to forward Internet-bound and Private (Point-to-site VPN, Site-to-site VPN, ExpressRoute, Virtual Network and Network Virtual Appliance) Traffic to an Azure Firewall, Next-Generation Firewall Network Virtual Appliance (NGFW-NVA) or security software-as-a-service (SaaS) solution deployed in the virtual hub.
+1. ***Enable*** Routing Intent
 
-1. To enable routing intent on Azure VWAN hub , VWAN >> VWAN Hub >> click on Hub >> Routing intent and Routing policies and set the internet traffic, private traffic to the NVA group deployed as shown below.
+    - ***Navigate*** to your Hub - vwanXX-vHub1_eastus
+    - ***Click*** "Routing Intent" and Routing Policies
+    - ***Select*** for "Internet traffic" - Network Virtual Appliance
+    - ***Select*** for "Private traffic" - Network Virtual Appliance
+    - ***Select*** for **both** "Next Hop Resources" - your cluster name (the only selection in the dropdown)
+    - ***Click*** "Save" to update Routing Intent
 
-![bgp3](../images/bgp3.png)
+    ![bgp7](../images/bgp7.jpg)
 
-{{% notice info %}} Make sure to click save if not routing policy will not be updated.{{% /notice %}}
+Continue to Task 6
