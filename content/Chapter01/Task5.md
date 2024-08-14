@@ -45,7 +45,7 @@ weight: 25
     - ***Click*** Static Routes
     - ***Click*** Create New
 
-    [bgp3](../images/bgp3.jpg)
+    ![bgp3](../images/bgp3.jpg)
 
     - ***Enter*** Destination - `10.1.0.0/16`
     - ***Enter*** Gateway Address - `10.1.112.1`
@@ -62,8 +62,8 @@ weight: 25
 
 1. ***Repeat*** the commands on the other FortiGate
 
-    [bgp4](../images/bgp4.jpg)
-    [bgp5](../images/bgp5.jpg)
+    ![bgp4](../images/bgp4.jpg)
+    ![bgp5](../images/bgp5.jpg)
 
 1. ***Verify*** BGP communication between FortiGate NVAs
 
@@ -74,7 +74,7 @@ weight: 25
     - **Open** FortiGate CLI
     - **Run** CLI command `get router info bgp summary`
 
-    [bgp6](../images/bgp6.jpg)
+    ![bgp6](../images/bgp6.jpg)
 
     More information about FortiGate static routes and BGP can be found in [Fortinet documents](https://docs.fortinet.com/document/fortigate-public-cloud/7.4.0/azure-vwan-ngfw-deployment-guide/860717/configuring-static-routes-and-enabling-bgp-on-fortigate-nvas).
 
