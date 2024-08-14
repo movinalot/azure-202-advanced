@@ -1,7 +1,7 @@
 ---
-title: "Ch 2 Outbound"
+title: "Chapter 2 Outbound"
 chapter: false
-menuTitle: "Ch 2: Outbound inspection"
+menuTitle: "Chapter 2: Outbound inspection"
 weight: 20
 ---
 
