@@ -1,6 +1,6 @@
 ---
 title: "VNET Peering & Verification"
-menuTitle: "Task 6 - VNETs & Verification"
+menuTitle: "6 - VNETs & Verification"
 weight: 30
 ---
 
@@ -54,9 +54,9 @@ Where traffic will be sent in Azure can be determined by viewing the effective R
 
 1. ***View*** each FortiGate's Route Table
 
-    - ***Open*** each FortiGate in a browser
-    - **Open** FortiGate CLI
-    - **Run** CLI command `get router info routing-table all`
+    - ***Open*** each FortiGate in a browser tab/window
+    - ***Open*** FortiGate CLI
+    - ***Run*** CLI command `get router info routing-table all`
 
     ![routing1](../images/routing1.jpg)
 
@@ -90,4 +90,4 @@ Where traffic will be sent in Azure can be determined by viewing the effective R
 
     The effective route's next Hop IP is the IP address of Internal Load balancer is deployed with the FortiGate NVAs.
 
-Continue to Chapter 2
+Continue to ***Chapter 2***

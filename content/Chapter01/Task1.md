@@ -1,6 +1,6 @@
 ---
-title: "Portal Login"
-menuTitle: "Task 1 - Preflight Check"
+title: "Azure Portal & Resources"
+menuTitle: "1 - Azure Portal & Resources"
 weight: 5
 ---
 
@@ -49,4 +49,4 @@ Before moving on to the next task, please read below:
     - **Linux-Branch-VM**
     - **FortiGate-Branch-VM**
 
-Continue to Task 2
+Continue to ***Task 2***

@@ -1,6 +1,6 @@
 ---
 title: "Confirm no traffic route between Spoke VNETS"
-menuTitle: "Task 4 - VNET-to-VNET Traffic"
+menuTitle: "4 - VNET-to-VNET Traffic"
 weight: 20
 ---
 
@@ -63,4 +63,4 @@ weight: 20
 
     Both ping tests will fail, these resources are unable to access each other and resources on the Internet.
 
-Continue to Task 5
+Continue to ***Task 5***

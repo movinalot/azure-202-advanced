@@ -22,6 +22,6 @@ weight: 2
 
 {{% notice style="secondary" icon="eye" title="PLEASE DO NOT SUBMIT MULTIPLE TIMES"  %}} After submitting, this page will return with a blank email address box and no other indications.
 
-Please continue to ___Task 1___
-
 {{% /notice %}}
+
+Continue to ___Task 1___

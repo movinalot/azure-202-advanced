@@ -1,6 +1,6 @@
 ---
 title: "BGP Setup and Routing Intent"
-menuTitle: "Task 5 - BGP & Routing Intent"
+menuTitle: "5 - BGP & Routing Intent"
 weight: 25
 ---
 
@@ -23,7 +23,7 @@ weight: 25
 
     Every subnet in Azure uses the first address in the subnet as the gateway. For example, in the subnet 10.1.1.0/24 Azure uses 10.1.1.1 as the subnet gateway.
 
-    - ***Open*** each FortiGate in a browser
+    - ***Open*** each FortiGate in a browser tab/window
     - ***Click*** on Network
     - ***Click*** on Interfaces
     - ***View*** the assigned address of port2 and determine the gateway
@@ -93,4 +93,4 @@ Routing Intent and Routing Policies allow you to configure the Virtual WAN hub t
 
     ![bgp7](../images/bgp7.jpg)
 
-Continue to Task 6
+Continue to ***Task 6***
