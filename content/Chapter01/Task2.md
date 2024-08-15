@@ -1,6 +1,6 @@
 ---
 title: "FortiGate NVA deployment in VWAN hub"
-menuTitle: "Task 2 - FortiGate Deployment"
+menuTitle: "2 - FortiGate Deployment"
 weight: 10
 ---
 
@@ -95,4 +95,4 @@ weight: 10
     ![vwan11](../images/vwan11.jpg)
     ![vwan12](../images/vwan12.jpg)
 
-Continue to Task 3
+Continue to ***Task 3***

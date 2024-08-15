@@ -1,5 +1,5 @@
 ---
-title: "Chapter 1 Secure Azure VWAN"
+title: "Chapter 1 Deploy and Verify"
 menuTitle: "Chapter 1: Deploy and Verify"
 weight: 10
 ---

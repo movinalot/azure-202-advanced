@@ -1,14 +1,28 @@
 ---
-title: "Chapter 2 Outbound"
+title: "Chapter 2 Traffic Inspection"
 chapter: false
-menuTitle: "Chapter 2: Outbound inspection"
+menuTitle: "Chapter 2: Traffic Inspection"
 weight: 20
 ---
 
-### In this section we will test the traffic between Spoke VNETS
+## Traffic Inspection
 
-1. Confirm vnet access to internet
+At this point
 
-	a. Why can’t the VNET linux hosts access the internet?
-	b. Joint solution review#
+- Azure Virtual WAN Routing Intent and Route Tables are configured
+- Azure Virtual Networks (the Spokes) are connected to the VWAN
+- FortiGate BGP is configured and has learned the Spoke networks
 
+### What's Next?
+
+- Can traffic pass from one spoke to another?
+- Can traffic pass to the Internet?
+- Can response traffic from the Internet get back to the Spokes?
+
+{{% notice info %}}
+Commonly used tools ***ping*** and **curl** will help determine availability and reachability of devices and services.
+
+Additionally packet sniffing in the FortGate CLI will help determine if traffic is reaching the FortiGates for inspections and forwarding to the appropriate destination.
+{{% /notice %}}
+
+Continue to ***Task 1***

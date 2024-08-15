@@ -1,6 +1,6 @@
 ---
 title: "FGSP Setup"
-menuTitle: "Task 3 - FGSP Setup"
+menuTitle: "3 - FGSP Setup"
 weight: 15
 ---
 
@@ -41,6 +41,13 @@ After FortiGate deployment is completed the next step is to configure **FortiGat
         set standalone-group-id 1
         set group-member-id 1
     end
+
+    config system ha
+        set session-pickup enable
+        set session-pickup-nat enable
+        set session-pickup-connectionless enable
+        set override disable
+    end
     ```
 
 1. ***Answer*** "**y**" to the "Do you want to continue? (y/n)" prompt
@@ -63,6 +70,13 @@ After FortiGate deployment is completed the next step is to configure **FortiGat
         set standalone-group-id 1
         set group-member-id 2
     end
+
+    config system ha
+        set session-pickup enable
+        set session-pickup-nat enable
+        set session-pickup-connectionless enable
+        set override disable
+    end
     ```
 
 1. ***Answer*** "**y**" to the "Do you want to continue? (y/n)" prompt
@@ -73,4 +87,4 @@ After FortiGate deployment is completed the next step is to configure **FortiGat
 
 FGSP is now configured and the FortiGates will share session information.
 
-Continue to Task 4
+Continue to ***Task 4***
