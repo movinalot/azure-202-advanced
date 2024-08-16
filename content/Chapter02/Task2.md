@@ -24,14 +24,16 @@ Can traffic pass from a spoke to the Internet?
 
     - ***Open*** each FortiGate in a browser tab/window
     - ***Open*** FortiGate CLI
-    - ***Run*** CLI command `diagnose sniffer packet any 'icmp' 4 0 a`
+    - ***Run*** CLI command `diagnose sniffer packet port2 'icmp' 4 0 a`
       - **4** - means: print header of packets with interface name
       - **0** - means: continuous output
       - **a** - means: absolute UTC time, yyyy-mm-dd hh:mm:ss.ms
 
     Linux-Spoke1_VM | Linux-Spoke2_VM
     :-:|:-:
-    ![nortsouthping1](../images/nortsouthping1.jpg) | ![nortsouthping2](../images/nortsouthping2.jpg)
+    ![northsouthping1](../images/northsouthping1.jpg) | ![northsouthping2](../images/northsouthping2.jpg)
+
+    In the screenshots notice how this time the ping traffic appeared on FortiGate 1
 
     FortiGate 0 | FortiGate 1
     :-:|:-:
@@ -62,9 +64,11 @@ Can traffic pass from a spoke to the Internet?
         Enable this policy | **enabled**
     - ***Click*** "OK"
 
+    ![firewall2](../images/firewall2.jpg)
+
     Linux-Spoke1_VM | Linux-Spoke2_VM
     :-:|:-:
-    ![nortsouthping3](../images/nortsouthping3.jpg) | ![nortsouthping4](../images/nortsouthping4.jpg)
+    ![northsouthping3](../images/northsouthping3.jpg) | ![northsouthping4](../images/northsouthping4.jpg)
 
     FortiGate 0 | FortiGate 1
     :-:|:-:

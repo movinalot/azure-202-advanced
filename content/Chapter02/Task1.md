@@ -68,6 +68,8 @@ Can traffic pass from one spoke to another? Ping is commonly used to test connec
         Enable this policy | **enabled**
     - ***Click*** "OK"
 
+    ![firewall1](../images/firewall1.jpg)
+
     Linux-Spoke1_VM | Linux-Spoke2_VM
     :-:|:-:
     ![eastwestping3](../images/eastwestping3.jpg) | ![eastwestping4](../images/eastwestping4.jpg)
