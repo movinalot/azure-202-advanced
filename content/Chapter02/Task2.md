@@ -16,9 +16,9 @@ Can traffic pass from a spoke to the Internet?
         - Linux-Spoke1-VM - `ping 8.8.8.8`
         - Linux-Spoke2-VM - `ping 8.8.8.8`
 
-    Neither ping will be successful because the FortiGate is not allowing traffic from port2 to port1, even though port2 would be considered *trusted* since the traffic is all internal. This is the FortiGate's ability to micro-segment the traffic.
+    Neither ping will be successful because the FortiGate is not allowing traffic from port2 to port1.
 
-    However, the traffic from each VM **does reach the FortiGate**, but it is dropped. Firewall Policies are required to allow traffic to pass from port2 to port2.
+    However, the traffic from each VM **does reach the FortiGate**, but it is dropped. Firewall Policies are required to allow traffic to pass from port2 to port1, and then return back to the VM that originated the ping.
 
 1. ***View*** ping traffic from Spoke VMs reaching the FortiGates
 
@@ -29,15 +29,17 @@ Can traffic pass from a spoke to the Internet?
       - **0** - means: continuous output
       - **a** - means: absolute UTC time, yyyy-mm-dd hh:mm:ss.ms
 
+    Linux-Spoke1_VM | Linux-Spoke2_VM
+    :-:|:-:
+    ![nortsouthping1](../images/nortsouthping1.jpg) | ![nortsouthping2](../images/nortsouthping2.jpg)
+
     FortiGate 0 | FortiGate 1
     :-:|:-:
-    this one | that one
+    ![fgtpingdiag5](../images/fgtpingdiag5.jpg) | ![fgtpingdiag6](../images/fgtpingdiag6.jpg)
 
-    Linux-Spoke1_VM        | Linux-Spoke2_VM
-    :-:|:-:
-    ![eastwestping1](../images/eastwestping1.jpg) | ![eastwestping2](../images/eastwestping2.jpg)
+    The ping traffic is only on one FortiGate, this is because the internal load balancer sends traffic from the Spokes to one of the FortiGates for inspection.
 
-1. ***Create*** Firewall policies **on both** FortiGates to allow traffic to pass from port2 to port2 (Spoke to Spoke)
+1. ***Create*** Firewall policies **on both** FortiGates to allow traffic to pass from port2 to port1 (Spoke to Internet)
 
     The FortiGates can be setup to sync configuration information. If one of the FortiGates was designated as the Primary configuration supplier and the other as a Secondary, any changes made to the Primary would be replicated to the secondary.
 
@@ -48,9 +50,9 @@ Can traffic pass from a spoke to the Internet?
     - ***Click*** Create new
         Attribute | Value
         -|-
-        Name | **port2_to_port2**
+        Name | **port2_to_port1**
         Incoming interface | **port2**
-        Outgoing interface | **port2**
+        Outgoing interface | **port1**
         Source | **all**
         Destination | **all**
         Schedule | **always**
@@ -62,6 +64,10 @@ Can traffic pass from a spoke to the Internet?
 
     Linux-Spoke1_VM | Linux-Spoke2_VM
     :-:|:-:
-    ![eastwestping3](../images/eastwestping3.jpg) | ![eastwestping4](../images/eastwestping4.jpg)
+    ![nortsouthping3](../images/nortsouthping3.jpg) | ![nortsouthping4](../images/nortsouthping4.jpg)
 
-Continue to ***Task 2***
+    FortiGate 0 | FortiGate 1
+    :-:|:-:
+    ![fgtpingdiag7](../images/fgtpingdiag7.jpg) | ![fgtpingdiag8](../images/fgtpingdiag8.jpg)
+
+You have completed the regular session tasks.  If time permits please continue to chapter 3 to configure access to the Linux Spoke VMs from a Branch FortiGate.
