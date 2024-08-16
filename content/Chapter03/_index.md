@@ -1,7 +1,7 @@
 ---
-title: "Ch 3 - Branch connectivity "
+title: "Chapter 3 - Branch connectivity "
 chapter: false
-menuTitle: "Ch 3: Branch Connectivity"
+menuTitle: "Chapter 3: Branch Connectivity"
 weight: 30
 ---
 
@@ -20,7 +20,4 @@ In this section you have two options:
         g. Test ping connectivity between Linux-Branch_VM and Linux-Spoke2_VM
         h. If the pings are successful in steps f and g, consider yourself a Senior Junior Admin. 
 
-2. Accept you still have Junior Admin skills and only know how to work the copy and paste functions of your keyboard.By raising your hand, let us know your email we will email you the config. 
-
-3. Let us know when you have successfully completed a though h, and if you are interested in extra part of lab. 
-
+2. Let us know when you have successfully completed a though h, and if you are interested in extra part of lab.
