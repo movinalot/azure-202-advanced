@@ -1,77 +1,72 @@
 ---
-title: "North South Inspection "
-menuTitle: "2 - Spoke to Internet Traffic"
-weight: 3
+title: "Confirm no traffic route between Spoke VNETS"
+menuTitle: "2 - VNET-to-VNET Traffic"
+weight: 20
 ---
 
-## North South Inspection
+## Task 2
 
-Can traffic pass from a spoke to the Internet?
+To be part of and Azure Virtual WAN, Azure Virtual Networks need to be connected to the Azure Virtual WAN Hub. Prior to VNETs being connected to a VWAN, virtual machines in the VNET will route their traffic based on Azure default routing, user defined routing in Azure Route Tables, or Routes advertised by the Azure Route Server.
 
-### Spoke to Internet traffic
+Two "Spoke" VNETs have been deployed in the Azure environment, each with a Spoke virtual machine (VM). The Spoke VNETs just stand-alone VNETs whose VMs cannot communicate with each other without setting up, VNET Peering and Routing.
 
-1. ***Ping*** from the Linux Spoke VMs to the Internet
+Determine that the Spoke VMs cannot communicate with each other.
 
-    - ***Open*** a serial console connections to each Linux Spoke VM and ping the other Spoke VM
-        - Linux-Spoke1-VM - `ping 8.8.8.8`
-        - Linux-Spoke2-VM - `ping 8.8.8.8`
+### Spoke Virtual Networks (VNETs) and Virtual Machines (VMs)
 
-    Neither ping will be successful because the FortiGate is not allowing traffic from port2 to port1.
+1. ***View*** the Spoke VNETs Address Space
 
-    However, the traffic from each VM **does reach the FortiGate**, but it is dropped. Firewall Policies are required to allow traffic to pass from port2 to port1, and then return back to the VM that originated the ping.
+    - Spoke1-vHub1_VNET with address space 192.168.1.0/24
+    - Spoke2-vHub1_VNET with address space 172.16.1.0/24
 
-1. ***View*** ping traffic from Spoke VMs reaching the FortiGates
+    ![vnets1](../images/vnets1.jpg)
 
-    - ***Open*** each FortiGate in a browser tab/window
-    - ***Open*** FortiGate CLI
-    - ***Run*** CLI command `diagnose sniffer packet port2 'icmp' 4 0 a`
-      - **4** - means: print header of packets with interface name
-      - **0** - means: continuous output
-      - **a** - means: absolute UTC time, yyyy-mm-dd hh:mm:ss.ms
+    VNET assigned address space can be view by:
+    - ***Clicking*** on a VNET
+    - ***Clicking*** "Address space" in the left-hand navigation
 
-    Linux-Spoke1_VM | Linux-Spoke2_VM
-    :-:|:-:
-    ![northsouthping1](../images/northsouthping1.jpg) | ![northsouthping2](../images/northsouthping2.jpg)
+    VNET **Spoke2-vHub1_VNET** is shown below.
 
-    In the screenshots notice how this time the ping traffic appeared on FortiGate 1
+    ![vnets2](../images/vnets2.jpg)
 
-    FortiGate 0 | FortiGate 1
-    :-:|:-:
-    ![fgtpingdiag5](../images/fgtpingdiag5.jpg) | ![fgtpingdiag6](../images/fgtpingdiag6.jpg)
+1. ***View*** the private IP addresses of the Spoke VNETs Linux VMs
 
-    The ping traffic is only on one FortiGate, this is because the internal load balancer sends traffic from the Spokes to one of the FortiGates for inspection.
+    - Linux-Spoke1_VM IP `192.168.1.4`
+    - Linux-Spoke2_VM IP `172.16.1.4`
 
-1. ***Create*** Firewall policies **on both** FortiGates to allow traffic to pass from port2 to port1 (Spoke to Internet)
+    ![linuxvms](../images/linuxvms.jpg)
 
-    The FortiGates can be setup to sync configuration information. If one of the FortiGates was designated as the Primary configuration supplier and the other as a Secondary, any changes made to the Primary would be replicated to the secondary.
+    Linux-Spoke1_VM        | Linux-Spoke2_VM
+    :-------------------------:|:-------------------------:
+    ![linuxvm1](../images/linuxvm1.jpg) |  ![linuxvm2](../images/linuxvm2.jpg)
 
-    Configuration Synchronization was not enabled on the FortiGates as part of this session.
+1. ***Access*** the Serial console on Linux-Spoke1_VM view
 
-    - ***Navigate*** to "Policy & Objects"
-    - ***Click*** Firewall Policy
-    - ***Click*** Create new
-        Attribute | Value
-        -|-
-        Name | **port2_to_port1**
-        Incoming interface | **port2**
-        Outgoing interface | **port1**
-        Source | **all**
-        Destination | **all**
-        Schedule | **always**
-        Service | **ALL**
-        NAT | **enabled**
-        IP pool configuration | **Use Outgoing Interface Address**
-        Enable this policy | **enabled**
-    - ***Click*** "OK"
+    - ***Scroll*** to the bottom of the left-hand navigation on the Linux-Spoke1_VM resource page
+    - ***Expand*** the "Help" section (if not already expanded)
+    - ***Click*** "Serial console"
 
-    ![firewall2](../images/firewall2.jpg)
+    A serial console session will start in the right-hand pane
 
-    Linux-Spoke1_VM | Linux-Spoke2_VM
-    :-:|:-:
-    ![northsouthping3](../images/northsouthping3.jpg) | ![northsouthping4](../images/northsouthping4.jpg)
+1. ***Login*** to Linux-Spoke1_VM
 
-    FortiGate 0 | FortiGate 1
-    :-:|:-:
-    ![fgtpingdiag7](../images/fgtpingdiag7.jpg) | ![fgtpingdiag8](../images/fgtpingdiag8.jpg)
+    - username `fortixperts`
+    - password `Fortixperts2024!`
 
-You have completed the regular session tasks.  If time permits please continue to chapter 3 to configure access to the Linux Spoke VMs from a Branch FortiGate.
+1. ***Ping*** Linux-Spoke2_VM
+
+    - `ping 172.16.1.4`
+
+    ![linuxvm1serial](../images/linuxvm1serial.jpg)
+
+1. ***Ping*** Linux-Spoke1_VM from Linux-Spoke2_VM
+
+    - ***Repeat*** previous steps to access the serial console of ***Linux-Spoke2_VM***
+
+1. ***Ping*** an Internet resource
+
+    - `ping 8.8.8.8`
+
+    Both ping tests will fail, these resources are unable to access each other and resources on the Internet.
+
+Continue to ***Task 3***

@@ -1,20 +1,28 @@
 ---
-title: "Chapter 3 - Branch connectivity "
+title: "Chapter 3 Traffic Inspection"
 chapter: false
-menuTitle: "Chapter 3: Branch Connectivity"
-weight: 30
+menuTitle: "Chapter 3: Traffic Inspection"
+weight: 20
 ---
 
-In this section we will be going over the Branch to Azure IPSEC tunnels and bgp Configuration. 
+## Traffic Inspection
 
-In this section you have two options:
+At this point
 
-1. Show off your skill set by configuring the VPN tunnels to NVA1 and NVA2 on your own. To help you get started we suggest the following steps to be done in the order.
+- Azure Virtual WAN Routing Intent and Route Tables are configured
+- Azure Virtual Networks (the Spokes) are connected to the VWAN
+- FortiGate BGP is configured and has learned the Spoke networks
 
-        a. Build VPN phase1 and Phase2 Tunnels
-        b. Configure the static route. (Hint: BGP neighbors)
-        c. Configure the firewall policies. (Hint: VPN Tunnel establishment)
-        d. Configure appropriate BGP settings. 
-        e. Confirm routing tables on the branch fortigate, NVA's and Hub. 
-        f. Test ping connectivity between Linux-Branch_VM and Linux-Spoke1_VM
-        g. Test ping connectivity between Linux-Branch_VM and Linux-Spoke2_VM
+### What's Next?
+
+- Can traffic pass from one spoke to another?
+- Can traffic pass to the Internet?
+- Can response traffic from the Internet get back to the Spokes?
+
+{{% notice info %}}
+Commonly used tools ***ping*** and **curl** will help determine availability and reachability of devices and services.
+
+Additionally packet sniffing in the FortGate CLI will help determine if traffic is reaching the FortiGates for inspections and forwarding to the appropriate destination.
+{{% /notice %}}
+
+Continue to ***Task 1***

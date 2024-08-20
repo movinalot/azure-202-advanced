@@ -1,14 +1,14 @@
 ---
 title: "VNET Peering & Verification"
-menuTitle: "6 - VNETs & Verification"
+menuTitle: "4 - VNETs & Verification"
 weight: 30
 ---
 
-## Task 6
-
-### Peer Spoke VNETS to Hub
+## Task 4
 
 FortiGates are ready to inspect network traffic. Network traffic is coming from or going to workloads in the Spoke VNETs. In order for the FortiGates to managed the traffic the Spoke VNETs must be peered to the VWAN Hub.
+
+### Peer Spoke VNETS to Hub
 
 1. ***Peer*** Spoke1 VNET to hub
 
@@ -42,7 +42,7 @@ FortiGates are ready to inspect network traffic. Network traffic is coming from 
 
 ### Verification
 
-Routes and routeing are the key for users to access workloads in an Azure VNET and for those workloads to be able to access resources outside of their VNET. At this point routes and routing should be set within the Azure environment and in the FortiGate NVAs.
+Routes and routing are the key for users to access workloads in an Azure VNET and for those workloads to be able to access resources outside of their VNET. At this point routes and routing should be set within the Azure environment and in the FortiGate NVAs.
 
 From the perspective of the FortiGate a decision will be made to send traffic to a specific port based on FortiGate Policy. Once the traffic leaves teh FortiGate's port it is up to Azure to forward the traffic.
 
@@ -90,4 +90,4 @@ Where traffic will be sent in Azure can be determined by viewing the effective R
 
     The effective route's next Hop IP is the IP address of Internal Load balancer is deployed with the FortiGate NVAs.
 
-Continue to ***Chapter 2***
+Continue to ***Chapter 3***

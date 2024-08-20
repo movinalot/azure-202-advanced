@@ -1,81 +1,90 @@
 ---
-title: "East West Inspection "
-menuTitle: "1 - Spoke to Spoke Traffic"
-weight: 1
+title: "FGSP Setup"
+menuTitle: "1 - FGSP Setup"
+weight: 15
 ---
 
-## EAST WEST Inspection
+## Task 1
 
-At this point
+After FortiGate deployment is completed the next step is to configure **FortiGate Session Life Support** [FGSP](https://docs.fortinet.com/document/fortigate/7.4.4/administration-guide/869218/fgsp-basic-peer-setup) on both FortiGates to enable session sync to support the  Active-Active architecture.
 
-- Azure Virtual WAN Routing Intent and Route Tables are configured
-- Azure Virtual Networks (the Spokes) are connected to the VWAN
-- FortiGate BGP is configured and has learned the Spoke networks
+### FGSP Setup
 
-Can traffic pass from one spoke to another? Ping is commonly used to test connectivity between devices.
+{{% notice tip %}}You will open a browser session to each FortiGate, the FortiGate GUI defaults to a 5 minute "Idle timeout". Avoid continually logging in by setting the idle timeout to 60 minutes in **System--> Settings:Administration Settings:Idle timeout**{{% /notice %}}
 
-### Spoke to Spoke traffic
+1. ***Access*** FortiGate CLIs.
 
-1. ***Ping*** between Linux Spoke VMs.
+    - ***Navigate*** to your Hub **vwanXX-eastus_VWAN**
+    - ***Click*** Network Virtual Appliance in the left-hand navigation
+    - ***Click*** "Click here" link under "Instances info" in the right-hand "Network Virtual Appliances" pane
+    - ***Note*** FortiGate Public IP and Private IP addresses
+    - ***Open*** a browser tab to each FortiGate using the Public IP address of each FortiGate
 
-    - ***Open*** a serial console connections to each Linux Spoke VM and ping the other Spoke VM
-        - Linux-Spoke1-VM - `ping 172.16.1.4`
-        - Linux-Spoke2-VM - `ping 192.168.1.4`
+    ![fgsp1](../images/fgsp1.jpg)
+    ![fgsp2](../images/fgsp2.jpg)
 
-    Neither ping will be successful because the FortiGate is not allowing traffic from port2 to port2, even though port2 would be considered *trusted* since the traffic is all internal. This is the FortiGate's ability to micro-segment the traffic.
+1. ***Configure*** FGSP
 
-    However, the traffic from each VM **does reach the FortiGate**, but it is dropped. Firewall Policies are required to allow traffic to pass from port2 to port2.
+    - ***Open*** a CLI session on each FortiGate
 
-1. ***View*** ping traffic from Spoke VMs reaching the FortiGates
+    {{% notice warning %}}Replace **x.x.x.x** with the port2 private IP address of the other FortiGate ending with **_1**. Copy these CLI commands to notepad or similar tool to update the *peerip* address.{{% /notice %}}
 
-    - ***Open*** each FortiGate in a browser tab/window
-    - ***Open*** FortiGate CLI
-    - ***Run*** CLI command `diagnose sniffer packet port2 'icmp' 4 0 a`
-      - **4** - means: print header of packets with interface name
-      - **0** - means: continuous output
-      - **a** - means: absolute UTC time, yyyy-mm-dd hh:mm:ss.ms
+- On FortiGate ending with **_0** configure the peerip address with the port2 private IP address of the FortiGate ending with **_1**.
 
-    Linux-Spoke1_VM | Linux-Spoke2_VM
-    :-:|:-:
-    ![eastwestping1](../images/eastwestping1.jpg) | ![eastwestping2](../images/eastwestping2.jpg)
+    ``` bash
+    config system standalone-cluster
+        config cluster-peer
+            edit 1
+                set peerip x.x.x.x
+            next
+        end
+        set standalone-group-id 1
+        set group-member-id 1
+    end
 
-    FortiGate 0 | FortiGate 1
-    :-:|:-:
-    ![fgtpingdiag1](../images/fgtpingdiag1.jpg) | ![fgtpingdiag2](../images/fgtpingdiag2.jpg)
+    config system ha
+        set session-pickup enable
+        set session-pickup-nat enable
+        set session-pickup-connectionless enable
+        set override disable
+    end
+    ```
 
-    The ping traffic is only on one FortiGate, this is because the internal load balancer sends traffic from the Spokes to one of the FortiGates for inspection.
+1. ***Answer*** "**y**" to the "Do you want to continue? (y/n)" prompt
 
-1. ***Create*** Firewall policies **on both** FortiGates to allow traffic to pass from port2 to port2 (Spoke to Spoke)
+    **Changing standalone-group-id or group-member-id will potentially affect FGSP traffic.**</br>
+    **Please first make sure the member is isolated from FGSP cluster properly.**</br>
+    **Do you want to continue? (y/n)**</br>
 
-    The FortiGates can be setup to sync configuration information. If one of the FortiGates was designated as the Primary configuration supplier and the other as a Secondary, any changes made to the Primary would be replicated to the secondary.
+    {{% notice warning %}}Notice that the **group-member-id** is **2** in the CLI commands below{{% /notice %}}
 
-    Configuration Synchronization was not enabled on the FortiGates as part of this session.
+- On FortiGate ending with **_1** configure the peerip address with the port2 private IP address of the FortiGate ending with **_1**.
 
-    - ***Navigate*** to "Policy & Objects"
-    - ***Click*** Firewall Policy
-    - ***Click*** Create new
-        Attribute | Value
-        -|-
-        Name | **port2_to_port2**
-        Incoming interface | **port2**
-        Outgoing interface | **port2**
-        Source | **all**
-        Destination | **all**
-        Schedule | **always**
-        Service | **ALL**
-        NAT | **enabled**
-        IP pool configuration | **Use Outgoing Interface Address**
-        Enable this policy | **enabled**
-    - ***Click*** "OK"
+    ``` bash
+    config system standalone-cluster
+        config cluster-peer
+            edit 1
+                set peerip x.x.x.x
+            next
+        end
+        set standalone-group-id 1
+        set group-member-id 2
+    end
 
-    ![firewall1](../images/firewall1.jpg)
+    config system ha
+        set session-pickup enable
+        set session-pickup-nat enable
+        set session-pickup-connectionless enable
+        set override disable
+    end
+    ```
 
-    Linux-Spoke1_VM | Linux-Spoke2_VM
-    :-:|:-:
-    ![eastwestping3](../images/eastwestping3.jpg) | ![eastwestping4](../images/eastwestping4.jpg)
+1. ***Answer*** "**y**" to the "Do you want to continue? (y/n)" prompt
 
-    FortiGate 0 | FortiGate 1
-    :-:|:-:
-    ![fgtpingdiag3](../images/fgtpingdiag3.jpg) | ![fgtpingdiag4](../images/fgtpingdiag4.jpg)
+    **Changing standalone-group-id or group-member-id will potentially affect FGSP traffic.**</br>
+    **Please first make sure the member is isolated from FGSP cluster properly.**</br>
+    **Do you want to continue? (y/n)**</br>
+
+FGSP is now configured and the FortiGates will share session information.
 
 Continue to ***Task 2***

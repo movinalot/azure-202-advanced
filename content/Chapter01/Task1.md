@@ -6,6 +6,8 @@ weight: 5
 
 ## Task 1
 
+The work for this session takes place in Azure and on FortiGates deployed into the Azure Virtual WAN Hub. The first step is to logon to the Azure Portal.
+
 ### Login to Portal
 
 1. ***Navigate*** to [Azureportal](https://portal.azure.com "Azure Portal")
@@ -36,17 +38,14 @@ Before moving on to the next task, please read below:
     - **vwanXX-eastus_VWAN**
 
   - Virtual Hub (VHUB)
-    - **vwanXX-vHub1_eastus**
+    - **vwanXX-vHub1_eastus** - This resource is visible in the Virtual Wan page.
 
   - Virtual Networks (VNETS)
     - **Spoke1-vHub1_VNET**
     - **Spoke2-vHub1_VNET**
-    - **Branch_VNET**
 
-  - Virtual Machines (VMs)
+  - Virtual Machines (VMs) with disk and network interface
     - **Linux-Spoke1-VM**
     - **Linux-Spoke2-VM**
-    - **Linux-Branch-VM**
-    - **FortiGate-Branch-VM**
 
 Continue to ***Task 2***

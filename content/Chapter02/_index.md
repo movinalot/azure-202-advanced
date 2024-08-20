@@ -1,28 +1,15 @@
 ---
-title: "Chapter 2 Traffic Inspection"
-chapter: false
-menuTitle: "Chapter 2: Traffic Inspection"
-weight: 20
+title: "Chapter 2 Configure and Verify"
+menuTitle: "Chapter 2: Configure and Verify"
+weight: 10
 ---
 
-## Traffic Inspection
+## Configure your environment
 
-At this point
+The next set of tasks focus on enabling these FortiGate and Azure VWAN capabilities.
 
-- Azure Virtual WAN Routing Intent and Route Tables are configured
-- Azure Virtual Networks (the Spokes) are connected to the VWAN
-- FortiGate BGP is configured and has learned the Spoke networks
-
-### What's Next?
-
-- Can traffic pass from one spoke to another?
-- Can traffic pass to the Internet?
-- Can response traffic from the Internet get back to the Spokes?
-
-{{% notice info %}}
-Commonly used tools ***ping*** and **curl** will help determine availability and reachability of devices and services.
-
-Additionally packet sniffing in the FortGate CLI will help determine if traffic is reaching the FortiGates for inspections and forwarding to the appropriate destination.
-{{% /notice %}}
-
-Continue to ***Task 1***
+- Configuring FGSP on the FortiGates
+- Determining Hub Spoke-to-Spoke Connectivity
+- Associating Azure Virtual Networks to the VWAN Hub
+- Configuring and Verifying FortiGate BGP and Azure Routing Intent
+- Re-Determining Hub Spoke-to-Spoke Connectivity
