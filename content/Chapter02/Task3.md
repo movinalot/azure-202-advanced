@@ -1,10 +1,12 @@
 ---
 title: "BGP Setup and Routing Intent"
-menuTitle: "5 - BGP & Routing Intent"
+menuTitle: "3 - BGP & Routing Intent"
 weight: 25
 ---
 
-## Task 5
+## Task 3
+
+FortiGates in the VWAN Hub use BGP for routing, configure BGP on the FortiGates
 
 ### BGP Setup
 
@@ -93,4 +95,4 @@ Routing Intent and Routing Policies allow you to configure the Virtual WAN hub t
 
     ![bgp7](../images/bgp7.jpg)
 
-Continue to ***Task 6***
+Continue to ***Task 4***

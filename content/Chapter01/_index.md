@@ -1,10 +1,10 @@
 ---
-title: "Chapter 1 Deploy and Verify"
-menuTitle: "Chapter 1: Deploy and Verify"
+title: "Chapter 1 Deploy"
+menuTitle: "Chapter 1: Deploy"
 weight: 10
 ---
 
-## Overview of your environment (15 min)
+## Overview of your environment
 
 Azure Virtual WAN is a networking service that brings many networking, security, and routing functionalities together to provide a single operational interface.
 
@@ -26,7 +26,7 @@ This session covers the following:
 
 Additionally, if desired and time permits:
 
-- Setting up IPSEC tunnels to Branch FortiGates and ping across your cloud environment from your Branch VM.
+- Hub to Hub Connectivity - If there is more than 1.5 hours left in the session ask the instructors to deploy the resources required for this task.
 
 Environment network diagram for reference:
 

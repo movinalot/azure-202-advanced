@@ -6,6 +6,8 @@ weight: 10
 
 ## Task 2
 
+Traditionally FortiGates associated with an Azure Virtual WAN (VWAN) were deployed in a Virtual Network (VNET) that was connected to an Azure Virtual WAN Hub. The deployment being done today has FortiGates being deployed directly into (integrated with) the VWAN hub. This type of deployment frees the administrator from having to deploy and manage Azure Virtual Machines. 
+
 ### FortiGate Deployment
 
 1. ***Click*** on VWAN **vwanXX-eastus_VWAN** in your Resource Group. **XX** is the number of your allocated environment.
@@ -95,4 +97,4 @@ weight: 10
     ![vwan11](../images/vwan11.jpg)
     ![vwan12](../images/vwan12.jpg)
 
-Continue to ***Task 3***
+Continue to ***Chapter 3***

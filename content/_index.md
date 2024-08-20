@@ -20,4 +20,4 @@ This session is "__Public Cloud - 202 - Secured Azure FortiGate Integrated vWAN 
 
 ### The Bonus Goal
 
-- Configure IPSec Tunnels for Secure Branch access to Azure Virtual WAN spoke workloads
+- Configure Hub to Hub Traffic Inspection
