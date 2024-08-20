@@ -74,4 +74,4 @@ Can traffic pass from a spoke to the Internet?
     :-:|:-:
     ![fgtpingdiag7](../images/fgtpingdiag7.jpg) | ![fgtpingdiag8](../images/fgtpingdiag8.jpg)
 
-You have completed the regular session tasks.  If time permits please continue to chapter 3 to configure access to the Linux Spoke VMs from a Branch FortiGate.
+You have completed the regular session tasks.
