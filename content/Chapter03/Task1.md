@@ -1,10 +1,10 @@
 ---
-title: "1 - Spoke to Spoke Traffic"
-menuTitle: "1 - Spoke to Spoke Traffic"
+title: "Task 1 - Spoke to Spoke Traffic"
+linkTitle: "1 - Spoke to Spoke Traffic"
 weight: 10
 ---
 
-## EAST WEST Inspection
+## Spoke to Spoke Traffic
 
 At this point
 
@@ -35,13 +35,13 @@ Can traffic pass from one spoke to another? Ping is commonly used to test connec
       - **0** - means: continuous output
       - **a** - means: absolute UTC time, yyyy-mm-dd hh:mm:ss.ms
 
-    Linux-Spoke1_VM | Linux-Spoke2_VM
-    :-:|:-:
-    ![eastwestping1](../images/eastwestping1.jpg) | ![eastwestping2](../images/eastwestping2.jpg)
+        Linux-Spoke1_VM | Linux-Spoke2_VM
+        :-:|:-:
+        ![eastwestping1](../images/eastwestping1.jpg) | ![eastwestping2](../images/eastwestping2.jpg)
 
-    FortiGate 0 | FortiGate 1
-    :-:|:-:
-    ![fgtpingdiag1](../images/fgtpingdiag1.jpg) | ![fgtpingdiag2](../images/fgtpingdiag2.jpg)
+        FortiGate 0 | FortiGate 1
+        :-:|:-:
+        ![fgtpingdiag1](../images/fgtpingdiag1.jpg) | ![fgtpingdiag2](../images/fgtpingdiag2.jpg)
 
     The ping traffic is only on one FortiGate, this is because the internal load balancer sends traffic from the Spokes to one of the FortiGates for inspection.
 
@@ -68,14 +68,14 @@ Can traffic pass from one spoke to another? Ping is commonly used to test connec
         Enable this policy | **enabled**
     - ***Click*** "OK"
 
-    ![firewall1](../images/firewall1.jpg)
+        ![firewall1](../images/firewall1.jpg)
 
-    Linux-Spoke1_VM | Linux-Spoke2_VM
-    :-:|:-:
-    ![eastwestping3](../images/eastwestping3.jpg) | ![eastwestping4](../images/eastwestping4.jpg)
+        Linux-Spoke1_VM | Linux-Spoke2_VM
+        :-:|:-:
+        ![eastwestping3](../images/eastwestping3.jpg) | ![eastwestping4](../images/eastwestping4.jpg)
 
-    FortiGate 0 | FortiGate 1
-    :-:|:-:
-    ![fgtpingdiag3](../images/fgtpingdiag3.jpg) | ![fgtpingdiag4](../images/fgtpingdiag4.jpg)
+        FortiGate 0 | FortiGate 1
+        :-:|:-:
+        ![fgtpingdiag3](../images/fgtpingdiag3.jpg) | ![fgtpingdiag4](../images/fgtpingdiag4.jpg)
 
 Continue to ***Next Task***

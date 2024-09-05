@@ -1,10 +1,10 @@
 ---
-title: "4 - VNETs & Verification"
-menuTitle: "4 - VNETs & Verification"
+title: "Task 4 - VNETs & Verification"
+linkTitle: "4 - VNETs & Verification"
 weight: 50
 ---
 
-## Task 4
+## VNETs & Verification
 
 FortiGates are ready to inspect network traffic. Network traffic is coming from or going to workloads in the Spoke VNETs. In order for the FortiGates to managed the traffic the Spoke VNETs must be peered to the VWAN Hub.
 
@@ -22,7 +22,7 @@ FortiGates are ready to inspect network traffic. Network traffic is coming from 
     - ***Select*** - "Virtual Network" - Spoke 1's VNET - **Spoke1-vHub1_VNET**
     - ***Click*** - "Create"
 
-    ![peering1](../images/peering1.jpg)
+        ![peering1](../images/peering1.jpg)
 
 1. ***Peer*** Spoke2 VNET to hub
 
@@ -36,9 +36,9 @@ FortiGates are ready to inspect network traffic. Network traffic is coming from 
     - ***Select*** - "Virtual Network" - Spoke 2's VNET - **Spoke2-vHub1_VNET**
     - ***Click*** - "Create"
 
-    {{% notice info %}}VNET Peering takes a few minutes to complete. Status can be reviewed by ***Clicking*** Refresh{{% /notice %}}
+        {{% notice info %}}VNET Peering takes a few minutes to complete. Status can be reviewed by ***Clicking*** Refresh{{% /notice %}}
 
-    ![peering2](../images/peering2.jpg)
+        ![peering2](../images/peering2.jpg)
 
 ### Verification
 
@@ -58,7 +58,7 @@ Where traffic will be sent in Azure can be determined by viewing the effective R
     - ***Open*** FortiGate CLI
     - ***Run*** CLI command `get router info routing-table all`
 
-    ![routing1](../images/routing1.jpg)
+        ![routing1](../images/routing1.jpg)
 
     The output shows that BGP routes have been learned for the two Spoke VNETs that were peered to the Hub
 
@@ -71,9 +71,9 @@ Where traffic will be sent in Azure can be determined by viewing the effective R
     - ***Select*** - "Choose resource type" "Route Tables"
     - ***Select*** - "Resource" "Default"
 
-    All Effective Routes should have the FortiGate NVA group as next hop.
+        All Effective Routes should have the FortiGate NVA group as next hop.
 
-    ![routing2](../images/routing2.jpg)
+        ![routing2](../images/routing2.jpg)
 
 1. View the Effective Routes on Spoke Linux Virtual Machines
 
@@ -84,10 +84,10 @@ Where traffic will be sent in Azure can be determined by viewing the effective R
 
     - Repeat for **Linux-Spoke2-VM**
 
-    ![routing3](../images/routing3jpg)
-    ![routing4](../images/routing4.jpg)
-    ![routing5](../images/routing5.jpg)
+        ![routing3](../images/routing3.jpg)
+        ![routing4](../images/routing4.jpg)
+        ![routing5](../images/routing5.jpg)
 
-    The effective route's next Hop IP is the IP address of Internal Load balancer is deployed with the FortiGate NVAs.
+    **The effective route's next Hop IP is the IP address of Internal Load balancer is deployed with the FortiGate NVAs.**
 
 Continue to ***Chapter 3***

@@ -1,6 +1,5 @@
 ---
 title: "Chapter 3: Traffic Inspection"
-chapter: false
 menuTitle: "Chapter 3: Traffic Inspection"
 weight: 10
 ---

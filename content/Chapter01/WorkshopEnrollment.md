@@ -1,6 +1,6 @@
 ---
 title: "Workshop Enrollment"
-menuTitle: "Workshop Enrollment"
+linkTitle: "Workshop Enrollment"
 weight: 20
 ---
 

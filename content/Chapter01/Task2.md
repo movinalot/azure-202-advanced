@@ -1,14 +1,12 @@
 ---
-title: "2 - FortiGate Deployment"
-menuTitle: "2 - FortiGate Deployment"
+title: "Task 2 - FortiGate Deployment"
+linkTitle: "2 - FortiGate Deployment"
 weight: 40
 ---
 
-## Task 2
+## FortiGate Deployment
 
 Traditionally FortiGates associated with an Azure Virtual WAN (VWAN) were deployed in a Virtual Network (VNET) that was connected to an Azure Virtual WAN Hub. The deployment being done today has FortiGates being deployed directly into (integrated with) the VWAN hub. This type of deployment frees the administrator from having to deploy and manage Azure Virtual Machines. 
-
-### FortiGate Deployment
 
 1. ***Click*** on VWAN **vwanXX-eastus_VWAN** in your Resource Group. **XX** is the number of your allocated environment.
 
@@ -31,9 +29,9 @@ Traditionally FortiGates associated with an Azure Virtual WAN (VWAN) were deploy
     - Hub status: **Succeeded**
     - Routing status: **Provisioned**
 
-    ![vwan3](../images/vwan3.jpg)
+        ![vwan3](../images/vwan3.jpg)
 
-    {{% notice warning %}}Note: please move on to the next step **only** if Hub and Routing status have green checks.{{% /notice %}}
+        {{% notice warning %}}Note: please move on to the next step **only** if Hub and Routing status have green checks.{{% /notice %}}
 
 1. ***Click*** on "Network Virtual Appliance in the "Third party providers" section of the left-hand navigation.
 1. ***Click*** the button "Create network virtual appliance"
@@ -42,7 +40,7 @@ Traditionally FortiGates associated with an Azure Virtual WAN (VWAN) were deploy
 
     - If a warning is displayed about "Leaving" the **site** or **page** ***Click*** the "Leave" button
 
-    ![vwan4](../images/vwan4.jpg)
+        ![vwan4](../images/vwan4.jpg)
 
 1. ***Click*** "Create" on the Marketplace listing for "**Azure Virtual WAN Secured by Fortinet FortiGate**"
 
@@ -63,7 +61,7 @@ Traditionally FortiGates associated with an Azure Virtual WAN (VWAN) were deploy
     - ***Update*** Managed Resource Group - Append "_vwanXX" to the provided name -- **Be sure to enter your allocated environment number for XX.**
     - ***Click*** "Next"
 
-    ![vwan6](../images/vwan6.jpg)
+        ![vwan6](../images/vwan6.jpg)
 
 1. **FortiGate in Virtual WAN Specific Parameters Tab values**
 
@@ -71,30 +69,30 @@ Traditionally FortiGates associated with an Azure Virtual WAN (VWAN) were deploy
     - ***Leave*** all other items as is
     - ***Click*** "Next"
 
-    ![vwan7](../images/vwan7.jpg)
+        ![vwan7](../images/vwan7.jpg)
 
 1. **PublicIP Verification Tab values**
 
     - ***Click*** "Next"
 
-    ![vwan8](../images/vwan8.jpg)
+        ![vwan8](../images/vwan8.jpg)
 
 1. **Tags Tab values**
 
     - ***Click*** "Next"
 
-    ![vwan9](../images/vwan9.jpg)
+        ![vwan9](../images/vwan9.jpg)
 
 1. **Review + create Tab values**
 
     - ***Scroll*** down to agree to the terms and conditions
     - ***Click*** "Create"
 
-    ![vwan10](../images/vwan10.jpg)
+        ![vwan10](../images/vwan10.jpg)
 
-    {{% notice info %}}The FortiGate NVAs take about 15 minutes to deploy. Grab a refreshment and relax! You will see the screen belows when the deployment is progressing and complete.{{% /notice %}}
+        {{% notice info %}}The FortiGate NVAs take about 15 minutes to deploy. Grab a refreshment and relax! You will see the screen belows when the deployment is progressing and complete.{{% /notice %}}
 
-    ![vwan11](../images/vwan11.jpg)
-    ![vwan12](../images/vwan12.jpg)
+        ![vwan11](../images/vwan11.jpg)
+        ![vwan12](../images/vwan12.jpg)
 
 Continue to ***Chapter 2***

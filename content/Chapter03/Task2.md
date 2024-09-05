@@ -1,14 +1,12 @@
 ---
-title: "2 - Spoke to Internet Traffic"
-menuTitle: "2 - Spoke to Internet Traffic"
+title: "Task 2 - Spoke to Internet Traffic"
+linkTitle: "2 - Spoke to Internet Traffic"
 weight: 20
 ---
 
-## North South Inspection
+## Spoke to Internet Traffic
 
 Can traffic pass from a spoke to the Internet?
-
-### Spoke to Internet traffic
 
 1. ***Ping*** from the Linux Spoke VMs to the Internet
 
@@ -29,15 +27,15 @@ Can traffic pass from a spoke to the Internet?
       - **0** - means: continuous output
       - **a** - means: absolute UTC time, yyyy-mm-dd hh:mm:ss.ms
 
-    Linux-Spoke1_VM | Linux-Spoke2_VM
-    :-:|:-:
-    ![northsouthping1](../images/northsouthping1.jpg) | ![northsouthping2](../images/northsouthping2.jpg)
+        Linux-Spoke1_VM | Linux-Spoke2_VM
+        :-:|:-:
+        ![northsouthping1](../images/northsouthping1.jpg) | ![northsouthping2](../images/northsouthping2.jpg)
 
-    In the screenshots notice how this time the ping traffic appeared on FortiGate 1
+        In the screenshots notice how this time the ping traffic appeared on FortiGate 1
 
-    FortiGate 0 | FortiGate 1
-    :-:|:-:
-    ![fgtpingdiag5](../images/fgtpingdiag5.jpg) | ![fgtpingdiag6](../images/fgtpingdiag6.jpg)
+        FortiGate 0 | FortiGate 1
+        :-:|:-:
+        ![fgtpingdiag5](../images/fgtpingdiag5.jpg) | ![fgtpingdiag6](../images/fgtpingdiag6.jpg)
 
     The ping traffic is only on one FortiGate, this is because the internal load balancer sends traffic from the Spokes to one of the FortiGates for inspection.
 
@@ -64,14 +62,14 @@ Can traffic pass from a spoke to the Internet?
         Enable this policy | **enabled**
     - ***Click*** "OK"
 
-    ![firewall2](../images/firewall2.jpg)
+        ![firewall2](../images/firewall2.jpg)
 
-    Linux-Spoke1_VM | Linux-Spoke2_VM
-    :-:|:-:
-    ![northsouthping3](../images/northsouthping3.jpg) | ![northsouthping4](../images/northsouthping4.jpg)
+        Linux-Spoke1_VM | Linux-Spoke2_VM
+        :-:|:-:
+        ![northsouthping3](../images/northsouthping3.jpg) | ![northsouthping4](../images/northsouthping4.jpg)
 
-    FortiGate 0 | FortiGate 1
-    :-:|:-:
-    ![fgtpingdiag7](../images/fgtpingdiag7.jpg) | ![fgtpingdiag8](../images/fgtpingdiag8.jpg)
+        FortiGate 0 | FortiGate 1
+        :-:|:-:
+        ![fgtpingdiag7](../images/fgtpingdiag7.jpg) | ![fgtpingdiag8](../images/fgtpingdiag8.jpg)
 
 You have completed the all session tasks.
