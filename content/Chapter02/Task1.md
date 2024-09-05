@@ -1,7 +1,7 @@
 ---
-title: "FGSP Setup"
+title: "1 - FGSP Setup"
 menuTitle: "1 - FGSP Setup"
-weight: 15
+weight: 20
 ---
 
 ## Task 1
@@ -87,4 +87,4 @@ After FortiGate deployment is completed the next step is to configure **FortiGat
 
 FGSP is now configured and the FortiGates will share session information.
 
-Continue to ***Task 2***
+Continue to ***Next Task***

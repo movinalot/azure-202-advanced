@@ -1,5 +1,5 @@
 ---
-title: "Chapter 1 Deploy"
+title: "Chapter 1: Deploy"
 menuTitle: "Chapter 1: Deploy"
 weight: 10
 ---
@@ -24,10 +24,12 @@ This session covers the following:
 - East-West Inspection between workloads in VNETs peered to the Hub
 - North-South inspection between workloads in VNETs peered to the Hub and the Internet
 
-Additionally, if desired and time permits:
+<!--Additionally, if desired and time permits:
 
-- Hub to Hub Connectivity - If there is more than 1.5 hours left in the session ask the instructors to deploy the resources required for this task.
+- Hub to Hub Connectivity - If there is more than 1.5 hours left in the session ask the instructors to deploy the resources required for this task.-->
 
 Environment network diagram for reference:
 
 ![networkdiagram1](./images/networkdiagram.png)
+
+Continue to ***First Task***

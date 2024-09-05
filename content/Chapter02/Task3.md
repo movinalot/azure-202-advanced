@@ -1,7 +1,7 @@
 ---
-title: "BGP Setup and Routing Intent"
+title: "3 - BGP & Routing Intent"
 menuTitle: "3 - BGP & Routing Intent"
-weight: 25
+weight: 40
 ---
 
 ## Task 3
@@ -95,4 +95,4 @@ Routing Intent and Routing Policies allow you to configure the Virtual WAN hub t
 
     ![bgp7](../images/bgp7.jpg)
 
-Continue to ***Task 4***
+Continue to ***Next Task***

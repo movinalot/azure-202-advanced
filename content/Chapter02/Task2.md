@@ -1,7 +1,7 @@
 ---
-title: "Confirm no traffic route between Spoke VNETS"
+title: "2 - VNET-to-VNET Traffic"
 menuTitle: "2 - VNET-to-VNET Traffic"
-weight: 20
+weight: 30
 ---
 
 ## Task 2
@@ -69,4 +69,4 @@ Determine that the Spoke VMs cannot communicate with each other.
 
     Both ping tests will fail, these resources are unable to access each other and resources on the Internet.
 
-Continue to ***Task 3***
+Continue to ***Next Task***

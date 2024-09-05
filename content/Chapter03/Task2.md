@@ -1,7 +1,7 @@
 ---
-title: "North South Inspection "
+title: "2 - Spoke to Internet Traffic"
 menuTitle: "2 - Spoke to Internet Traffic"
-weight: 3
+weight: 20
 ---
 
 ## North South Inspection
@@ -74,4 +74,4 @@ Can traffic pass from a spoke to the Internet?
     :-:|:-:
     ![fgtpingdiag7](../images/fgtpingdiag7.jpg) | ![fgtpingdiag8](../images/fgtpingdiag8.jpg)
 
-You have completed the session tasks.
+You have completed the all session tasks.

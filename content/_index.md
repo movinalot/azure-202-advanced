@@ -16,8 +16,8 @@ This session is "__Public Cloud - 202 - Secured Azure FortiGate Integrated vWAN 
 - Setup Routing Intent to secure network traffic via the Fortinet FortiGates
 - Connect Azure Virtual Networks (VNETs) to the VWAN Hub
 - Secure East/West network traffic - Spoke-to-Spoke
-- Secure North/South network traffic - Internal-to-External
+- Secure North/South network traffic - Internal-to-Internet
 
-### The Bonus Goal
+<!--### The Bonus Goal
 
-- Configure Hub to Hub Traffic Inspection
+- Configure Hub to Hub Traffic Inspection-->

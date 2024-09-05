@@ -1,7 +1,7 @@
 ---
-title: "VNET Peering & Verification"
+title: "4 - VNETs & Verification"
 menuTitle: "4 - VNETs & Verification"
-weight: 30
+weight: 50
 ---
 
 ## Task 4

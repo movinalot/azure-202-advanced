@@ -1,8 +1,8 @@
 ---
-title: "Chapter 3 Traffic Inspection"
+title: "Chapter 3: Traffic Inspection"
 chapter: false
 menuTitle: "Chapter 3: Traffic Inspection"
-weight: 20
+weight: 10
 ---
 
 ## Traffic Inspection
@@ -25,4 +25,4 @@ Commonly used tools ***ping*** and **curl** will help determine availability and
 Additionally packet sniffing in the FortGate CLI will help determine if traffic is reaching the FortiGates for inspections and forwarding to the appropriate destination.
 {{% /notice %}}
 
-Continue to ***Task 1***
+Continue to ***First Task***
