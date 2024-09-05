@@ -14,6 +14,19 @@ At this point
 
 Can traffic pass from one spoke to another? Ping is commonly used to test connectivity between devices.
 
+1. ***Disable*** Probe Response on each FortiGate's port1 interface
+
+    Both interfaces on the FortiGate may have **Probe Response** configured to respond to the Azure Internal Load Balancer Health Probes. This can cause traffic to take an unexpected path to the FortiGate. Ensure only the FortiGate interface that is expecting Spoke VNET traffic is responding to Load Balancer Heath Probes.
+
+    - ***Navigate*** to Network -> Interfaces
+    - ***Double-Click*** port1
+    - ***Uncheck*** Probe Response
+    - ***Click*** "OK"
+
+        ![proberesponse1](../images/proberesponse1.jpg)
+
+        ![proberesponse2](../images/proberesponse2.jpg)
+
 ### Spoke to Spoke traffic
 
 1. ***Ping*** between Linux Spoke VMs.

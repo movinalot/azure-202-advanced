@@ -12,12 +12,22 @@ FortiGates in the VWAN Hub use BGP for routing, configure BGP on the FortiGates
 
 1. ***Confirm*** Private address space of the vWAN hub
 
-    The private address space of the vWAN hub is needed to create a summary route from the private address range to the secondary interfaces of the FortiGate NVAs to establish BGP peering. The BGP peers are already configured and ready to go online after the route is enabled.
+    The private address space of the vWAN hub is needed to create a summary route from the private address range to the secondary interfaces of the FortiGate NVAs to establish BGP peering.
+
+    The FortiGates are deployed with BGP peers already configured and ready to go online after the static route is enabled.
 
     - ***Navigate*** to your Hub **vwanXX-eastus_VWAN**
     - ***View*** Hub Address space
 
         ![bgp1](../images/bgp1.jpg)
+
+1. View FortiGate BGP Peer status
+
+    - ***Open*** each FortiGate in a browser tab/window
+    - **Open** FortiGate CLI
+    - **Run** CLI command `get router info bgp summary` to view BGP Peer status
+
+        ![bgp0](../images/bgp0.jpg)
 
 1. ***Determine*** FortiGate NVA port2 Gateway
 
@@ -25,16 +35,15 @@ FortiGates in the VWAN Hub use BGP for routing, configure BGP on the FortiGates
 
     Every subnet in Azure uses the first address in the subnet as the gateway. For example, in the subnet 10.1.1.0/24 Azure uses 10.1.1.1 as the subnet gateway.
 
-    - ***Open*** each FortiGate in a browser tab/window
     - ***Click*** on Network
     - ***Click*** on Interfaces
     - ***View*** the assigned address of port2 and determine the gateway
 
-    In the following example, the first IP of the subnet is 10.1.112.1.
+    In the screenshot below the port2 IP address is 10.1.112.5/255.255.255.128 (/25)
+    - Network address is **10.1.112.0**
+    - Gateway address is **10.1.112.1**
 
-    In the screenshot below the port2 IP address is 10.1.112.5/255.255.255.128 or a /25 mask, which makes the network address 10.1.112.0 and the first IP, which Azure assigns as the gateway, is 10.1.112.1
-
-    ![bgp2](../images/bgp2.jpg)
+        ![bgp2](../images/bgp2.jpg)
 
 1. ***Configure*** Static Routes on each FortiGate
 
@@ -49,12 +58,20 @@ FortiGates in the VWAN Hub use BGP for routing, configure BGP on the FortiGates
 
         ![bgp3](../images/bgp3.jpg)
 
+1. Create a static route
+
     - ***Enter*** Destination - `10.1.0.0/16`
     - ***Enter*** Gateway Address - `10.1.112.1`
     - ***Select*** Interface - **port2**
     - ***Click*** "OK"
 
-    Repeat the process to add a static route for the load balancer probe
+        ![bgp4](../images/bgp4.jpg)
+
+1. Repeat the process to add a static route for the Azure Internal Load Balancer Health Probe
+
+    Refer to the overall [deployment diagram](../images/networkdiagram.png) for the Internal Load Balancer placement. Health Probes enable the Azure Load Balance to know if a FortiGate is in a state to forward traffic.
+
+    The static route Destination below is the default Azure Load Balancer Health Probe destination.
 
     - ***Enter*** Destination - `168.63.129.16/32`
     - ***Enter*** Gateway Address - `10.1.112.1`
@@ -64,15 +81,15 @@ FortiGates in the VWAN Hub use BGP for routing, configure BGP on the FortiGates
 
 1. ***Repeat*** the commands on the other FortiGate
 
-    ![bgp4](../images/bgp4.jpg)
+    When completed the static routes of each FortiGate should look similar to the screenshot below.
+
     ![bgp5](../images/bgp5.jpg)
 
 1. ***Verify*** BGP communication between FortiGate NVAs
 
-    After configuring the static routes on both FortiGates BGP peering is automatically enabled.
+    After configuring the static routes on both FortiGates BGP peers are reachable.
 
     - ***Verify*** BGP communication between FortiGate NVAs in the CLI.
-
     - **Open** FortiGate CLI
     - **Run** CLI command `get router info bgp summary`
 
@@ -86,12 +103,12 @@ Routing Intent and Routing Policies allow you to configure the Virtual WAN hub t
 
 1. ***Enable*** Routing Intent
 
-    - ***Navigate*** to your Hub - vwanXX-vHub1_eastus
-    - ***Click*** "Routing Intent" and Routing Policies
-    - ***Select*** for "Internet traffic" - Network Virtual Appliance
-    - ***Select*** for "Private traffic" - Network Virtual Appliance
-    - ***Select*** for **both** "Next Hop Resources" - your cluster name (the only selection in the dropdown)
-    - ***Click*** "Save" to update Routing Intent
+    - ***Navigate*** - to your Hub - vwanXX-vHub1_eastus
+    - ***Click*** - "Routing Intent and Routing Policies"
+    - ***Select*** - for "Internet traffic" - Network Virtual Appliance
+    - ***Select*** - for "Private traffic" - Network Virtual Appliance
+    - ***Select*** - for **both** "Next Hop Resources" - your cluster name (the only selection in the dropdown)
+    - ***Click*** - "Save" to update Routing Intent
 
         ![bgp7](../images/bgp7.jpg)
 

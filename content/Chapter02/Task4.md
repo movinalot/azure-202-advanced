@@ -6,7 +6,11 @@ weight: 50
 
 ## VNETs & Verification
 
-FortiGates are ready to inspect network traffic. Network traffic is coming from or going to workloads in the Spoke VNETs. In order for the FortiGates to managed the traffic the Spoke VNETs must be peered to the VWAN Hub.
+FortiGates are ready to inspect network traffic.
+
+Network traffic will be coming from or going to workloads in the Spoke VNETs.
+
+In order for the FortiGates to manage the traffic, the Spoke VNETs must be peered to the VWAN Hub.
 
 ### Peer Spoke VNETS to Hub
 

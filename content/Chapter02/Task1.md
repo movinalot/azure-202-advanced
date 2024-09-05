@@ -24,28 +24,22 @@ After FortiGate deployment is completed the next step is to configure **FortiGat
 1. ***Configure*** FGSP
 
     1. ***Open*** a CLI session on each FortiGate
+    1. Enter the blocks of CLI commands on each FortiGate.
 
     1. On FortiGate ending with **_0** configure the peerip address with the port2 private IP address of the FortiGate ending with **_1**.
 
-        {{% notice warning %}}Replace **x.x.x.x** with the port2 private IP address of the FortiGate ending with **_1**</br>
-        Copy these CLI commands to notepad or similar tool to update the *peerip* address.{{% /notice %}}
+        {{% notice warning %}}If the IP address of **port2** on FortiGate ending**_1** is not **10.1.112.6** replace the **peerip** below with the port2 private IP address of the FortiGate ending with **_1**</br>
+        Copy these CLI commands to notepad or similar tool to update the *peerip* address, if required.{{% /notice %}}
 
         ```basic
         config system standalone-cluster
             config cluster-peer
                 edit 1
-                    set peerip x.x.x.x
+                    set peerip 10.1.112.6
                 next
             end
             set standalone-group-id 1
             set group-member-id 1
-        end
-
-        config system ha
-            set session-pickup enable
-            set session-pickup-nat enable
-            set session-pickup-connectionless enable
-            set override disable
         end
         ```
 
@@ -55,10 +49,19 @@ After FortiGate deployment is completed the next step is to configure **FortiGat
         **Please first make sure the member is isolated from FGSP cluster properly.**</br>
         **Do you want to continue? (y/n)**</br>
 
+        ```basic
+        config system ha
+            set session-pickup enable
+            set session-pickup-nat enable
+            set session-pickup-connectionless enable
+            set override disable
+        end
+        ```
+
     1. On FortiGate ending with **_1** configure the peerip address with the port2 private IP address of the FortiGate ending with **_1**.
 
-        {{% notice warning %}}Replace **x.x.x.x** with the port2 private IP address of the FortiGate ending with **_0**</br>
-        Copy these CLI commands to notepad or similar tool to update the *peerip* address.{{% /notice %}}
+        {{% notice warning %}}If the IP address of **port2** on FortiGate ending**_0** is not **10.1.112.5** replace the **peerip** below with the port2 private IP address of the FortiGate ending with **_0**</br>
+        Copy these CLI commands to notepad or similar tool to update the *peerip* address, if required.{{% /notice %}}
 
         {{% notice warning %}}Notice that the **group-member-id** is **2** in the CLI commands below{{% /notice %}}
 
@@ -66,18 +69,11 @@ After FortiGate deployment is completed the next step is to configure **FortiGat
         config system standalone-cluster
             config cluster-peer
                 edit 1
-                    set peerip x.x.x.x
+                    set peerip 10.1.112.5
                 next
             end
             set standalone-group-id 1
             set group-member-id 2
-        end
-
-        config system ha
-            set session-pickup enable
-            set session-pickup-nat enable
-            set session-pickup-connectionless enable
-            set override disable
         end
         ```
 
@@ -87,6 +83,15 @@ After FortiGate deployment is completed the next step is to configure **FortiGat
         **Please first make sure the member is isolated from FGSP cluster properly.**</br>
         **Do you want to continue? (y/n)**</br>
 
-FGSP is now configured and the FortiGates will share session information.
+        ```basic
+        config system ha
+            set session-pickup enable
+            set session-pickup-nat enable
+            set session-pickup-connectionless enable
+            set override disable
+        end
+        ```
+
+**FGSP is now configured and the FortiGates will share session information.**
 
 Continue to ***Next Task***

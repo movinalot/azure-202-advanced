@@ -6,7 +6,7 @@ weight: 40
 
 ## FortiGate Deployment
 
-Traditionally FortiGates associated with an Azure Virtual WAN (VWAN) were deployed in a Virtual Network (VNET) that was connected to an Azure Virtual WAN Hub. The deployment being done today has FortiGates being deployed directly into (integrated with) the VWAN hub. This type of deployment frees the administrator from having to deploy and manage Azure Virtual Machines. 
+Traditionally FortiGates associated with an Azure Virtual WAN (VWAN) were deployed in a Virtual Network (VNET) that was connected to an Azure Virtual WAN Hub. The deployment being done today has FortiGates being deployed directly into (integrated with) the VWAN hub. This type of deployment frees the administrator from having to deploy and manage Azure Virtual Machines.
 
 1. ***Click*** on VWAN **vwanXX-eastus_VWAN** in your Resource Group. **XX** is the number of your allocated environment.
 
@@ -48,18 +48,18 @@ Traditionally FortiGates associated with an Azure Virtual WAN (VWAN) were deploy
 
 1. **Basics Tab values**
 
-    - ***Select*** Resource Group - **vwanXX-training** -- **Be sure to select your Resource Group**
-    - ***Select*** Region - East US -- **Should already be defaulted to the correct region**
-    - ***Enter*** FortiGate administrative username - ```fortixperts```
-    - ***Enter***  password - ```Fortixperts2024!```
-    - ***Confirm*** password - ```Fortixperts2024!```
-    - ***Enter*** FortiGate Name Prefix - **vwanXX** -- **Be sure to enter your allocated environment number for XX.**
-    - ***Select*** FortiGate License Type - "Pay As you Go (PAYG)"
-    - ***Select*** FortiGate Image Version - "7.4.X" -- **Be sure to select the highest 7.4 version.**
-    - ***Select*** Azure vWan deployment type - "SDWAN + NGFW (Hybrid)"
-    - ***Enter*** Application Name - vwanXX -- **Be sure to enter your allocated environment number for XX.**
-    - ***Update*** Managed Resource Group - Append "_vwanXX" to the provided name -- **Be sure to enter your allocated environment number for XX.**
-    - ***Click*** "Next"
+    - ***Select*** - Resource Group - **vwanXX-training** -- *Be sure to select your Resource Group*
+    - ***Select*** - Region - **East US** -- *Should already be defaulted to the correct region*
+    - ***Enter*** - FortiGate administrative username - ```fortixperts```
+    - ***Enter*** - password - ```Fortixperts2024!```
+    - ***Confirm*** - password - ```Fortixperts2024!```
+    - ***Enter*** - FortiGate Name Prefix - **vwanXX** -- *Be sure to enter your allocated environment number for XX.*
+    - ***Select*** - FortiGate License Type - "**Pay As you Go (PAYG)**"
+    - ***Select*** - FortiGate Image Version - "**7.4.X**" -- *Be sure to select the highest 7.4 version.*
+    - ***Select*** - Azure vWan deployment type - "**SDWAN + NGFW (Hybrid)**"
+    - ***Enter*** - Application Name - **vwanXX** -- *Be sure to enter your allocated environment number for XX.*
+    - ***Update*** - Managed Resource Group - Append "**_vwanXX**" to the provided name -- *Be sure to enter your allocated environment number for XX.*
+    - ***Click*** - "**Next**"
 
         ![vwan6](../images/vwan6.jpg)
 
