@@ -1,7 +1,7 @@
 ---
-title: "East West Inspection "
+title: "1 - Spoke to Spoke Traffic"
 menuTitle: "1 - Spoke to Spoke Traffic"
-weight: 1
+weight: 10
 ---
 
 ## EAST WEST Inspection
@@ -78,4 +78,4 @@ Can traffic pass from one spoke to another? Ping is commonly used to test connec
     :-:|:-:
     ![fgtpingdiag3](../images/fgtpingdiag3.jpg) | ![fgtpingdiag4](../images/fgtpingdiag4.jpg)
 
-Continue to ***Task 2***
+Continue to ***Next Task***

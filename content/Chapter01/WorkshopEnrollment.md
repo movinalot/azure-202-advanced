@@ -1,7 +1,7 @@
 ---
 title: "Workshop Enrollment"
 menuTitle: "Workshop Enrollment"
-weight: 2
+weight: 20
 ---
 
 ## Public Cloud - 202 - Secured Azure FortiGate Integrated vWAN Hub
@@ -10,11 +10,11 @@ weight: 2
 
 {{% notice info %}}
 
-### Customer/Partner Name  and Event Code
+### Email, Customer Name, and Event Code
 
-* If you are using this workshop for a __Customer/Partner__ - enter their name
-* If you are a __Customer/Partner__ - enter your __Customer/Partner__ name
-* If this is an instructor led event please enter the provided __Event Code__
+* Enter your email address
+* Enter your Partner or Customer Name
+* Event Code is set
 
 {{% /notice %}}
 
@@ -23,5 +23,3 @@ weight: 2
 {{% notice style="secondary" icon="eye" title="PLEASE DO NOT SUBMIT MULTIPLE TIMES"  %}} After submitting, this page will return with a blank email address box and no other indications.
 
 {{% /notice %}}
-
-Continue to ___Task 1___

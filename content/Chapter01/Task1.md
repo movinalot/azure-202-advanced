@@ -1,7 +1,7 @@
 ---
-title: "Azure Portal & Resources"
+title: "1 - Azure Portal & Resources"
 menuTitle: "1 - Azure Portal & Resources"
-weight: 5
+weight: 30
 ---
 
 ## Task 1
@@ -18,6 +18,10 @@ The work for this session takes place in Azure and on FortiGates deployed into t
 1. ***Click*** "Yes" to "Stay singed in?"
 
     ![portallogin2](../images/portallogin2.png)
+
+1. ***Click*** "Cancel" on the "Welcome to Microsoft Azure" page (if displayed)
+
+    ![portallogin2](../images/portallogin2.jpg)
 
 1. ***Click*** "Resource groups"
 
@@ -48,4 +52,4 @@ Before moving on to the next task, please read below:
     - **Linux-Spoke1-VM**
     - **Linux-Spoke2-VM**
 
-Continue to ***Task 2***
+Continue to ***Next Task***

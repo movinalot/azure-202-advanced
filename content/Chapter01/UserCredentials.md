@@ -1,8 +1,10 @@
 ---
 title: "User Credentials"
 menuTitle: "User Credentials"
-weight: 35
+weight: 10
 ---
+
+These are the credentials that are used throughout the session
 
 ## Azure Portal Login
 
