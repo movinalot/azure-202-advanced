@@ -29,6 +29,8 @@ The work for this session takes place in Azure and on FortiGates deployed into t
 
 1. ***Click*** your Resource Group named *vwanXX-training*. **XX** is the number of your allocated environment.
 
+    {{% notice tip %}}In an Azure environment there can be many Resource Groups, use the search field to find your Resource Group.{{% /notice %}}
+
     ![portallogin4](../images/portallogin4.png)
 
 1. ***View*** the already deployed resources already deployed

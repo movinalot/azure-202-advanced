@@ -19,7 +19,7 @@ At this point
 - Can response traffic from the Internet get back to the Spokes?
 
 {{% notice info %}}
-Commonly used tools ***ping*** and **curl** will help determine availability and reachability of devices and services.
+Commonly used tools **ping** and **curl** will help determine availability and reachability of devices and services.
 
 Additionally packet sniffing in the FortGate CLI will help determine if traffic is reaching the FortiGates for inspections and forwarding to the appropriate destination.
 {{% /notice %}}
