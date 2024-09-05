@@ -4,7 +4,9 @@ menuTitle: "Chapter 1: Deploy"
 weight: 10
 ---
 
-## Overview of your environment
+## Deploy
+
+### Overview of your environment
 
 Azure Virtual WAN is a networking service that brings many networking, security, and routing functionalities together to provide a single operational interface.
 

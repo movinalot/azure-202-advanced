@@ -1,10 +1,10 @@
 ---
-title: "Chapter 2: Configure and Verify"
-menuTitle: "Chapter 2: Configure and Verify"
+title: "Chapter 2: Configure & Verify"
+menuTitle: "Chapter 2: Configure & Verify"
 weight: 10
 ---
 
-## Configure your environment
+## Configure and Verify
 
 The next set of tasks focus on enabling these FortiGate and Azure VWAN capabilities.
 

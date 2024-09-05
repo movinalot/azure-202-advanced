@@ -1,6 +1,6 @@
 ---
 title: "User Credentials"
-menuTitle: "User Credentials"
+linkTitle: "User Credentials"
 weight: 10
 ---
 

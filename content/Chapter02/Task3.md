@@ -1,10 +1,10 @@
 ---
-title: "3 - BGP & Routing Intent"
-menuTitle: "3 - BGP & Routing Intent"
+title: "Task 3 - BGP & Routing Intent"
+linkTitle: "3 - BGP & Routing Intent"
 weight: 40
 ---
 
-## Task 3
+## BGP & Routing Intent
 
 FortiGates in the VWAN Hub use BGP for routing, configure BGP on the FortiGates
 
@@ -17,7 +17,7 @@ FortiGates in the VWAN Hub use BGP for routing, configure BGP on the FortiGates
     - ***Navigate*** to your Hub **vwanXX-eastus_VWAN**
     - ***View*** Hub Address space
 
-    ![bgp1](../images/bgp1.jpg)
+        ![bgp1](../images/bgp1.jpg)
 
 1. ***Determine*** FortiGate NVA port2 Gateway
 
@@ -47,7 +47,7 @@ FortiGates in the VWAN Hub use BGP for routing, configure BGP on the FortiGates
     - ***Click*** Static Routes
     - ***Click*** Create New
 
-    ![bgp3](../images/bgp3.jpg)
+        ![bgp3](../images/bgp3.jpg)
 
     - ***Enter*** Destination - `10.1.0.0/16`
     - ***Enter*** Gateway Address - `10.1.112.1`
@@ -76,7 +76,7 @@ FortiGates in the VWAN Hub use BGP for routing, configure BGP on the FortiGates
     - **Open** FortiGate CLI
     - **Run** CLI command `get router info bgp summary`
 
-    ![bgp6](../images/bgp6.jpg)
+        ![bgp6](../images/bgp6.jpg)
 
     More information about FortiGate static routes and BGP can be found in [Fortinet documents](https://docs.fortinet.com/document/fortigate-public-cloud/7.4.0/azure-vwan-ngfw-deployment-guide/860717/configuring-static-routes-and-enabling-bgp-on-fortigate-nvas).
 
@@ -93,6 +93,6 @@ Routing Intent and Routing Policies allow you to configure the Virtual WAN hub t
     - ***Select*** for **both** "Next Hop Resources" - your cluster name (the only selection in the dropdown)
     - ***Click*** "Save" to update Routing Intent
 
-    ![bgp7](../images/bgp7.jpg)
+        ![bgp7](../images/bgp7.jpg)
 
 Continue to ***Next Task***
