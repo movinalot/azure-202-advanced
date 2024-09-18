@@ -1,6 +1,6 @@
 ---
-title: "Task 1 - Spoke to Spoke Traffic"
-linkTitle: "1 - Spoke to Spoke Traffic"
+title: "Task 1: Spoke to Spoke Traffic"
+linkTitle: "Task 1: Spoke to Spoke Traffic"
 weight: 10
 ---
 

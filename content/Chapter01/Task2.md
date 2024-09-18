@@ -1,6 +1,6 @@
 ---
-title: "Task 2 - FortiGate Deployment"
-linkTitle: "2 - FortiGate Deployment"
+title: "Task 2: FortiGate Deployment"
+linkTitle: "Task 2: FortiGate Deployment"
 weight: 40
 ---
 

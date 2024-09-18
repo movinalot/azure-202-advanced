@@ -1,6 +1,6 @@
 ---
-title: "Task 1 - Azure Portal & Resources"
-linkTitle: "1 - Azure Portal & Resources"
+title: "Task 1: Azure Portal & Resources"
+linkTitle: "Task 1: Azure Portal & Resources"
 weight: 30
 ---
 

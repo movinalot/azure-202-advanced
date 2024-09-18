@@ -1,6 +1,6 @@
 ---
-title: "Task 3 - BGP & Routing Intent"
-linkTitle: "3 - BGP & Routing Intent"
+title: "Task 3: BGP & Routing Intent"
+linkTitle: "Task 3: BGP & Routing Intent"
 weight: 40
 ---
 

@@ -11,6 +11,6 @@ resource "azurerm_virtual_hub" "vhub" {
   resource_group_name = each.value.name
   location            = each.value.location
   virtual_wan_id      = azurerm_virtual_wan.vwan[each.key].id
-  address_prefix      = "10.1.0.0/16"
+  address_prefix      = local.hub_address_space
 }
 
