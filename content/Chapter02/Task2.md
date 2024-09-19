@@ -1,6 +1,6 @@
 ---
-title: "Task 2 - VNET-to-VNET Traffic"
-linkTitle: "2 - VNET-to-VNET Traffic"
+title: "Task 2: VNET-to-VNET Traffic"
+linkTitle: "Task 2: VNET-to-VNET Traffic"
 weight: 30
 ---
 

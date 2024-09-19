@@ -1,6 +1,6 @@
 ---
-title: "Task 2 - Spoke to Internet Traffic"
-linkTitle: "2 - Spoke to Internet Traffic"
+title: "Task 2: Spoke to Internet Traffic"
+linkTitle: "Task 2: Spoke to Internet Traffic"
 weight: 20
 ---
 
@@ -48,6 +48,7 @@ Can traffic pass from a spoke to the Internet?
     - ***Navigate*** to "Policy & Objects"
     - ***Click*** Firewall Policy
     - ***Click*** Create new
+
         Attribute | Value
         -|-
         Name | **port2_to_port1**
@@ -60,6 +61,7 @@ Can traffic pass from a spoke to the Internet?
         NAT | **enabled**
         IP pool configuration | **Use Outgoing Interface Address**
         Enable this policy | **enabled**
+
     - ***Click*** "OK"
 
         ![firewall2](../images/firewall2.jpg)

@@ -1,6 +1,6 @@
 ---
-title: "Task 4 - VNETs & Verification"
-linkTitle: "4 - VNETs & Verification"
+title: "Task 4: VNETs & Verification"
+linkTitle: "Task 4: VNETs & Verification"
 weight: 50
 ---
 
@@ -48,7 +48,7 @@ In order for the FortiGates to manage the traffic, the Spoke VNETs must be peere
 
 Routes and routing are the key for users to access workloads in an Azure VNET and for those workloads to be able to access resources outside of their VNET. At this point routes and routing should be set within the Azure environment and in the FortiGate NVAs.
 
-From the perspective of the FortiGate a decision will be made to send traffic to a specific port based on FortiGate Policy. Once the traffic leaves teh FortiGate's port it is up to Azure to forward the traffic.
+From the perspective of the FortiGate a decision will be made to send traffic to a specific port based on FortiGate Policy. Once the traffic leaves the FortiGate's port it is up to Azure to forward the traffic.
 
 Where traffic will be sent in Azure can be determined by viewing the effective Routes associated to a particular networking service.
 

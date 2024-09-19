@@ -1,6 +1,6 @@
 ---
-title: "Task 1 - FGSP Setup"
-linkTitle: "1 - FGSP Setup"
+title: "Task 1: FGSP Setup"
+linkTitle: "Task 1: FGSP Setup"
 weight: 20
 ---
 
@@ -28,7 +28,7 @@ After FortiGate deployment is completed the next step is to configure **FortiGat
 
     1. On FortiGate ending with **_0** configure the peerip address with the port2 private IP address of the FortiGate ending with **_1**.
 
-        {{% notice warning %}}If the IP address of **port2** on FortiGate ending**_1** is not **10.1.112.6** replace the **peerip** below with the port2 private IP address of the FortiGate ending with **_1**</br>
+        {{% notice warning %}}If the IP address of **port2** on FortiGate ending **_1** is not **10.1.112.6** replace the **peerip** below with the port2 private IP address of the FortiGate ending with **_1**</br>
         Copy these CLI commands to notepad or similar tool to update the *peerip* address, if required.{{% /notice %}}
 
         ```basic
@@ -60,7 +60,7 @@ After FortiGate deployment is completed the next step is to configure **FortiGat
 
     1. On FortiGate ending with **_1** configure the peerip address with the port2 private IP address of the FortiGate ending with **_1**.
 
-        {{% notice warning %}}If the IP address of **port2** on FortiGate ending**_0** is not **10.1.112.5** replace the **peerip** below with the port2 private IP address of the FortiGate ending with **_0**</br>
+        {{% notice warning %}}If the IP address of **port2** on FortiGate ending **_0** is not **10.1.112.5** replace the **peerip** below with the port2 private IP address of the FortiGate ending with **_0**</br>
         Copy these CLI commands to notepad or similar tool to update the *peerip* address, if required.{{% /notice %}}
 
         {{% notice warning %}}Notice that the **group-member-id** is **2** in the CLI commands below{{% /notice %}}

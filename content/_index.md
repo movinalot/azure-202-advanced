@@ -5,11 +5,9 @@ weight: 1
 archetype: home
 ---
 
-## Welcome to Fortinet XPERTS USA Summit 2024
+Company ABC has decided to move to Azure Virtual WAN to do stuff
 
-This session is "__Public Cloud - 202 - Secured Azure FortiGate Integrated vWAN Hub__"
-
-### The Main Goals
+### Course Goals
 
 - Deploy FortiGate Network Virtual Appliances (NVAs) into an existing Azure Virtual WAN (VWAN) Hub.
 - Configure Static Routes and BGP
