@@ -1,6 +1,6 @@
 <#
     .DESCRIPTION
-        Remove Azure Virtual Hub Vnet Connections
+        Manage Azure Virtual Hub Vnet Connections
 
     .NOTES
         AUTHOR: jmcdonough@fortinet.com
@@ -35,7 +35,8 @@ foreach ($resourceGroup in $ResourceGroups) {
 				if ($Delete) {
 					Write-Host "Deleting vHub vnet connection - Resource Group: $($resourceGroup.ResourceGroupName) vHub: $($vHub.Name) - $($vhubVnetConnection.Name)"
 					Remove-AzVirtualHubVnetConnection -ResourceGroupName $resourceGroup.ResourceGroupName -ParentResourceName $vHub.Name -Name $vhubVnetConnection.Name -AsJob -Force
-				} else {
+				}
+				else {
 					Write-Host "vHub vnet connection Resource Group: $($resourceGroup.ResourceGroupName) vHub: $($vHub.Name) - $($vhubVnetConnection.Name)"
 				}
 			}

@@ -1,6 +1,6 @@
 <#
     .DESCRIPTION
-        Remove Azure Virtual Hub Routing Intent
+        Manage Azure Virtual Hub Routing Intent
 
     .NOTES
         AUTHOR: jmcdonough@fortinet.com
@@ -32,11 +32,12 @@ foreach ($resourceGroup in $ResourceGroups) {
 		$routingIntent = Get-AzRoutingIntent -ResourceGroupName $resourceGroup.ResourceGroupName -HubName $vHub.Name -ErrorAction SilentlyContinue
 		if ($routingIntent) {
 			if ($Delete) {
-                Write-Host "Deleting vHub Routing Intent - Resource Group: $($resourceGroup.ResourceGroupName) vHub: $($vHub.Name) - $($routingIntent.Id)"
+				Write-Host "Deleting vHub Routing Intent - Resource Group: $($resourceGroup.ResourceGroupName) vHub: $($vHub.Name) - $($routingIntent.Id)"
 				Remove-azroutingIntent -ResourceId $routingIntent.Id -AsJob -Force
-			} else {
-                Write-Host "vHub Routing Intent - Resource Group: $($resourceGroup.ResourceGroupName) vHub: $($vHub.Name) - $($routingIntent.Id)"
-            }
+			}
+			else {
+				Write-Host "vHub Routing Intent - Resource Group: $($resourceGroup.ResourceGroupName) vHub: $($vHub.Name) - $($routingIntent.Id)"
+			}
 		}
 	}
 }
