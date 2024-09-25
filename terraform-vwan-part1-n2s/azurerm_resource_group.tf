@@ -1,5 +1,5 @@
 ###################### ResourceGroup ######################
 data "azurerm_resource_group" "resource_group" {
-  for_each = toset(["vwan12"])
+  for_each = local.resource_group_names
   name     = "${each.value}-training"
 }
