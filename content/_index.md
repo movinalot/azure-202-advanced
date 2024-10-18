@@ -5,7 +5,7 @@ weight: 1
 archetype: home
 ---
 
-Company ABC has decided to move to Azure Virtual WAN to do stuff
+Company Jonnys tvs has decided to move to Azure Virtual WAN to do stuff
 
 ### Course Goals
 
