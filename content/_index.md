@@ -6,7 +6,7 @@ archetype: home
 ---
 
 Company Jonnys tvs, radio, and beds has decided to move to Azure Virtual WAN to do stuff
-
+New line here
 ### Course Goals
 
 - Deploy FortiGate Network Virtual Appliances (NVAs) into an existing Azure Virtual WAN (VWAN) Hub.
