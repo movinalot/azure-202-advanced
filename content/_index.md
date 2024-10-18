@@ -5,7 +5,7 @@ weight: 1
 archetype: home
 ---
 
-Company Jonnys tvs has decided to move to Azure Virtual WAN to do stuff
+Company Jonnys tvs, radio, and beds has decided to move to Azure Virtual WAN to do stuff
 
 ### Course Goals
 
