@@ -1,7 +1,7 @@
 ---
 title: "Chapter 4: Deploy Part II"
 menuTitle: "Chapter 4: Deploy Part II"
-weight: 10
+weight: 104
 ---
 
 ## Deploy Part II

@@ -1,7 +1,7 @@
 ---
 title: "Chapter 3: Traffic Inspection"
 menuTitle: "Chapter 3: Traffic Inspection"
-weight: 10
+weight: 103
 ---
 
 ## Traffic Inspection

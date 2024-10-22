@@ -1,7 +1,7 @@
 ---
 title: "Chapter 2: Configure & Verify"
 menuTitle: "Chapter 2: Configure & Verify"
-weight: 10
+weight: 102
 ---
 
 ## Configure and Verify
