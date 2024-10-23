@@ -1,6 +1,6 @@
 ---
 title: "Task 2: User Credentials"
-linkTitle: "User Credentials"
+linkTitle: "Task 2: User Credentials"
 weight: 2
 ---
 
