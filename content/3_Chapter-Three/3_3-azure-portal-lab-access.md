@@ -1,43 +1,54 @@
 ---
 title: "Task 3: Azure Portal - Lab Access"
+linkTitle: "Task 3: Azure Portal - Lab Access"
 weight: 3
 ---
 
-### Lab Environment
-- This lab is configured to allow each student to have their own training lab environment using pre-created Azure resource groups all in one shared Azure Subscription.
+## Azure Portal & Resources
 
-### Azure Portal Lab Access
-- First, you must log in to the Azure Portal. Then, you will gain access to the lab environment.
+The work for this session takes place in Azure and on FortiGates deployed into the Azure Virtual WAN Hub. The first step is to logon to the Azure Portal.
 
-### To access the Azure Portal sign-in page
-- 1. Open a browser and access the following URL:
-  - https://portal.azure.com
+### Login to Azure Portal and Review Existing Resources
 
+1. ***Navigate*** to [Azure Portal](https://portal.azure.com)
+1. ***Login*** with provided credentials
 
-- 2. Use the credentials shared with you by your instructors. 
-  - **Username**:  "**studentxx@fortinetcloud.onmicrosoft.com**"
-  - **Password**:  "**FortinetAzure2024!**"
+    ![portallogin1](../images/portallogin1.png)
 
+1. ***Click*** "Yes" to "Stay singed in?"
 
-- 3. Click **Log in**.
+    ![portallogin2](../images/portallogin2.png)
 
-- 4. Click **No** on the 'Stay signed in?' prompt
+1. ***Click*** "Cancel" on the "Welcome to Microsoft Azure" page (if displayed)
 
-- 5. Click **Get started** on the 'Welcome to Microsoft Azure' page.
+    ![portallogin2](../images/portallogin2.jpg)
 
-- 6. Click **Skip** on the 'How do you plan to use Azure' page.
+1. ***Click*** "Resource groups"
 
-- 7. Click **Skip** on the 'Now, let show you around Azure' page.
+    ![portallogin3](../images/portallogin3.png)
 
-- 8. Click on the **Home** link in the upper left corner.
-![](../Images/Azure-Home.PNG)
+1. ***Click*** your Resource Group named *vwanXX-training*. **XX** is the number of your allocated environment.
 
+    {{% notice tip %}}In an Azure environment there can be many Resource Groups, use the search field to find your Resource Group.{{% /notice %}}
 
-- 9. Click on **Resource Groups** in the main page.
-![](../Images/Azure-Portal-RG.PNG)
+    ![portallogin4](../images/portallogin4.png)
 
+1. ***View*** the already deployed resources already deployed
 
-- 10. Confrim your resource group is shown.
-![](../Images/Azure-Portal-Verify.PNG)
+    {{% notice info %}}The assigned resource group has already been deployed with key resources of this session.{{% /notice %}}
 
-**Continue to Chapter 4:  Deploy a VNET**
+    - **Review** and make sure all the following resources are deployed in your resource group.
+      - Virtual WAN (VWAN)
+        - **vwanXX-eastus_VWAN**
+        - Virtual Hub (VHUB)
+          - **vwanXX-vHub1_eastus** - This resource is visible in the Virtual Wan page.
+
+      - Virtual Networks (VNETS)
+        - **Spoke1-vHub1_VNET**
+        - **Spoke2-vHub1_VNET**
+
+      - Virtual Machines (VMs) with disk and network interface
+        - **Linux-Spoke1-VM**
+        - **Linux-Spoke2-VM**
+
+Continue to ***Next Task***

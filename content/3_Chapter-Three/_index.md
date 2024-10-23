@@ -1,6 +1,6 @@
 ---
 title: "Chapter 3: Getting Started" 
-weight: 10
+weight: 30
 ---
 
 
