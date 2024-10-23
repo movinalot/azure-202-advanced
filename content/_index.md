@@ -5,9 +5,9 @@ weight: 1
 archetype: home
 ---
 
-In this course you will learn how to deploy a FortiGate Network Virtual Appliance (NVA) into an existing Azure Virtual WAN (vWAN) to meet the requirements of Company ABC as they move server workloads from existing managed hubs and VNETs in Azure to the managed vWAN service. 
-This course will start with understanding key services and terminology used in Azure when deploying vWAN, hubs, VNETs, and routing services. 
-The course continues with the student deploying active/active FortiGate NVAs to secure the vWAN and configuring the the FortiGate NVAs to route and manage network traffic between Company ABC's hosted services.
+In this course you will learn how to deploy a FortiGate network virtual appliance (NVA) to an existing Azure Virtual WAN (vWAN) to meet the connectivity and security requirements of Company ABC as they move server workloads, from existing managed hubs and VNETs, to the managed vWAN service. 
+This course will start with understanding key resources and terminology used in Azure when deploying vWAN, hubs, VNETs, routing services, and FortiGate NVAs. 
+The course continues with the student deploying active/active FortiGate NVAs to secure the vWAN and configuring the the FortiGate NVAs to route and manage network traffic between Company ABC's hosted services located in VNETs.
 
 ### Course Goals
 
