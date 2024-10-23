@@ -1,16 +1,13 @@
 ---
-title: "Task 4: VNETs & Verification"
-linkTitle: "Task 4: VNETs & Verification"
-weight: 50
+title: "Task 5: VNET Peering and Verifying Routing"
+linkTitle: "Task 5: VNET Peering and Verifying Routing"
+weight: 5
 ---
 
-## VNETs & Verification
 
-FortiGates are ready to inspect network traffic.
+In this task, the student will setup peering between the spokes/VNETs and the vWAN hub.
+Then second part of this task it to verify routing by viewing the routing tables on the FortiGate NVAs, the hub, and effective routes on the hosts.
 
-Network traffic will be coming from or going to workloads in the Spoke VNETs.
-
-In order for the FortiGates to manage the traffic, the Spoke VNETs must be peered to the VWAN Hub.
 
 ### Peer Spoke VNETS to Hub
 
@@ -44,7 +41,7 @@ In order for the FortiGates to manage the traffic, the Spoke VNETs must be peere
 
         ![peering2](../images/peering2.jpg)
 
-### Verification
+### Verify Routing
 
 Routes and routing are the key for users to access workloads in an Azure VNET and for those workloads to be able to access resources outside of their VNET. At this point routes and routing should be set within the Azure environment and in the FortiGate NVAs.
 
@@ -94,4 +91,8 @@ Where traffic will be sent in Azure can be determined by viewing the effective R
 
     **The effective route's next Hop IP is the IP address of Internal Load balancer is deployed with the FortiGate NVAs.**
 
-Continue to ***Chapter 3***
+The diagram below is a visual representation of what you have deployed and configured.  Congrats!
+
+![](../images/1_1-az-vwan-single-hub-ra.PNG)]
+
+Continue to ***Chapter 5***

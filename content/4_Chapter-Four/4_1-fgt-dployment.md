@@ -1,12 +1,10 @@
 ---
-title: "Task 1: FortiGate Deployment"
-linkTitle: "Task 1: FortiGate Deployment"
+title: "Task 1: FortiGate NVA Deployment"
+linkTitle: "Task 1: FortiGate NVA Deployment"
 weight: 1
 ---
 
-## FortiGate Deployment
-
-Traditionally FortiGates associated with an Azure Virtual WAN (VWAN) were deployed in a Virtual Network (VNET) that was connected to an Azure Virtual WAN Hub. The deployment being done today has FortiGates being deployed directly into (integrated with) the VWAN hub. This type of deployment frees the administrator from having to deploy and manage Azure Virtual Machines.
+In task one, you will deploy a FortiGate NVA into the vWAN hub that you have been assigned to.
 
 1. ***Click*** on VWAN **vwanXX-eastus_VWAN** in your Resource Group. **XX** is the number of your allocated environment.
 
@@ -95,4 +93,4 @@ Traditionally FortiGates associated with an Azure Virtual WAN (VWAN) were deploy
         ![vwan11](../images/vwan11.jpg)
         ![vwan12](../images/vwan12.jpg)
 
-Continue to ***Chapter 2***
+Continue to ***Chapter 4 - Task 2: Configure FGSP***

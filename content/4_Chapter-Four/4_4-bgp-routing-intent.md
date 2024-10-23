@@ -1,14 +1,12 @@
 ---
-title: "Task 3: BGP & Routing Intent"
-linkTitle: "Task 3: BGP & Routing Intent"
-weight: 40
+title: "Task 4: BGP & Routing Intent"
+linkTitle: "Task 4: BGP & Routing Intent"
+weight: 4
 ---
 
-## BGP & Routing Intent
+In task four, the student will configure BGP on the FortiGates and enable Routing Intent from the Azure hub portal.
 
-FortiGates in the VWAN Hub use BGP for routing, configure BGP on the FortiGates
-
-### BGP Setup
+### Configure BGP
 
 1. ***Confirm*** Private address space of the vWAN hub
 
@@ -112,4 +110,4 @@ Routing Intent and Routing Policies allow you to configure the Virtual WAN hub t
 
         ![bgp7](../images/bgp7.jpg)
 
-Continue to ***Next Task***
+Continue to ***Chapter 4 - Task 5: VNET Peering and Verifying Routing***

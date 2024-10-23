@@ -1,18 +1,23 @@
 ---
-title: "Chapter 4: FortiGate NVA Deployment"
-menuTitle: "Chapter 4: FortiGate NVA Deployment"
+title: "Chapter 4: Securing the Azure vWAN"
+menuTitle: "Chapter 4: Securing the Azure vWAN"
 weight: 40
 ---
 
 
-In this chapter, you will navigate to your assigned vWAN hub and deploy a pair of Fortigate NVAs.
+In this chapter, the student will navigate to your assigned vWAN hub and deploy a pair of Fortigate NVAs to secure the vWAN.  After the Fortigates have been deployed, the student will configure FGSP, static and dynamic routing, and confirm connectivity between spoke/vNET resources.
 
 ### Overview
-- Deploy FortiGate NVAs into a VWAN Hub
+- Deploy FortiGate NVAs into asiigned VWAN hub
+- Configure FGSP on both FortiGate NVAs
+- Confirm VNET to VNET connectivity
+- Configure BGP and enable Routing Intent
+
 - East-West Inspection between workloads in VNETs peered to the Hub
 - North-South inspection between workloads in VNETs peered to the Hub and the Internet
 
+After you have completed the above tasks, the diagram below is a visual representation of what you have deployed and configured.
 
 ![](../images/1_1-az-vwan-single-hub-ra.PNG)]
 
-Continue to ***Chapter XX***
+Continue to ***Chapter 4 - Task 1: - FortiGate NVA Deployment***

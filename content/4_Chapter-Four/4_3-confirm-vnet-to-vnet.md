@@ -1,10 +1,8 @@
 ---
-title: "Task 2: VNET-to-VNET Traffic"
-linkTitle: "Task 2: VNET-to-VNET Traffic"
-weight: 30
+title: "Task 3: VNET-to-VNET Traffic"
+linkTitle: "Task 3: VNET-to-VNET Traffic"
+weight: 3
 ---
-
-## VNET-to-VNET Traffic
 
 To be part of and Azure Virtual WAN, Azure Virtual Networks need to be connected to the Azure Virtual WAN Hub. Prior to VNETs being connected to a VWAN, virtual machines in the VNET will route their traffic based on Azure default routing, user defined routing in Azure Route Tables, or Routes advertised by the Azure Route Server.
 
@@ -68,4 +66,4 @@ Determine that the Spoke VMs cannot communicate with each other.
 
     **Both ping tests will fail, these resources are unable to access each other and resources on the Internet.**
 
-Continue to ***Next Task***
+Continue to ***Chapter 4 - Task 4: BGP & Routing Intent***
