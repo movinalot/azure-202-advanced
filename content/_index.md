@@ -22,4 +22,4 @@ The course continues with the student deploying active/active FortiGate NVAs to 
 
 ![](./images/1_1-az-vwan-single-hub-ra.PNG)
 
-**Continue to Chapter 1: Architecture Diagrams**
+**Continue to Chapter 1: Reference Diagrams**
