@@ -5,31 +5,29 @@ weight: 3
 
 
 
-Need to add FGT NVA support info here!!
+Microsoft Azure supports virtual WAN (vWAN), and partners with third-party solution providers, such as Fortinet, to deploy network virtual appliances (NVAs) to a vWAN hub.
 
-### FortiGate-VM
-By combining stateful inspection with a comprehensive suite of powerful security features, FortiGate next generation firewall technology delivers complete content and network protection. This solution is available for deployment on Microsoft Azure.
+### FortiGate NVA
+By combining stateful inspection with a comprehensive suite of powerful security features, FortiGate next generation firewall technology delivers complete content and network protection. This solution is available for deployment in the Microsoft Azure vWAN managed service.
 
 In addition to advanced features such as an extreme threat database, vulnerability management, and flow-based inspection, features including application control, firewall, antivirus, IPS, web filter, and VPN work in concert to identify and mitigate the latest complex security threats.
 
-FortiGate-VM for Azure supports active/passive high availability (HA) configuration with FortiGate-native unicast HA synchronization between the primary and secondary nodes. When the FortiGate-VM detects a failure, the passive firewall instance becomes active and uses Azure API calls to configure its interfaces/ports.
-
-FortiGate-VM also supports active/passive HA and active/active HA using Azure load balancer services.
+FortiGate NVAs are deployed in an active/active high availability (HA) configuration with FortiGate-native FGSP synchronization between the NVAs.
 
 
-### Instance Type Support
-FortiGate supports the following instance types on Azure:
-- Compute optimized instance types
-    - [**F Series**](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-compute)
+### Order Types
+You can choose one of the following scale unit values when deploying FortiGate NVAs.  Higher scale units are available for increased bandwidth requirements. A specific FortiGate virtual machine license is recommended for each scale unit value.
 
-- General purpose instance types
-    - [**D Series**](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-general)
+- NGFW Deployment
+![](../images/2_3-fortigate-support-vwan-ngfw.PNG)
 
-- Memory optimized instance types
-    - [**E Series**](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-memory)
+- SD-WAN NGFW Deployment
+![](../images/2_3-fortigate-support-vwan-sdwan-ngfw.PNG)
 
-### Models
-FortiGate-VM is available with different CPU and RAM sizes and you can deploy it on various private and public cloud platforms. The following table shows the models conventionally available to order, also known as bring your own license models.
-![](../Images/Azure-FGT-Support-Models.PNG)
+
+### Deployment Requirements
+Deployment requires the following:
+- Two full FortiGate licenses if using bring your own license (BYOL) or FortiFlex. Alternatively, you can select pay as you go (PAYG) during deployment.
+- One fully licensed FortiManager instance (PAYG or BYOL)
 
 **Continue to Chapter 3 - Getting Started**
