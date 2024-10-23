@@ -4,7 +4,7 @@ weight: 30
 ---
 
 
-In this chapter, you will enter your information to confirm course attendance and login to the Azure portal with your assign credentials.
+In this chapter, you will complete the course enrollment, review the lab credentials, and login to the Azure portal with your assign credentials.
 
 
 

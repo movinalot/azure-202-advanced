@@ -1,7 +1,7 @@
 ---
-title: "Task 2: FortiGate Deployment"
-linkTitle: "Task 2: FortiGate Deployment"
-weight: 40
+title: "Task 1: FortiGate Deployment"
+linkTitle: "Task 1: FortiGate Deployment"
+weight: 1
 ---
 
 ## FortiGate Deployment
