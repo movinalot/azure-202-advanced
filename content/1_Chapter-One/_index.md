@@ -14,7 +14,7 @@ Students will deploy and configure the following two architectures:
 ![](./images/1_1-az-vwan-single-hub-ra.PNG)
 
 
-- **Deploy a second vWAN hub and managed traffic with the FortiGate NVAs**
+- **Students will deploy a second vWAN hub, a VNET, and configure routing.  Network Traffic between the hubs will be managed through the FortiGate NVAs**
 ![](./images/1_1-az-vwan-second-hub-ra.PNG)
 
 **Continue to Chapter 2 - Azure Virtual WAN Concepts**
