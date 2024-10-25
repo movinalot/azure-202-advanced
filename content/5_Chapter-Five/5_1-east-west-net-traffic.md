@@ -83,7 +83,7 @@ In this task, the student will create FortiGate firewall policies to allow east-
     - Linux-Spoke2-VM - `ping 192.168.1.4`
 
 
-Linux-Spoke1_VM | Linux-Spoke2_VM
+        Linux-Spoke1_VM | Linux-Spoke2_VM
         :-:|:-:
         ![eastwestping3](../images/eastwestping3.jpg) | ![eastwestping4](../images/eastwestping4.jpg)
 
