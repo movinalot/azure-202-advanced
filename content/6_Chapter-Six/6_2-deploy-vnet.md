@@ -1,7 +1,7 @@
 ---
 title: "Task 2: Deploy a VNET"
 linkTitle: "Task 2: Deploy a VNET"
-weight: 30
+weight: 2
 ---
 
 ## Deploy a VNET

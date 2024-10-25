@@ -12,13 +12,12 @@ The course continues with the student deploying active/active FortiGate NVAs to 
 ### Course Goals
 
 - Learn key Azure vWAN resources and terms related to this course
-- Deploy a pair of FortiGate Network Virtual Appliances (NVAs) to an existing Azure Virtual WAN (vWAN) hub
-- Enable Routing Intent to route the vWAN hub traffice to the Fortinet FortiGate NVAs
-- Configure Static Routing and dynamic routing with BGP
-- Connect existing Azure Virtual Networks (VNETs) to the vWAN Hub
+- Deploy a pair of FortiGate Network Virtual Appliances (NVAs) to an existing Azure vWAN hub and configure FGSP
+- Configure dynamic routing with BGP and enable Routing Intent
+- Peer Azure Virtual Networks (VNETs) to the vWAN Hub
 - Manage East/West network traffic - Spoke-to-Spoke
 - Manage North/South network traffic - Spoke-to-Internet
-- Add a second vWAN hub, create and connect a VNET, and managed traffic between the vWAN hubs
+- Deploy a second vWAN hub, create and peer a VNET, and manage network traffic between the vWAN hubs
 
 ![](./images/1_1-az-vwan-single-hub-ra.PNG)
 

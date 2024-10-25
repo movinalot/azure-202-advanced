@@ -1,12 +1,10 @@
 ---
-title: "Task 2: Spoke to Internet Traffic"
-linkTitle: "Task 2: Spoke to Internet Traffic"
-weight: 20
+title: "Task 2: North-South Network Traffic"
+linkTitle: "Task 2: North-South Network Traffic"
+weight: 2
 ---
 
-## Spoke to Internet Traffic
-
-Can traffic pass from a spoke to the Internet?
+In this task, the student will create FortiGate firewall policies to allow North-South network traffic.
 
 1. ***Ping*** from the Linux Spoke VMs to the Internet
 
@@ -74,4 +72,4 @@ Can traffic pass from a spoke to the Internet?
         :-:|:-:
         ![fgtpingdiag7](../images/fgtpingdiag7.jpg) | ![fgtpingdiag8](../images/fgtpingdiag8.jpg)
 
-You have completed the all session tasks.
+Continue to ***Chapter 6 - Adding a Second vWAN Hub***

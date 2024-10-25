@@ -1,18 +1,10 @@
 ---
-title: "Task 1: Spoke to Spoke Traffic"
-linkTitle: "Task 1: Spoke to Spoke Traffic"
-weight: 10
+title: "Task 1: East-West Network Traffic"
+linkTitle: "Task 1: East-West Network Traffic"
+weight: 1
 ---
 
-## Spoke to Spoke Traffic
-
-At this point
-
-- Azure Virtual WAN Routing Intent and Route Tables are configured
-- Azure Virtual Networks (the Spokes) are connected to the VWAN
-- FortiGate BGP is configured and has learned the Spoke networks
-
-Can traffic pass from one spoke to another? Ping is commonly used to test connectivity between devices.
+In this task, the student will create FortiGate firewall policies to allow east-west network traffic.
 
 1. ***Disable*** Probe Response on each FortiGate's port1 interface
 
@@ -91,4 +83,4 @@ Can traffic pass from one spoke to another? Ping is commonly used to test connec
         :-:|:-:
         ![fgtpingdiag3](../images/fgtpingdiag3.jpg) | ![fgtpingdiag4](../images/fgtpingdiag4.jpg)
 
-Continue to ***Next Task***
+Continue to ***Chapter 5 - Task 2: North-South Network Traffic***

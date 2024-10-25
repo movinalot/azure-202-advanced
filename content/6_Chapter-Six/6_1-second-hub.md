@@ -1,7 +1,7 @@
 ---
 title: "Task 1: Deploy a VWAN Hub"
 linkTitle: "Task 1: Deploy a VWAN Hub"
-weight: 20
+weight: 1
 ---
 
 ## Deploy a VWAN Hub
