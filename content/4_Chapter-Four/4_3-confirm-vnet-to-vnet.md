@@ -6,7 +6,7 @@ weight: 3
 
 To be part of and Azure Virtual WAN, Azure Virtual Networks need to be connected to the Azure Virtual WAN Hub. Prior to VNETs being connected to a VWAN, virtual machines in the VNET will route their traffic based on Azure default routing, user defined routing in Azure Route Tables, or Routes advertised by the Azure Route Server.
 
-Two "Spoke" VNETs have been deployed in the Azure environment, each with a Spoke virtual machine (VM). The Spoke VNETs just stand-alone VNETs whose VMs cannot communicate with each other without setting up, VNET Peering and Routing.
+Two "Spoke" VNETs have been deployed in the Azure environment, each with a Spoke virtual machine (VM). The Spoke VNETs are just stand-alone VNETs whose VMs cannot communicate with each other without setting up VNET Peering and Routing.
 
 Determine that the Spoke VMs cannot communicate with each other.
 
