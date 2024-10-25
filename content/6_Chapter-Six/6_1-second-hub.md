@@ -1,9 +1,10 @@
 ---
-title: "Task 1: Deploy a VWAN Hub"
-linkTitle: "Task 1: Deploy a VWAN Hub"
+title: "Task 1: Deploy a second VWAN Hub"
+linkTitle: "Task 1: Deploy a second VWAN Hub"
 weight: 1
 ---
 
+PICK UP FROM HERE:  In this task, the student.....
 ## Deploy a VWAN Hub
 
 The initial Virtual WAN setup was already done for you before the session. Now you will deploy a Hub in another Azure Region. The Hub will eventually have a Virtual Network (VNET) associated to it, with a Linux server deployed in the associated VNET.
@@ -40,4 +41,5 @@ The initial Virtual WAN setup was already done for you before the session. Now y
         ![hub8](../images/hub8.jpg)
         ![hub9](../images/hub9.jpg)
 
-Continue to ***Next Task***
+
+Continue to ***Chapter 6 - Task 2: Deploy a VNET***

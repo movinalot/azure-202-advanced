@@ -4,7 +4,10 @@ linkTitle: "Task 2: North-South Network Traffic"
 weight: 2
 ---
 
+
 In this task, the student will create FortiGate firewall policies to allow North-South network traffic.
+
+
 
 1. ***Ping*** from the Linux Spoke VMs to the Internet
 
@@ -64,6 +67,10 @@ In this task, the student will create FortiGate firewall policies to allow North
 
         ![firewall2](../images/firewall2.jpg)
 
+4. ***Ping*** from the Linux Spoke VMs to the Internet and confirm the pings are successful
+    - Linux-Spoke1-VM - `ping 8.8.8.8`
+    - Linux-Spoke2-VM - `ping 8.8.8.8`
+
         Linux-Spoke1_VM | Linux-Spoke2_VM
         :-:|:-:
         ![northsouthping3](../images/northsouthping3.jpg) | ![northsouthping4](../images/northsouthping4.jpg)
@@ -71,5 +78,6 @@ In this task, the student will create FortiGate firewall policies to allow North
         FortiGate 0 | FortiGate 1
         :-:|:-:
         ![fgtpingdiag7](../images/fgtpingdiag7.jpg) | ![fgtpingdiag8](../images/fgtpingdiag8.jpg)
+
 
 Continue to ***Chapter 6 - Adding a Second vWAN Hub***

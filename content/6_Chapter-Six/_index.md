@@ -5,11 +5,13 @@ weight: 60
 ---
 
 
-The next set of tasks focus on adding more Infrastructure to the Virtual WAN.
+In chapter six, the student will deploy a second vWAN hub, create a VNET and peer to the new hub, deploy a Linux VM and managed network connectivity between the two hubs.
 
-- Add an additional Hub in another Azure Region
-- Create an Azure Virtual Network
-- Associating Azure Virtual Network to the VWAN Hub
-- Deploy a Linux Server
+## Overview
+- Deploy a second vWAN hub in another Azure region
+- Create an Azure VNET
+- Peer the new VNET to the second vWAN hub
+- Deploy a Linux VM
+- Manage network traffic between the two hubs
 
-Continue to ***First Task***
+Continue to ***Chapter 6 - Task 1: Deploy a second VWAN Hub***

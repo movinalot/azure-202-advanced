@@ -4,7 +4,9 @@ linkTitle: "Task 1: East-West Network Traffic"
 weight: 1
 ---
 
+
 In this task, the student will create FortiGate firewall policies to allow east-west network traffic.
+
 
 1. ***Disable*** Probe Response on each FortiGate's port1 interface
 
@@ -75,6 +77,12 @@ In this task, the student will create FortiGate firewall policies to allow east-
 
         ![firewall1](../images/firewall1.jpg)
 
+
+4. ***Ping*** between Linux Spoke VMs and confirm connectivity.
+        - Linux-Spoke1-VM - `ping 172.16.1.4`
+        - Linux-Spoke2-VM - `ping 192.168.1.4`
+
+
         Linux-Spoke1_VM | Linux-Spoke2_VM
         :-:|:-:
         ![eastwestping3](../images/eastwestping3.jpg) | ![eastwestping4](../images/eastwestping4.jpg)
@@ -82,5 +90,6 @@ In this task, the student will create FortiGate firewall policies to allow east-
         FortiGate 0 | FortiGate 1
         :-:|:-:
         ![fgtpingdiag3](../images/fgtpingdiag3.jpg) | ![fgtpingdiag4](../images/fgtpingdiag4.jpg)
+
 
 Continue to ***Chapter 5 - Task 2: North-South Network Traffic***
