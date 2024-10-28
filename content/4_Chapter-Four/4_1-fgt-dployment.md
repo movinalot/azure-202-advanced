@@ -14,7 +14,7 @@ In task one, you will deploy a FortiGate NVA into the vWAN hub that you have bee
 
     ![vwan2](../images/vwan2.jpg)
 
-1. ***Click*** on the Hub
+1. ***Click*** on your assigned hub
 
 1. ***View*** information about Hub
 
@@ -22,7 +22,7 @@ In task one, you will deploy a FortiGate NVA into the vWAN hub that you have bee
     - Location (Region)
     - Private Address Space
 
-1. ***Check*** statuses
+1. ***Confirm the status of the following:***
 
     - Hub status: **Succeeded**
     - Routing status: **Provisioned**
@@ -36,9 +36,9 @@ In task one, you will deploy a FortiGate NVA into the vWAN hub that you have bee
 1. ***Select*** fortinet-sdwan-and-ngfw
 1. ***Click*** "Create". proceed to leave site to redirect to Marketplace.
 
-    - If a warning is displayed about "Leaving" the **site** or **page** ***Click*** the "Leave" button
-
         ![vwan4](../images/vwan4.jpg)
+
+- If a warning is displayed about "Leaving" the site, select the **Leave page** button.
         ![](../images/4_1-fortigate-deployment-2.PNG)
 
 1. ***Click*** "Create" on the Marketplace listing for "**Azure Virtual WAN Secured by FortiGate**"
