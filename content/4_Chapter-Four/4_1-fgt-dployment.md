@@ -78,7 +78,7 @@ In task one, you will deploy a FortiGate NVA into the vWAN hub that you have bee
 
     - ***No screenshot included in the step***
 
-15. On the **Tags** tab, select "Next"
+15. On the **Tags** tab, select "Next".
 
     - ***No screenshot included in this step***
 
@@ -90,13 +90,15 @@ In task one, you will deploy a FortiGate NVA into the vWAN hub that you have bee
 ![](../images/4_1-fortigate-deployment-7.PNG)
 
 
-{{% notice info %}}The FortiGate NVAs take about 15 minutes to deploy. Grab a refreshment and relax! You will see the screen belows when the deployment is progressing and complete.{{% /notice %}}
+{{% notice info %}}The FortiGate NVAs take about 15 minutes to deploy. Grab a refreshment and relax! You will see the screen belows when the deployment is in progress and when complete.{{% /notice %}}
 
 
 ![](../images/4_1-fortigate-deployment-8.PNG)
 
+
 17. Click on your assigned **Resource group** to return to your RG and prepare for the next task.
 
 ![](../images/4_1-fortigate-deployment-9.PNG)
+
 
 Continue to ***Chapter 4 - Task 2: Configure FGSP***
