@@ -4,7 +4,7 @@ linkTitle: "Task 2: User Credentials"
 weight: 2
 ---
 
-These are the credentials that are used throughout the session
+These are the credentials that are used throughout the session.  It is recommended you open this page in a new tab for quick reference.
 
 ## Azure Portal Login
 

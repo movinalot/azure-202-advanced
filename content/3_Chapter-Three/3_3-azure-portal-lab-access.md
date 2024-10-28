@@ -39,11 +39,11 @@ The work for this session takes place in Azure and on FortiGates deployed into t
 
     - **Review** and make sure all the following resources are deployed in your resource group.
       - Virtual WAN (VWAN)
-        - **vwanXX-eastus_VWAN**
-        - Virtual Hub (VHUB)
-          - **vwanXX-vHub1_eastus** - This resource is visible in the Virtual Wan page.
+        - **vwanXX-training_VWAN**
+        - Virtual Hub (vhub) - This resource is visible in the vwanXX-training_VWAN page.  Navigate to **Connectivity** then **Hubs** on the left side of the page.
+          - **vwanXX-eastus-vHub1_VHUB** 
 
-      - Virtual Networks (VNETS)
+      - Virtual Networks (VNETs)
         - **Spoke1-vHub1_VNET**
         - **Spoke2-vHub1_VNET**
 

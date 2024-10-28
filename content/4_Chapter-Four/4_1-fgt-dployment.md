@@ -6,7 +6,7 @@ weight: 1
 
 In task one, you will deploy a FortiGate NVA into the vWAN hub that you have been assigned to.
 
-1. ***Click*** on VWAN **vwanXX-eastus_VWAN** in your Resource Group. **XX** is the number of your allocated environment.
+1. ***Click*** on VWAN **vwanXX-training_VWAN** in your Resource Group. **XX** is the number of your allocated environment.
 
     ![vwan1](../images/vwan1.jpg)
 
@@ -22,7 +22,7 @@ In task one, you will deploy a FortiGate NVA into the vWAN hub that you have bee
     - Location (Region)
     - Private Address Space
 
-1. ***Confirm the status of the following:***
+1. ***Confirm*** the status of the following:
 
     - Hub status: **Succeeded**
     - Routing status: **Provisioned**
@@ -36,7 +36,7 @@ In task one, you will deploy a FortiGate NVA into the vWAN hub that you have bee
 1. ***Select*** fortinet-sdwan-and-ngfw
 1. ***Click*** "Create". proceed to leave site to redirect to Marketplace.
 
-        ![vwan4](../images/vwan4.jpg)
+![](../images/vwan4.jpg)
 
 - If a warning is displayed about "Leaving" the site, select the **Leave page** button.
         ![](../images/4_1-fortigate-deployment-2.PNG)
@@ -44,6 +44,10 @@ In task one, you will deploy a FortiGate NVA into the vWAN hub that you have bee
 1. ***Click*** "Create" on the Marketplace listing for "**Azure Virtual WAN Secured by FortiGate**"
 
     ![vwan5](../images/vwan5.jpg)
+
+10. ***Click*** on "Yes, continue" on the Continue creating this plan? screen.
+
+![](../images/4_1-fortigate-deployment-4.PNG)
 
 1. On the "Create Azure Virtual WAN Secured by FortiGate" window, enter the following values in the **Basics** tab:
 

@@ -5,12 +5,12 @@ weight: 40
 ---
 
 
-In this chapter, the student will navigate to your assigned vWAN hub and deploy a pair of Fortigate NVAs to secure the vWAN.  After the Fortigates have been deployed, the student will configure FGSP, dynamic routing, enable Routing Intent, and confirm connectivity between VNET resources.
+In this chapter, the student will navigate to your assigned vWAN hub and deploy a pair of Fortigate NVAs to secure the vWAN.  After the Fortigates have been deployed, the student will configure FGSP, test VNET to VNET and Internet connectivity, configure BGP, enable Routing Intent, and peer VNETs with the vWAN hub.
 
 ### Overview
 - Deploy FortiGate NVAs into assigned VWAN hub
 - Configure FGSP on both FortiGate NVAs
-- Confirm VNET to VNET connectivity
+- Confirm no VNET to VNET or Internet connectivity
 - Configure BGP and enable Routing Intent
 - Peer VNETs with the vWAN hub
 
