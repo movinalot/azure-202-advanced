@@ -64,7 +64,7 @@ In task one, you will deploy a FortiGate NVA into the vWAN hub that you have bee
     - ***Update*** - Managed Resource Group - Append "**_vwanXX**" to the provided name -- *Enter your assigned lab number for XX.*
     - ***Click*** - "**Next**"
 
-    ![](../images/4_1-fortigate-deployment-3.PNG)
+![](../images/4_1-fortigate-deployment-3_1.PNG)
 
 13. On the **FortiGate in Virtual WAN Specific Parameters** tab, enter the following values:
 
