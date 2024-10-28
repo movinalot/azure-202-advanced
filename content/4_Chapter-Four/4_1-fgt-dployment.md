@@ -39,27 +39,28 @@ In task one, you will deploy a FortiGate NVA into the vWAN hub that you have bee
     - If a warning is displayed about "Leaving" the **site** or **page** ***Click*** the "Leave" button
 
         ![vwan4](../images/vwan4.jpg)
+        ![](../images/4_1-fortigate-deployment-2.PNG)
 
-1. ***Click*** "Create" on the Marketplace listing for "**Azure Virtual WAN Secured by Fortinet FortiGate**"
+1. ***Click*** "Create" on the Marketplace listing for "**Azure Virtual WAN Secured by FortiGate**"
 
     ![vwan5](../images/vwan5.jpg)
 
-1. **Basics Tab values**
+1. On the "Create Azure Virtual WAN Secured by FortiGate" window, enter the following values in the **Basics** tab:
 
-    - ***Select*** - Resource Group - **vwanXX-training** -- *Be sure to select your Resource Group*
-    - ***Select*** - Region - **East US** -- *Should already be defaulted to the correct region*
+    - ***Select*** - Resource Group - **vwanXX-training** -- *Be sure to select your assigned Resource Group*
+    - ***Select*** - Region - **East US** -- *May already be defaulted to the correct region*
     - ***Enter*** - FortiGate administrative username - ```fortixperts```
     - ***Enter*** - password - ```Fortixperts2024!```
     - ***Confirm*** - password - ```Fortixperts2024!```
-    - ***Enter*** - FortiGate Name Prefix - **vwanXX** -- *Be sure to enter your allocated environment number for XX.*
+    - ***Enter*** - FortiGate Name Prefix - **vwanXX** -- *Enter your assigned lab number for XX.*
     - ***Select*** - FortiGate License Type - "**Pay As you Go (PAYG)**"
     - ***Select*** - FortiGate Image Version - "**7.4.X**" -- *Be sure to select the highest 7.4 version.*
     - ***Select*** - Azure vWan deployment type - "**SDWAN + NGFW (Hybrid)**"
-    - ***Enter*** - Application Name - **vwanXX** -- *Be sure to enter your allocated environment number for XX.*
-    - ***Update*** - Managed Resource Group - Append "**_vwanXX**" to the provided name -- *Be sure to enter your allocated environment number for XX.*
+    - ***Enter*** - Application Name - **vwanXX** -- *Enter your assigned lab number for XX.*
+    - ***Update*** - Managed Resource Group - Append "**_vwanXX**" to the provided name -- *Enter your assigned lab number for XX.*
     - ***Click*** - "**Next**"
 
-        ![vwan6](../images/vwan6.jpg)
+    ![](../images/4_1-fortigate-deployment-3.PNG)
 
 1. **FortiGate in Virtual WAN Specific Parameters Tab values**
 

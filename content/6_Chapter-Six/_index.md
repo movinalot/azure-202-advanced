@@ -5,7 +5,7 @@ weight: 60
 ---
 
 
-In chapter six, the student will deploy a second vWAN hub, create a VNET and peer to the new hub, deploy a Linux VM and managed network connectivity between the two hubs.
+In chapter six, the student will deploy a second vWAN hub and create a VNET.  Next the student will peer the VNET to the new hub, deploy a Linux VM, and managed network connectivity between the two hubs.
 
 ## Overview
 - Deploy a second vWAN hub in another Azure region
