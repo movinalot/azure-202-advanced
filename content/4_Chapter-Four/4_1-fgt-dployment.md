@@ -66,36 +66,37 @@ In task one, you will deploy a FortiGate NVA into the vWAN hub that you have bee
 
     ![](../images/4_1-fortigate-deployment-3.PNG)
 
-1. **FortiGate in Virtual WAN Specific Parameters Tab values**
+1. On the **FortiGate in Virtual WAN Specific Parameters** tab, enter the following values:
 
-    - ***Select*** Virtual WAN Hub - select vwanXX-vHub1_eastus -- **Be sure to enter your allocated environment number for XX.**
+    - ***Select*** Virtual WAN Hub - select vwanXX-eastus-vHub1_VHUB -- **Be sure to enter your assigned lab number for XX.**
     - ***Leave*** all other items as is
     - ***Click*** "Next"
 
-        ![vwan7](../images/vwan7.jpg)
+![](../images/4_1-fortigate-deployment-5.PNG)
 
-1. **PublicIP Verification Tab values**
-
-    - ***Click*** "Next"
-
-        ![vwan8](../images/vwan8.jpg)
-
-1. **Tags Tab values**
+1. On the **PublicIP Verification** tab, select "Next".
 
     - ***Click*** "Next"
 
-        ![vwan9](../images/vwan9.jpg)
+![](../images/4_1-fortigate-deployment-6.PNG)
 
-1. **Review + create Tab values**
+1. On the **Tags** tab, select "Next"
+
+    - ***No screenshot included in this step***
+
+1. On the **Review + create** tab, select the following:
 
     - ***Scroll*** down to agree to the terms and conditions
     - ***Click*** "Create"
 
-        ![vwan10](../images/vwan10.jpg)
+![](../images/4_1-fortigate-deployment-7.PNG)
 
         {{% notice info %}}The FortiGate NVAs take about 15 minutes to deploy. Grab a refreshment and relax! You will see the screen belows when the deployment is progressing and complete.{{% /notice %}}
 
-        ![vwan11](../images/vwan11.jpg)
-        ![vwan12](../images/vwan12.jpg)
+![](../images/4_1-fortigate-deployment-8.PNG)
+
+- Click on your assigned **Resource group** to return to your RG and prepare for the next task.
+
+![](../images/4_1-fortigate-deployment-9.PNG)
 
 Continue to ***Chapter 4 - Task 2: Configure FGSP***
