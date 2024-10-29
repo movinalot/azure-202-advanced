@@ -6,13 +6,13 @@ weight: 1
 
 In task one, you will deploy a FortiGate NVA into the vWAN hub that you have been assigned to.
 
-1. ***Click*** on VWAN **vwanXX-training_VWAN** in your Resource Group. **XX** is the number of your allocated environment.
+1. ***Click*** on VWAN **vwanXX-training_VWAN** in your Resource Group. **XX** is your assigned number.
 
-    ![vwan1](../images/vwan1.jpg)
+    ![](../images/4_1-fortigate-deployment-10.PNG)
 
 2. ***Click*** on "Hubs" in the "Connectivity" section of the left-hand navigation. A hub in EastUS has already been deployed.
 
-    ![vwan2](../images/vwan2.jpg)
+    ![](../images/4_1-fortigate-deployment-11.PNG)
 
 3. ***Click*** on your assigned hub
 
@@ -27,7 +27,7 @@ In task one, you will deploy a FortiGate NVA into the vWAN hub that you have bee
     - Hub status: **Succeeded**
     - Routing status: **Provisioned**
 
-        ![vwan3](../images/vwan3.jpg)
+        ![](../images/4_1-fortigate-deployment-12.PNG)
 
         {{% notice warning %}}Note: please move on to the next step **only** if Hub and Routing status have green checks.{{% /notice %}}
 
