@@ -182,11 +182,11 @@ enableEmoji = true
 
   [params.author]
   # Author of the site, will be used in meta information
-    name = "Srija Allam / John McDonough"
+    name = "Brent Martinez / John McDonough"
 
 
 [[menu.shortcuts]]
-name = "<i class='far fa-lightbulb'></i> Xperts Presentation"
+name = "<i class='far fa-lightbulb'></i> Xperts 2024 Presentation"
 url = "Xperts-2024-AZURE-202.pdf"
 weight = 10
 
@@ -201,7 +201,7 @@ url = "https://docs.fortinet.com/cloud-solutions/azure"
 weight = 30
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-tools'></i> AWS MP Listings for Fortinet"
+name = "<i class='fas fa-tools'></i> Azure MP Listings for Fortinet"
 url = "https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=fortinet"
 weight = 40
 

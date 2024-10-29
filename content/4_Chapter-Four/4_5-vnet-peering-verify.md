@@ -13,17 +13,17 @@ Then second part of this task it to verify routing by viewing the routing tables
 
 1. ***Peer*** Spoke1 VNET to hub
 
-    - ***Navigate*** to your Virtual Wan - **vwanXX-eastus_VWAN**
-    - ***Click*** "Virtual network connections"
+    - ***Navigate*** to your Virtual Wan - **vwanXX-training_VWAN**
+    - ***Click*** "Virtual network connections" on the left under "Connectivity".
     - ***Click*** "+ Add connection"
 
     - ***Enter*** - "Connection name" - `Spoke1`
-    - ***Select*** - "Hubs" - your Hub -**vwanXX-vHub1_eastus**
+    - ***Select*** - "Hubs" - your Hub -**vwanXX-eastus-vHub1_VHUB**
     - ***Select*** - "Resource group" - your Resource - **vwanXX-training**
     - ***Select*** - "Virtual Network" - Spoke 1's VNET - **Spoke1-vHub1_VNET**
     - ***Click*** - "Create"
 
-        ![peering1](../images/peering1.jpg)
+    ![](../images/4_5-vnet-peering-verify-1.PNG)
 
 1. ***Peer*** Spoke2 VNET to hub
 
