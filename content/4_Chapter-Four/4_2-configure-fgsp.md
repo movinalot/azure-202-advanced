@@ -8,16 +8,16 @@ After the FortiGate NVA deployments are complete, the next step is to configure 
 
 {{% notice tip %}}You will open a browser session to each FortiGate, the FortiGate GUI defaults to a 5 minute "Idle timeout". Avoid continually logging in by setting the idle timeout to 60 minutes in **System--> Settings:Administration Settings:Idle timeout**{{% /notice %}}
 
-1. ***Access*** FortiGate CLIs.
+1. To access the CLI on your FortiGate NVAs, following these steps:
 
-    - ***Navigate*** to your Hub **vwanXX-eastus_VWAN**
+    - From your Resource Group, navigate to your vWAN **"vwanxx-training_VWAN"** and then your hub **"vwanXX-eastus-vHub1_VHUB"**
     - ***Click*** Network Virtual Appliance in the left-hand navigation
     - ***Click*** "Click here" link under "Instances info" in the right-hand "Network Virtual Appliances" pane
     - ***Note*** FortiGate Public IP and Private IP addresses
     - ***Open*** a browser tab to each FortiGate using the Public IP address of each FortiGate
 
-        ![fgsp1](../images/fgsp1.jpg)
-        ![fgsp2](../images/fgsp2.jpg)
+        ![](../images/4_2-configure-fgsp-1.PNG)
+        ![](../images/4_2-configure-fgsp-2.PNG)
 
 1. ***Configure*** FGSP
 
