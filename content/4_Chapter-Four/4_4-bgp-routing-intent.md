@@ -41,7 +41,7 @@ In task four, the student will configure BGP on the FortiGates and enable Routin
     - Network address is **10.1.112.0**
     - Gateway address is **10.1.112.1**
 
-        ![](../images/4_4-bgp-routing-intent-2.PNG)
+![](../images/4_4-bgp-routing-intent-2.PNG)
 
 1. ***Configure*** Static Routes on each FortiGate
 
@@ -97,17 +97,17 @@ In task four, the student will configure BGP on the FortiGates and enable Routin
 
 ### Enable Routing Intent
 
-Routing Intent and Routing Policies allow you to configure the Virtual WAN hub to forward Internet-bound and Private (Point-to-site VPN, Site-to-site VPN, ExpressRoute, Virtual Network and Network Virtual Appliance) Traffic to an Azure Firewall, Next-Generation Firewall Network Virtual Appliance (NGFW-NVA) or security software-as-a-service (SaaS) solution deployed in the virtual hub.
+Routing Intent and Routing Policies allow you to configure the Virtual WAN hub to forward Internet-bound and Private (Point-to-site VPN, Site-to-site VPN, ExpressRoute, Virtual Network and Network Virtual Appliance) traffic to an Azure Firewall, Next-Generation Firewall Network Virtual Appliance (NGFW-NVA) or security software-as-a-service (SaaS) solution deployed in the virtual hub.
 
 1. ***Enable*** Routing Intent
 
-    - ***Navigate*** - to your Hub - vwanXX-vHub1_eastus
-    - ***Click*** - "Routing Intent and Routing Policies"
+    - ***Navigate*** - to your Hub - vwanXX-eastus-vHub1_VHUB
+    - ***Click*** - "Routing Intent and Routing Policies" on the left under "Routing"
     - ***Select*** - for "Internet traffic" - Network Virtual Appliance
     - ***Select*** - for "Private traffic" - Network Virtual Appliance
     - ***Select*** - for **both** "Next Hop Resources" - your cluster name (the only selection in the dropdown)
     - ***Click*** - "Save" to update Routing Intent
 
-        ![bgp7](../images/bgp7.jpg)
+![](../images/4_4-bgp-routing-intent-3.PNG)
 
 Continue to ***Chapter 4 - Task 5: VNET Peering and Verifying Routing***
