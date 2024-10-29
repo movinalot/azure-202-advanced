@@ -16,14 +16,14 @@ In this task, the student will confirm the Linux VMs cannot communicate between 
 
 2. VNET assigned address space can be determined by clicking on a VNET and viewing the **"Address space"** value on the right side of the "Overview" pane.
 
-        VNET **Spoke1-vHub1_VNET** is shown below.
-        ![](../images/4_3-confirm-vnet-to-vnet-2.PNG)
+VNET **Spoke1-vHub1_VNET** is shown below.
+![](../images/4_3-confirm-vnet-to-vnet-2.PNG)
 
 3. Repeat the above steps to determine the **"Address space"** for **Spoke2-vHub1_VNET**.
 
 4. To view the private IP addresses of the spoke VNET Linux VMs, navigate from your assigned resource group to each Linux VM - **"Linux-Spoke1_VM"** and **"Linux-Spoke2_VM"**.
 
-    ![](../images/4_3-confirm-vnet-to-vnet-3.PNG)
+        ![](../images/4_3-confirm-vnet-to-vnet-3.PNG)
 
         Linux-Spoke1_VM        | Linux-Spoke2_VM
         :-------------------------:|:-------------------------:
@@ -31,9 +31,9 @@ In this task, the student will confirm the Linux VMs cannot communicate between 
 
 5. Access the serial console on the Linux-Spoke1_VM.
 
-    - ***Scroll*** to the bottom of the left-hand navigation on the Linux-Spoke1_VM resource page
-    - ***Expand*** the "Help" section (if not already expanded)
-    - ***Click*** "Serial console"
+    - Scroll to the bottom of the left-hand navigation on the **Linux-Spoke1_VM** resource page
+    - Expand the ***Help*** section (if not already expanded)
+    - Click **"Serial console"**
 
     A serial console session will start in the right-hand pane
 
