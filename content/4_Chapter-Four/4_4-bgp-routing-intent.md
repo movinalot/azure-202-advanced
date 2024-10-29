@@ -8,7 +8,7 @@ In task four, the student will configure BGP on the FortiGates and enable Routin
 
 ### Configure BGP
 
-1. ***Confirm*** Private address space of the vWAN hub
+1. ***Confirm*** the private address space of the vWAN hub
 
     The private address space of the vWAN hub is needed to create a summary route from the private address range to the secondary interfaces of the FortiGate NVAs to establish BGP peering.
 
@@ -37,11 +37,11 @@ In task four, the student will configure BGP on the FortiGates and enable Routin
     - ***Click*** on Interfaces
     - ***View*** the assigned address of port2 and determine the gateway
 
-    In the screenshot below the port2 IP address is 10.1.112.5/255.255.255.128 (/25)
+    In the screenshot below, the port2 IP address is 10.1.112.5/255.255.255.128 (/25)
     - Network address is **10.1.112.0**
     - Gateway address is **10.1.112.1**
 
-        ![bgp2](../images/bgp2.jpg)
+        ![](../images/4_4-bgp-routing-intent-2.PNG)
 
 1. ***Configure*** Static Routes on each FortiGate
 
@@ -65,16 +65,16 @@ In task four, the student will configure BGP on the FortiGates and enable Routin
 
         ![bgp4](../images/bgp4.jpg)
 
-1. Repeat the process to add a static route for the Azure Internal Load Balancer Health Probe
+1. Repeat the process to add a static route for the Azure internal load balancer health probe
 
-    Refer to the overall [deployment diagram](../images/networkdiagram.png) for the Internal Load Balancer placement. Health Probes enable the Azure Load Balance to know if a FortiGate is in a state to forward traffic.
+    Refer to the overall [](../images/1_1-az-vwan-single-hub-ra.PNG) for the internal load balancer placement. Health probes enable the Azure load balancer to know if a FortiGate is in a state to forward traffic.
 
-    The static route Destination below is the default Azure Load Balancer Health Probe destination.
+    The static route destination below is the default Azure load balancer health probe destination.
 
-    - ***Enter*** Destination - `168.63.129.16/32`
-    - ***Enter*** Gateway Address - `10.1.112.1`
-    - ***Select*** Interface - **port2**
-    - ***Enter*** Administrative Distance - `5`
+    - ***Enter*** Destination: `168.63.129.16/32`
+    - ***Enter*** Gateway Address: `10.1.112.1`
+    - ***Select*** Interface: **port2**
+    - ***Enter*** Administrative Distance: `5`
     - ***Click*** "OK"
 
 1. ***Repeat*** the commands on the other FortiGate

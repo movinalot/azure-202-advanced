@@ -23,10 +23,10 @@ VNET **Spoke1-vHub1_VNET** is shown below.
 
 4. To view the private IP addresses of the spoke VNET Linux VMs, navigate from your assigned resource group to each Linux VM - **"Linux-Spoke1_VM"** and **"Linux-Spoke2_VM"**.
 
-        ![](../images/4_3-confirm-vnet-to-vnet-3.PNG)
-        Linux-Spoke1_VM        | Linux-Spoke2_VM
-        :-------------------------:|:-------------------------:
-        ![linuxvm1](../images/linuxvm1.jpg) |  ![](../images/4_3-confirm-vnet-to-vnet-4.PNG)
+    ![](../images/4_3-confirm-vnet-to-vnet-3.PNG)
+    Linux-Spoke1_VM        | Linux-Spoke2_VM
+    :-------------------------:|:-------------------------:
+    ![linuxvm1](../images/linuxvm1.jpg) |  ![](../images/4_3-confirm-vnet-to-vnet-4.PNG)
 
 5. Access the serial console on the Linux-Spoke1_VM.
 
