@@ -14,10 +14,10 @@ In task four, the student will configure BGP on the FortiGates and enable Routin
 
     The FortiGates are deployed with BGP peers already configured and ready to go online after the static route is enabled.
 
-    - ***Navigate*** to your Hub **vwanXX-eastus_VWAN**
+    - ***Navigate*** to your Hub **vwanXX-training_VWAN**
     - ***View*** Hub Address space
 
-        ![bgp1](../images/bgp1.jpg)
+        ![](../images/4_4-bgp-routing-intent-1.PNG)
 
 1. View FortiGate BGP Peer status
 
