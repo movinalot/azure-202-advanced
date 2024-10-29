@@ -10,7 +10,7 @@ After the FortiGate NVA deployments are complete, the next step is to configure 
 
 1. To access the CLI on your FortiGate NVAs, following these steps:
 
-    - From your Resource Group, navigate to your vWAN **"vwanxx-training_VWAN"** and then your hub **"vwanXX-eastus-vHub1_VHUB"**
+    - From your assigned Resource Group **"vwanxx-training"**, navigate to your vWAN **"vwanxx-training_VWAN"** and then your hub **"vwanXX-eastus-vHub1_VHUB"**
     - ***Click*** Network Virtual Appliance in the left-hand navigation
     - ***Click*** "Click here" link under "Instances info" in the right-hand "Network Virtual Appliances" pane
     - ***Note*** FortiGate Public IP and Private IP addresses

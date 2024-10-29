@@ -4,40 +4,33 @@ linkTitle: "Task 3: VNET-to-VNET Traffic"
 weight: 3
 ---
 
-To be part of and Azure Virtual WAN, Azure Virtual Networks need to be connected to the Azure Virtual WAN Hub. Prior to VNETs being connected to a VWAN, virtual machines in the VNET will route their traffic based on Azure default routing, user defined routing in Azure Route Tables, or Routes advertised by the Azure Route Server.
+To be part of an Azure Virtual WAN, Azure VNETs need to be peered to the Azure vWAN hub. Prior to VNETs being connected to a vWAN, virtual machines in the VNET will route their traffic based on Azure default routing, user defined routing (UDR), or routes advertised by the Azure Route Server.
 
-Two "Spoke" VNETs have been deployed in the Azure environment, each with a Spoke virtual machine (VM). The Spoke VNETs are just stand-alone VNETs whose VMs cannot communicate with each other without setting up VNET Peering and Routing.
+Two "Spoke" VNETs have been deployed in your assigned resource group, each with a Linux virtual machine (VM). The spoke VNETs are just stand-alone VNETs which means the Linux VMs in one spoke cannot communicate with Linux VMs in the other spoke without setting up VNET peering with the hub and configuring routing.
 
-Determine that the Spoke VMs cannot communicate with each other.
+In this task, the student will setup peering between the VNETs/spokes and the vWAN hub.  Then confirm the Linux VMs cannot communicate between VNETs and the Internet.
 
-### Spoke Virtual Networks (VNETs) and Virtual Machines (VMs)
 
-1. ***View*** the Spoke VNETs Address Space
+1. To view the assigned VNET address space, navigate from your assigned resource group to the two VNETs - **"Spoke1-vHub1_VNET"** and **"Spoke2-vHub1_VNET"**.
 
-    - Spoke1-vHub1_VNET with address space 192.168.1.0/24
-    - Spoke2-vHub1_VNET with address space 172.16.1.0/24
+![](../images/4_3-confirm-vnet-to-vnet-1.PNG)
 
-        ![vnets1](../images/vnets1.jpg)
-
-    VNET assigned address space can be view by:
+2. VNET assigned address space can be viewed by:
     - ***Clicking*** on a VNET
-    - ***Clicking*** "Address space" in the left-hand navigation
+    - Note the address space on the right side of the "Overview" pane.
 
-        VNET **Spoke2-vHub1_VNET** is shown below.
-        ![vnets2](../images/vnets2.jpg)
+        VNET **Spoke1-vHub1_VNET** is shown below.
+        ![](../images/4_3-confirm-vnet-to-vnet-2.PNG)
 
-1. ***View*** the private IP addresses of the Spoke VNETs Linux VMs
+2. To view the private IP addresses of the spoke VNET Linux VMs, navigate from your assigned resource group to each Linux VM - **"Linux-Spoke1_VM"** and **"Linux-Spoke2_VM"**.
 
-    - Linux-Spoke1_VM IP `192.168.1.4`
-    - Linux-Spoke2_VM IP `172.16.1.4`
-
-        ![linuxvms](../images/linuxvms.jpg)
+    ![](../images/4_3-confirm-vnet-to-vnet-3.PNG)
 
         Linux-Spoke1_VM        | Linux-Spoke2_VM
         :-------------------------:|:-------------------------:
-        ![linuxvm1](../images/linuxvm1.jpg) |  ![linuxvm2](../images/linuxvm2.jpg)
+        ![linuxvm1](../images/linuxvm1.jpg) |  ![](../images/4_3-confirm-vnet-to-vnet-4.PNG)
 
-1. ***Access*** the Serial console on Linux-Spoke1_VM view
+1. Access the serial console on the Linux-Spoke1_VM.
 
     - ***Scroll*** to the bottom of the left-hand navigation on the Linux-Spoke1_VM resource page
     - ***Expand*** the "Help" section (if not already expanded)
@@ -45,22 +38,22 @@ Determine that the Spoke VMs cannot communicate with each other.
 
     A serial console session will start in the right-hand pane
 
-1. ***Login*** to Linux-Spoke1_VM
+1. Login to Linux-Spoke1_VM:
 
     - username `fortixperts`
     - password `Fortixperts2024!`
 
-1. ***Ping*** Linux-Spoke2_VM
+1. Ping Linux-Spoke2_VM:
 
-    - `ping 172.16.1.4`
+    - `ping 192.168.2.4`
 
-        ![linuxvm1serial](../images/linuxvm1serial.jpg)
+        ![](../images/4_3-confirm-vnet-to-vnet-5.PNG)
 
-1. ***Ping*** Linux-Spoke1_VM from Linux-Spoke2_VM
+1. Ping Linux-Spoke1_VM from Linux-Spoke2_VM:
 
-    - ***Repeat*** previous steps to access the serial console of ***Linux-Spoke2_VM***
+    - Repeat previous steps to access the serial console of ***Linux-Spoke2_VM***
 
-1. ***Ping*** an Internet resource
+1. Ping an Internet resource from both Linux VMs:
 
     - `ping 8.8.8.8`
 
