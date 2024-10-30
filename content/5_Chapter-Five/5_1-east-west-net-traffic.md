@@ -22,7 +22,7 @@ In this task, the student will create FortiGate firewall policies to allow east-
 
         ![proberesponse2](../images/proberesponse2.jpg)
 
-### Spoke to Spoke traffic
+### Spoke to Spoke traffic (East-West)
 
 1. ***Ping*** between Linux Spoke VMs.
 
@@ -86,11 +86,11 @@ In this task, the student will create FortiGate firewall policies to allow east-
 
         Linux-Spoke1_VM | Linux-Spoke2_VM
         :-:|:-:
-        ![eastwestping3](../images/5_1-east-west-net-traffic-4.PNG) | ![eastwestping4](../images/eastwestping4.jpg)
+        ![eastwestping3](../images/5_1-east-west-net-traffic-4.PNG) | ![eastwestping4](../images/5_1-east-west-net-traffic-5.PNG)
 
         FortiGate 0 | FortiGate 1
         :-:|:-:
-        ![fgtpingdiag3](../images/5_1-east-west-net-traffic-5.PNG) | ![fgtpingdiag4](../images/fgtpingdiag4.jpg)
+        ![fgtpingdiag3](../images/5_1-east-west-net-traffic-6.PNG) | ![fgtpingdiag4](../images/fgtpingdiag4.jpg)
 
 
 Continue to ***Chapter 5 - Task 2: North-South Network Traffic***
