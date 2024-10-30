@@ -65,4 +65,4 @@ Feel free to read through the available disk services that can be changed/enable
 - 13. Verify the new **Linux-Spoke3-VM** and the associated componets are listed in your Resource Group.
 
 
-Continue to ***Chapter 6 - Task 4: Peer the New VNET to the Second Hub***
+Continue to ***Chapter 6 - Task 4: VNET Peering to the Second Hub***
