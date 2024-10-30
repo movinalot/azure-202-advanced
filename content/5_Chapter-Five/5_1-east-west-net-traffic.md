@@ -8,20 +8,6 @@ weight: 1
 In this task, the student will create FortiGate firewall policies to allow east-west network traffic.
 
 
-1. ***Disable*** Probe Response on each FortiGate's port1 interface
-
-    Both interfaces on the FortiGate may have **Probe Response** configured to respond to the Azure internal load balancer health probes. This can cause traffic to take an unexpected path to the FortiGate. Ensure only the FortiGate interface that is expecting Spoke VNET traffic (Port2) is responding to the load balancer heath probes.
-
-    On both FortiGate NVAs, configure the following:
-    - ***Navigate*** to Network -> Interfaces
-    - ***Double-Click*** port1
-    - ***Uncheck*** Probe Response
-    - ***Click*** "OK"
-
-        ![proberesponse1](../images/proberesponse1.jpg)
-
-        ![proberesponse2](../images/proberesponse2.jpg)
-
 ### Spoke to Spoke traffic (East-West)
 
 1. ***Ping*** between Linux Spoke VMs.
