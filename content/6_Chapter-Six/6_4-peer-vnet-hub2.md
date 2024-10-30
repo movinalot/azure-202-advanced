@@ -41,11 +41,11 @@ Now that the Spoke3-vHub2_VNET has been peered to your second hub (vwanXX-westus
 
         ![](../images/6_4-peer-vnet-hub2-3.PNG)
 
-    The output shows that BGP routes have been learned for the new Spoke3-vHub2_VNET peered to the new vwanXX-westus-vHub2_VHUB.
+    The output shows that BGP learned routes for the new Spoke3-vHub2_VNET peered to the new vwanXX-westus-vHub2_VHUB.
 
 2. ***View*** the effective routes, of the default route table, in both hubs.
     
-    ***vHub1***
+    - ***vHub1***
     - ***Navigate*** to your vWAN hub - **vwanXX-eastus-vHub1_VHUB**
     - On the left side, expand "Routing" and then "Effective Routes"
     - ***Select*** - "Route Tables" under "Choose resource type"
@@ -55,13 +55,13 @@ Now that the Spoke3-vHub2_VNET has been peered to your second hub (vwanXX-westus
 
         ![](../images/4_5-vnet-peering-verify-5.PNG)
 
-    ***vHub2***
+    - ***vHub2***
     - ***Navigate*** to your vWAN hub - **vwanXX-westus-vHub2_VHUB**
     - On the left side, expand "Routing" and then "Effective Routes"
     - ***Select*** - "Route Tables" under "Choose resource type"
     - ***Select*** - "Default" under "Resource"
   
-        Note the three spoke VNETs learned by vHub2.
+        ***Note the three spoke VNETs learned by vHub2.***
         ![](../images/6_4-peer-vnet-hub2-4.PNG)
 
 
@@ -78,7 +78,7 @@ Now that the Spoke3-vHub2_VNET has been peered to your second hub (vwanXX-westus
 
     **The effective route's next hop IP is the IP address of internal load balancer that is deployed in vHub2.**
 
-The diagram below is a visual representation of what you have deployed and configured.  Congrats!
+The diagram below is a visual representation of what you have deployed and configured.  ***Congrats!***
 
 ![](../images/1_1-az-vwan-second-hub-ra.PNG)
 
