@@ -55,4 +55,4 @@ Azure Virtual Networks (VNET) can be peered to a vWAN hub. Once a VNET is peered
 
        ![vnet10](../images/vnet10.jpg)
 
-Continue to ***Chapter 6 - Task 3: Peer New VNET to New Hub***
+Continue to ***Chapter 6 - Task 3: Deploy a Linux VM***

@@ -1,5 +1,5 @@
 ---
-title: "Task 4: Peer the New VNET to Second Hub"
+title: "Task 4: Peer the New VNET to the Second Hub"
 linkTitle: "Task 4: Peer the New VNET to the Second Hub"
 weight: 4
 ---
@@ -57,4 +57,4 @@ Azure Virtual Networks (VNET) can be peered to a vWAN hub. Once a VNET is peered
 
        ![vnet10](../images/vnet10.jpg)
 
-Continue to ***Next Task***
+Continue to ***Chapter 6 - Task 5: Manage Network Traffic Between Hubs***

@@ -17,7 +17,7 @@ The initial vWAN hub setup was already done for you before the session. Now you 
     - ***Click*** - "+ New Hub" button
 
     - ***Select*** - Region "West US"
-    - ***Enter*** - Name **vwanXX-vHub2_westus**
+    - ***Enter*** - Name **vwan12-westus-vHub2_VHUB**
     - ***Enter*** - Hub private address space "10.2.0.0/16"
     - ***Select*** - Virtual hub capacity "2 Routing Infrastructure Units, 3 Gbps Router, Supports 2000 VMs"
     - ***Select*** - Hub routing preference "AS Path"
