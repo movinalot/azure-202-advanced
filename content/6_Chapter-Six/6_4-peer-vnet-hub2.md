@@ -1,8 +1,10 @@
 ---
-title: "Task 2: Deploy a VNET"
-linkTitle: "Task 2: Deploy a VNET"
-weight: 2
+title: "Task 4: Peer the New VNET to Second Hub"
+linkTitle: "Task 4: Peer the New VNET to the Second Hub"
+weight: 4
 ---
+
+3: Peer New VNET to New Hub
 
 ## Deploy a VNET
 
@@ -51,8 +53,8 @@ Azure Virtual Networks (VNET) can be peered to a vWAN hub. Once a VNET is peered
 
        ![vnet9](../images/vnet9.jpg)
 
-        - ***Click*** - your resource group name when the deployment is complete and confirm the new "Spoke3-vHUB2_VNET".
+        - ***Click*** - your resource group name when the deployment is complete
 
        ![vnet10](../images/vnet10.jpg)
 
-Continue to ***Chapter 6 - Task 3: Peer New VNET to New Hub***
+Continue to ***Next Task***

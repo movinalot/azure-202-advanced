@@ -4,14 +4,16 @@ linkTitle: "Task 1: Deploy a second VWAN Hub"
 weight: 1
 ---
 
-PICK UP FROM HERE:  In this task, the student.....
+In this task, the student will deploy a second vWAN hub.
+
 ## Deploy a VWAN Hub
 
-The initial Virtual WAN setup was already done for you before the session. Now you will deploy a Hub in another Azure Region. The Hub will eventually have a Virtual Network (VNET) associated to it, with a Linux server deployed in the associated VNET.
+The initial vWAN hub setup was already done for you before the session. Now you will deploy a second hub in another Azure region. The hub will eventually have a Virtual Network (VNET) peered to it, with a Linux VM deployed in the VNET as well.
 
 1. ***Add*** a VWAN Hub.
 
-    - ***Navigate*** to your VWAN's **vwanXX-eastus_VWAN** hubs
+    - ***Navigate*** to your assigned vWAN **vwanXX-eastus_VWAN**
+    - On the left under "Connectivity" select "Hubs".
     - ***Click*** - "+ New Hub" button
 
     - ***Select*** - Region "West US"
