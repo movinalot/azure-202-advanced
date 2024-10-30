@@ -23,7 +23,7 @@ In this task, the student will setup peering between the Spoke3-vHub2_VNET and t
 
         {{% notice info %}}VNET Peering takes a few minutes to complete. The Connectivity Status can be reviewed by ***Clicking*** Refresh{{% /notice %}}
 
-        ![](../images/6_4-peer-vnet-hub2-2.PNG
+        ![](../images/6_4-peer-vnet-hub2-2.PNG)
 
 ### Verify Route Tables
 
@@ -73,9 +73,8 @@ Now that the Spoke3-vHub2_VNET has been peered to your second hub (vwanXX-westus
     - ***Click*** - "Linux-Spoke3-VM_nic1 (primary) / ipconfig (primary)
     - One the next page, navigate to ***Help*** on the bottom left and ***Click*** - "Effective Routes"
 
-                - Effective routes for **Linux-Spoke3-VM**
-
-                ![](../images/6_4-peer-vnet-hub2-4.PNG)
+    - Effective routes for **Linux-Spoke3-VM**
+    ![](../images/6_4-peer-vnet-hub2-4.PNG)
 
     **The effective route's next hop IP is the IP address of internal load balancer that is deployed in vHub2.**
 
