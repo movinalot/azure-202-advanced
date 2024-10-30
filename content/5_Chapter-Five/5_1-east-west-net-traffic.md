@@ -10,8 +10,9 @@ In this task, the student will create FortiGate firewall policies to allow east-
 
 1. ***Disable*** Probe Response on each FortiGate's port1 interface
 
-    Both interfaces on the FortiGate may have **Probe Response** configured to respond to the Azure Internal Load Balancer Health Probes. This can cause traffic to take an unexpected path to the FortiGate. Ensure only the FortiGate interface that is expecting Spoke VNET traffic is responding to Load Balancer Heath Probes.
+    Both interfaces on the FortiGate may have **Probe Response** configured to respond to the Azure internal load balancer health probes. This can cause traffic to take an unexpected path to the FortiGate. Ensure only the FortiGate interface that is expecting Spoke VNET traffic (Port2) is responding to the load balancer heath probes.
 
+    On both FortiGate NVAs, configure the following:
     - ***Navigate*** to Network -> Interfaces
     - ***Double-Click*** port1
     - ***Uncheck*** Probe Response
@@ -26,7 +27,7 @@ In this task, the student will create FortiGate firewall policies to allow east-
 1. ***Ping*** between Linux Spoke VMs.
 
     - ***Open*** a serial console connections to each Linux Spoke VM and ping the other Spoke VM
-        - Linux-Spoke1-VM - `ping 172.16.1.4`
+        - Linux-Spoke1-VM - `ping 192.168.2.4`
         - Linux-Spoke2-VM - `ping 192.168.1.4`
 
     Neither ping will be successful because the FortiGate is not allowing traffic from port2 to port2, even though port2 would be considered *trusted* since the traffic is all internal. This is the FortiGate's ability to micro-segment the traffic.
@@ -44,19 +45,19 @@ In this task, the student will create FortiGate firewall policies to allow east-
 
         Linux-Spoke1_VM | Linux-Spoke2_VM
         :-:|:-:
-        ![eastwestping1](../images/eastwestping1.jpg) | ![eastwestping2](../images/eastwestping2.jpg)
+        ![eastwestping1](../images/5_1-east-west-net-traffic-1.PNG) | ![eastwestping2](../images/5_1-east-west-net-traffic-2.PNG)
 
         FortiGate 0 | FortiGate 1
         :-:|:-:
-        ![fgtpingdiag1](../images/fgtpingdiag1.jpg) | ![fgtpingdiag2](../images/fgtpingdiag2.jpg)
+        ![fgtpingdiag1](../images/5_1-east-west-net-traffic-3.PNG) | ![fgtpingdiag2](../images/fgtpingdiag2.jpg)
 
     The ping traffic is only on one FortiGate, this is because the internal load balancer sends traffic from the Spokes to one of the FortiGates for inspection.
 
 1. ***Create*** Firewall policies **on both** FortiGates to allow traffic to pass from port2 to port2 (Spoke to Spoke)
 
-    The FortiGates can be setup to sync configuration information. If one of the FortiGates was designated as the Primary configuration supplier and the other as a Secondary, any changes made to the Primary would be replicated to the secondary.
+    ***NOTE:*** The FortiGates can be setup to sync configuration information. If one of the FortiGates was designated as the primary configuration supplier and the other as a secondary, any changes made to the primary would be replicated to the secondary.
 
-    Configuration Synchronization was not enabled on the FortiGates as part of this session.
+    Configuration Synchronization was not enabled on the FortiGates as part of this course.
 
     - ***Navigate*** to "Policy & Objects"
     - ***Click*** Firewall Policy
@@ -79,17 +80,17 @@ In this task, the student will create FortiGate firewall policies to allow east-
 
 
 4. ***Ping*** between Linux Spoke VMs and confirm connectivity.
-    - Linux-Spoke1-VM - `ping 172.16.1.4`
+    - Linux-Spoke1-VM - `ping 192.168.2.4`
     - Linux-Spoke2-VM - `ping 192.168.1.4`
 
 
         Linux-Spoke1_VM | Linux-Spoke2_VM
         :-:|:-:
-        ![eastwestping3](../images/eastwestping3.jpg) | ![eastwestping4](../images/eastwestping4.jpg)
+        ![eastwestping3](../images/5_1-east-west-net-traffic-4.PNG) | ![eastwestping4](../images/eastwestping4.jpg)
 
         FortiGate 0 | FortiGate 1
         :-:|:-:
-        ![fgtpingdiag3](../images/fgtpingdiag3.jpg) | ![fgtpingdiag4](../images/fgtpingdiag4.jpg)
+        ![fgtpingdiag3](../images/5_1-east-west-net-traffic-5.PNG) | ![fgtpingdiag4](../images/fgtpingdiag4.jpg)
 
 
 Continue to ***Chapter 5 - Task 2: North-South Network Traffic***

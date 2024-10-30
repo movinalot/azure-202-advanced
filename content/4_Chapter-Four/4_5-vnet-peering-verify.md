@@ -96,4 +96,4 @@ The diagram below is a visual representation of what you have deployed and confi
 
 ![](../images/1_1-az-vwan-single-hub-ra.PNG)]
 
-Continue to ***Chapter 5 - Traffic Management***
+Continue to ***Chapter 5 - Network Traffic Management***
