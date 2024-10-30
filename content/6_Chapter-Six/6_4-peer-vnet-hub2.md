@@ -4,7 +4,7 @@ linkTitle: "Task 4: VNET Peering to the Second Hub"
 weight: 4
 ---
 
-In this task, the student will setup peering between the Spoke3-vHub2_VNET and the  vwan12-westus-vHub2_VHUB.  Then the student will view route tables on the FortiGate NVAs, hubs, and the Linux-Spoke3-VM.
+In this task, the student will setup peering between the Spoke3-vHub2_VNET and the  vwanxx-westus-vHub2_VHUB.  Then you will view route tables on the FortiGate NVAs, hubs, and the Linux-Spoke3-VM.
 
 1. Peer Spoke3-vHub2_VNET to vwan12-westus-vHub2_VHUB
 
@@ -26,7 +26,7 @@ In this task, the student will setup peering between the Spoke3-vHub2_VNET and t
 
 ### Verify Route Tables
 
-Now that the Spoke3-vHub2_VNET has been peered to your second hub (vwanXX-westus-vHub2_VHUB) and both vWAN hubs are part of the Azure vWAN, let take a closer looks at the learned routes in each service.
+Now that the ***Spoke3-vHub2_VNET*** has been peered to your second hub ***(vwanXX-westus-vHub2_VHUB)*** and both hubs are part of the Azure vWAN, let take a closer look at the learned routes in each resource.
 
 - What routes do the FortiGates know about?
 - What are the effective routes of both hubs?
@@ -44,7 +44,7 @@ Now that the Spoke3-vHub2_VNET has been peered to your second hub (vwanXX-westus
 
 2. ***View*** the effective routes, of the default route table, in both hubs.
     
-    - ***vHub1***
+    ***vHub1***
     - ***Navigate*** to your vWAN hub - **vwanXX-eastus-vHub1_VHUB**
     - On the left side, expand "Routing" and then "Effective Routes"
     - ***Select*** - "Route Tables" under "Choose resource type"
@@ -54,7 +54,7 @@ Now that the Spoke3-vHub2_VNET has been peered to your second hub (vwanXX-westus
 
         ![](../images/4_5-vnet-peering-verify-5.PNG)
 
-    - ***vHub2***
+    ***vHub2***
     - ***Navigate*** to your vWAN hub - **vwanXX-westus-vHub2_VHUB**
     - On the left side, expand "Routing" and then "Effective Routes"
     - ***Select*** - "Route Tables" under "Choose resource type"
@@ -72,7 +72,7 @@ Now that the Spoke3-vHub2_VNET has been peered to your second hub (vwanXX-westus
     - ***Click*** - "Linux-Spoke3-VM_nic1 (primary) / ipconfig (primary)
     - One the next page, navigate to ***Help*** on the bottom left and ***Click*** - "Effective Routes"
 
-    - Effective routes for **Linux-Spoke3-VM**
+    Effective routes for ***Linux-Spoke3-VM***
     ![](../images/6_4-peer-vnet-hub2-4.PNG)
 
     **The effective route's next hop IP is the IP address of internal load balancer that is deployed in vHub2.**
