@@ -6,7 +6,7 @@ weight: 3
 
 ## Deploy a Linux VM
 
-Now that you have a **VNET** deployed, you are going to deploy a Linux VM in the same VNET.  This VM will be used to test hub to hub connectivity between spokes peered to differant hubs.
+Now that you have the Spoke3-vHub2_VNET deployed, you are going to deploy a Linux VM in Spoke3-vHub2_VNET.  This VM will be used to test hub to hub connectivity between spokes peered to different hubs.
 
 **Steps to create a Linux VM**
 - 1. Navigate into your assigned Resource Group and click on the **+ Create** located at the top left of the tool bar.
@@ -44,33 +44,25 @@ Feel free to read through the available disk services that can be changed/enable
 
 - 7. Under the **Networking** tab, update the following fields: (Leave the default entry of the other fields not listed here)
         - **Virtual network**:  "**Spoke3-vHub2_VNET**"
-        - **Subnet**:  "**Protected-A_Subnet (192.168.1.128/27)**"
-        - **Public IP**:  Select **Create new**
-    - On the new **Create public IP address** on the right, enter the following:
-        - **Name**:  "**Linux-A-VM_PIP**"
-        - **Routing preference**:  "**Internet**"
-        - Select **OK**
-    - **Delete public IP and NIC when VM is deleted**:  **Select**
+        - **Subnet**:  "**Subnet1-Spoke3_SUBNET (192.168.3.0/24)**"
+        - **Public IP**:  Select **None**
+        - **NIC network security group**:  Select **None**
 
 - 8. Confirm the changes and the other fields default entries match the following diagram.
-![](../Images/Azure-create-linux-vm-4.PNG)
-![](../Images/Azure-create-linux-vm-5.PNG)
+![](../images/6_3-deploy-vm-6.PNG)
+![](../images/6_3-deploy-vm-7.PNG)
 
 - 9. Select **Review + create >**.
 
 - 10. Feel free to read through the **Management**, **Monitoring**, **Advanced**, and **Tags** tabs for additional services that can be changed/enabled.
 
 - 11. Confirm the template validation has passed and select **Create**
-![](../Images/Azure-create-linux-vm-6.PNG)
+![](../images/6_3-deploy-vm-8.PNG)
 
-- 12. The **Deployment is in progress** notice is displayed.
-![](../Images/Azure-create-linux-vm-7.PNG)
+- 12. The **Deployment is in progress** notice is displayed and then the **Your deployment is complete** notice is displayed, click on the **vwan12-training** link to be re-directed to your resource group.
+![](../images/6_3-deploy-vm-9.PNG)
 
-- 13. Once the **Your deployment is complete** notice is displayed, click on the **vwan12-training** link to be re-directed to your resource group.
-![](../Images/Azure-create-linux-vm-10.PNG)
-
-- 14. Verify the new **Linux-Spoke3-VM** and the associated componets are listed.
-![](../Images/Azure-create-linux-vm-11.PNG)
+- 13. Verify the new **Linux-Spoke3-VM** and the associated componets are listed in your Resource Group.
 
 
 Continue to ***Chapter 6 - Task 4: Peer the New VNET to the Second Hub***
