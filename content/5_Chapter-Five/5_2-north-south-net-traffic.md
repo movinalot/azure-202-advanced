@@ -36,7 +36,7 @@ In this task, the student will create FortiGate firewall policies to allow North
 
         FortiGate 0 | FortiGate 1
         :-:|:-:
-        ![fgtpingdiag5](../images/fgtpingdiag5.jpg) | ![fgtpingdiag6](../images/5_2-north-south-net-traffic-1.PNG
+        ![fgtpingdiag5](../images/fgtpingdiag5.jpg) | ![fgtpingdiag6](../images/5_2-north-south-net-traffic-1.PNG)
 
     The ping traffic is only on one FortiGate, this is because the internal load balancer sends traffic from the Spokes to one of the FortiGates for inspection.
 
