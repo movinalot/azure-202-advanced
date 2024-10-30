@@ -15,14 +15,13 @@ In this task, the student will setup peering between the Spoke3-vHub2_VNET and t
     - ***Enter*** - "Connection name" - `Spoke3`
     - ***Select*** - "Hubs" - your second hub -**vwanXX-westus-vHub2_VHUB**
     - ***Select*** - "Resource group" - your resource group - **vwanXX-training**
-    - ***Select*** - "Virtual Network" - Spoke1 VNET - **Spoke3-vHub2_VNET**
+    - ***Select*** - "Virtual Network" - Spoke3 VNET - **Spoke3-vHub2_VNET**
     - ***Click*** - "Create"
 
         ![](../images/6_4-peer-vnet-hub2-1.PNG)
 
 
-        {{% notice info %}}VNET Peering takes a few minutes to complete. The Connectivity Status can be reviewed by ***Clicking*** Refresh{{% /notice %}}
-
+        {{% notice info %}}VNET Peering takes a few minutes to complete. The Connectivity Status can be updated by ***Clicking*** Refresh{{% /notice %}}
         ![](../images/6_4-peer-vnet-hub2-2.PNG)
 
 ### Verify Route Tables
@@ -31,7 +30,7 @@ Now that the Spoke3-vHub2_VNET has been peered to your second hub (vwanXX-westus
 
 - What routes do the FortiGates know about?
 - What are the effective routes of both hubs?
-- What are the effective routes of the Linux VMs in the Spoke VNETs?
+- What are the effective routes of the Linux-Spoke3-VM?
 
 1. ***View*** each FortiGate's route table
 
