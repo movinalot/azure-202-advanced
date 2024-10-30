@@ -26,7 +26,7 @@ In this task, the student will setup peering between the Spoke3-vHub2_VNET and t
 
 ### Verify Route Tables
 
-Now that the ***Spoke3-vHub2_VNET*** has been peered to your second hub ***(vwanXX-westus-vHub2_VHUB)*** and both hubs are part of the Azure vWAN, let take a closer look at the learned routes in each resource.
+Now that the ***Spoke3-vHub2_VNET*** has been peered to your second hub ***vwanXX-westus-vHub2_VHUB*** and both hubs are part of the Azure vWAN, lets take a closer look at the learned routes in each resource.
 
 - What routes do the FortiGates know about?
 - What are the effective routes of both hubs?
@@ -50,7 +50,8 @@ Now that the ***Spoke3-vHub2_VNET*** has been peered to your second hub ***(vwan
     - ***Select*** - "Route Tables" under "Choose resource type"
     - ***Select*** - "Default" under "Resource"
   
-        All effective routes should have the FortiGate NVA group as next hop.
+        ***All effective routes should have the FortiGate NVA group as next hop.***
+        ***Note that nothing has changed in your vwanXX-eastus-vHub1_VHUB route table.***
 
         ![](../images/4_5-vnet-peering-verify-5.PNG)
 
@@ -61,6 +62,7 @@ Now that the ***Spoke3-vHub2_VNET*** has been peered to your second hub ***(vwan
     - ***Select*** - "Default" under "Resource"
   
         ***Note the three spoke VNETs learned by vHub2.***
+
         ![](../images/6_4-peer-vnet-hub2-4.PNG)
 
 

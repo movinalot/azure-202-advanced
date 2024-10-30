@@ -4,57 +4,66 @@ linkTitle: "Task 5: Manage Network Traffic Between Hubs"
 weight: 5
 ---
 
-5: Manage Network Traffic Between Hubs
 
-## Deploy a VNET
+In this task, the student will create FortiGate firewall policies to allow or deny selective east-west network traffic between spokes in differant hubs.
 
-Azure Virtual Networks (VNET) can be peered to a vWAN hub. Once a VNET is peered to a vWAN hub, workloads in the VNET can communicate with workloads in other VNETs connected to other vWAN hubs that are part of the same vWAN.
 
-1. ***Add*** a VNET
+Create the following addresses and firewall policies **on both** FortiGates.
 
-    - ***Navigate*** to your Resource Group **vwanXX-training**
-    - ***Click*** - The Portal Menu button in the upper-left corner, sometime referred to as the hamburger button
-    - ***Select*** - Virtual Networks in the left-hand navigation
-    - ***Click*** - "+ Create" button
+1.  Create firewall addresses for Spoke1-vHub1_VNET, Spoke2-vHub1_VNET, and Spoke3-vHub2_VNET.
+    - Login to both FortiGate NVAs
+    - ***Navigate*** to "Policy & Objects"
+    - ***Select***  "Addresses" and "+ Create new" at the top of the Address page.
+    - ***Name***  Spoke1-vHub1_VNET
+    - ***Interface***: port2
+    - ***IP/Netmask***:  192.168.1.0/24
+    - ***Click*** OK
+    ![](../images/6_5-manage-net-hubs-1.PNG)
+    ![](../images/6_5-manage-net-hubs-2.PNG)
 
-        ![vnet1](../images/vnet1.jpg)
-        ![vnet2](../images/vnet2.jpg)
-        ![vnet3](../images/vnet3.jpg)
+Follow the above steps to create addresses for Spoke2-vHub1_VNET (192.168.2.0/24) and Spoke3-vHub2_VNET (192.168.3.0/24), both on interface port2.
 
-    - ***Select*** - your Resource Group **vwanXX-training**
-    - ***Enter*** - Virtual network name **Spoke3-vHub2_VNET**
-    - ***Select*** - Region "West US 3"
-    - ***Click*** - "Next" button
+![](../images/6_5-manage-net-hubs-3.PNG)
 
-        ![vnet4](../images/vnet4.jpg)
 
-    - ***Click*** - "Next" button on "Security" tab
+2. Create a firewall policy to allow traffic to pass from spoke1 to spoke3.  Be sure to do this on both FortiGates.
+***NOTE***:  Delete the existing port2_to_port2 policy!
 
-       ![vnet5](../images/vnet5.jpg)
+    - ***Click*** Firewall Policy
+    - ***Click*** Create new
+        Attribute | Value
+        -|-
+        Name | **Spoke1_to_Spoke3**
+        Incoming interface | **port2**
+        Outgoing interface | **port2**
+        Source | **Spoke1-vHub1_VNET**
+        Destination | **Spoke3-vHub2_VNET**
+        Schedule | **always**
+        Service | **ALL**
+        NAT | **disabled**
+        Enable this policy | **enabled**
+    - ***Click*** "OK"
 
-    - ***Enter*** - Address Space **192.168.3.0**
-    - ***Select*** - Netmask **/24**
-    - ***Click*** - "Pencil" button to edit subnet configuration
-    - ***Enter*** - Name **Subnet1-Spoke3_SUBNET**
-    - ***Enter*** - Starting address **192.168.3.0**
-    - ***Click*** - "Save" button
+        ![](../images/6_5-manage-net-hubs-4.PNG)
+        ![](../images/6_5-manage-net-hubs-5.PNG)
 
-       ![vnet6](../images/vnet6.jpg)
+Follow the above steps to create a firewall policy to deny traffic from spoke2 to spoke3 and another firewall policy to allow traffic from spoke3 to both spoke1 and spoke2.  Be sure to do this on both FortiGates.
 
-        - ***Click*** - "Next" button
+3. Test connectivity between Linux spoke VMs.
 
-       ![vnet7](../images/vnet7.jpg)
+    - ***Open*** a serial console connections on each Linux VM and ping the other spoke VM
+        - Linux-Spoke1-VM - `ping 192.168.3.4`
+        - Linux-Spoke2-VM - `ping 192.168.3.4`
+        - Linux-Spoke3-VM - `ping 192.168.1.4`
+        - Linux-Spoke3-VM - `ping 192.168.2.4`
 
-        - ***Click*** - "Next" button
+    Did you get the results you expected?  If you did, great job!.  You are done with the course.
+    If you did not, here are some helpful troubleshooing hints:
+    - Did you enter the addresses and firewall policies on both FortiGates?
+    - Double check your firewall policies.  Make sure NAT is disabled.
+    - Make sure the adress names have the correct IP addresses.
+    - Check your route table on the FortiGates.  Do you still see all three VNETs?
 
-       ![vnet8](../images/vnet8.jpg)
+    If you checked all the above and you are still not getting the expected results, reach out to an instructor.
 
-        - ***Click*** - "Create" button
-
-       ![vnet9](../images/vnet9.jpg)
-
-        - ***Click*** - your resource group name when the deployment is complete
-
-       ![vnet10](../images/vnet10.jpg)
-
-Continue to ***Next Task***
+    ***Thanks for attending!***
