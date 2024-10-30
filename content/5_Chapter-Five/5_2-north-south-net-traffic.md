@@ -5,7 +5,7 @@ weight: 2
 ---
 
 
-In this task, the student will create FortiGate firewall policies to allow North-South network traffic.
+In this task, the student will create FortiGate firewall policies to allow North-South (Spoke to Internet) network traffic.
 
 
 
@@ -36,15 +36,15 @@ In this task, the student will create FortiGate firewall policies to allow North
 
         FortiGate 0 | FortiGate 1
         :-:|:-:
-        ![fgtpingdiag5](../images/fgtpingdiag5.jpg) | ![fgtpingdiag6](../images/fgtpingdiag6.jpg)
+        ![fgtpingdiag5](../images/fgtpingdiag5.jpg) | ![fgtpingdiag6](../images/5_2-north-south-net-traffic-1.PNG
 
     The ping traffic is only on one FortiGate, this is because the internal load balancer sends traffic from the Spokes to one of the FortiGates for inspection.
 
 1. ***Create*** Firewall policies **on both** FortiGates to allow traffic to pass from port2 to port1 (Spoke to Internet)
 
-    The FortiGates can be setup to sync configuration information. If one of the FortiGates was designated as the Primary configuration supplier and the other as a Secondary, any changes made to the Primary would be replicated to the secondary.
+    The FortiGates can be setup to sync configuration information. If one of the FortiGates was designated as the primary configuration supplier and the other as a secondary, any changes made to the primary would be replicated to the secondary.
 
-    Configuration Synchronization was not enabled on the FortiGates as part of this session.
+    Configuration Synchronization was not enabled on the FortiGates as part of this course.
 
     - ***Navigate*** to "Policy & Objects"
     - ***Click*** Firewall Policy
@@ -77,7 +77,7 @@ In this task, the student will create FortiGate firewall policies to allow North
 
         FortiGate 0 | FortiGate 1
         :-:|:-:
-        ![fgtpingdiag7](../images/fgtpingdiag7.jpg) | ![fgtpingdiag8](../images/fgtpingdiag8.jpg)
+        ![fgtpingdiag7](../images/fgtpingdiag7.jpg) | ![fgtpingdiag8](../images/5_2-north-south-net-traffic-2.PNG)
 
 
 Continue to ***Chapter 6 - Adding a Second vWAN Hub***
