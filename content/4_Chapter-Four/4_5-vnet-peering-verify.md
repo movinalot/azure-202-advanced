@@ -18,9 +18,9 @@ Then second part of this task it to verify routing by viewing the routing tables
     - ***Click*** "+ Add connection"
 
     - ***Enter*** - "Connection name" - `Spoke1`
-    - ***Select*** - "Hubs" - your Hub -**vwanXX-eastus-vHub1_VHUB**
-    - ***Select*** - "Resource group" - your Resource - **vwanXX-training**
-    - ***Select*** - "Virtual Network" - Spoke 1's VNET - **Spoke1-vHub1_VNET**
+    - ***Select*** - "Hubs" - your assigned hub -**vwanXX-eastus-vHub1_VHUB**
+    - ***Select*** - "Resource group" - your resource group - **vwanXX-training**
+    - ***Select*** - "Virtual Network" - Spoke1 VNET - **Spoke1-vHub1_VNET**
     - ***Click*** - "Create"
 
     ![](../images/4_5-vnet-peering-verify-1.PNG)
@@ -32,12 +32,12 @@ Then second part of this task it to verify routing by viewing the routing tables
     - ***Click*** "+ Add connection"
 
     - ***Enter*** - "Connection name" - `Spoke2`
-    - ***Select*** - "Hubs" - your Hub -**vwanXX-eastus-vHub1_VHUB**
-    - ***Select*** - "Resource group" - your Resource - **vwanXX-training**
-    - ***Select*** - "Virtual Network" - Spoke 2's VNET - **Spoke2-vHub1_VNET**
+    - ***Select*** - "Hubs" - your assigned hub -**vwanXX-eastus-vHub1_VHUB**
+    - ***Select*** - "Resource group" - your resource group - **vwanXX-training**
+    - ***Select*** - "Virtual Network" - Spoke2 VNET - **Spoke2-vHub1_VNET**
     - ***Click*** - "Create"
 
-    ![](../images/4_5-vnet-peering-verify-2.PNG)
+        ![](../images/4_5-vnet-peering-verify-2.PNG)
 
 
         {{% notice info %}}VNET Peering takes a few minutes to complete. The Connectivity Status can be reviewed by ***Clicking*** Refresh{{% /notice %}}
@@ -69,7 +69,7 @@ Where traffic will be sent in Azure can be determined by viewing the effective r
 1. ***View*** the hub effective routes in the default route table
 
     - ***Navigate*** to your vWAN hub - **vwanXX-eastus-vHub1_VHUB**
-    - ***Select*** - On the left side, expand "Routing" and then "Effective Routes"
+    - On the left side, expand "Routing" and then "Effective Routes"
     - ***Select*** - "Route Tables" under "Choose resource type"
     - ***Select*** - "Default" under "Resource"
   
