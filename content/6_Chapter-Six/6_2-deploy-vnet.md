@@ -21,7 +21,7 @@ Azure Virtual Networks (VNET) can be peered to a vWAN hub. Once a VNET is peered
 
     - ***Select*** - your Resource Group **vwanXX-training**
     - ***Enter*** - Virtual network name **Spoke3-vHub2_VNET**
-    - ***Select*** - Region "West US 3"
+    - ***Select*** - Region "(US) West US"
     - ***Click*** - "Next" button
 
         ![vnet4](../images/vnet4.jpg)

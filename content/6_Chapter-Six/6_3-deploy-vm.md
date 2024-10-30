@@ -4,57 +4,73 @@ linkTitle: "Task 3: Deploy a Linux VM"
 weight: 3
 ---
 
-4: Deploy a Linux VM
+## Deploy a Linux VM
 
-## Deploy a VNET
+Now that you have a **VNET** deployed, you are going to deploy a Linux VM in the same VNET.  This VM will be used to test hub to hub connectivity between spokes peered to differant hubs.
 
-Azure Virtual Networks (VNET) can be peered to a vWAN hub. Once a VNET is peered to a vWAN hub, workloads in the VNET can communicate with workloads in other VNETs connected to other vWAN hubs that are part of the same vWAN.
+**Steps to create a Linux VM**
+- 1. Navigate into your assigned Resource Group and click on the **+ Create** located at the top left of the tool bar.
+![](../images/6_3-deploy-vm-1.PNG)  
 
-1. ***Add*** a VNET
+You will be redirected to the Azure Marketplace.
 
-    - ***Navigate*** to your Resource Group **vwanXX-training**
-    - ***Click*** - The Portal Menu button in the upper-left corner, sometime referred to as the hamburger button
-    - ***Select*** - Virtual Networks in the left-hand navigation
-    - ***Click*** - "+ Create" button
+- 2. In the Marketplace search bar, enter **ubuntu 24.10** and then enter.  Navigate to the **Ubuntu 24.10 - all plans** offering from **Canonical** and select **Create** and **Ubuntu Server 24.10**.
+![](../images/6_3-deploy-vm-2.PNG)
 
-        ![vnet1](../images/vnet1.jpg)
-        ![vnet2](../images/vnet2.jpg)
-        ![vnet3](../images/vnet3.jpg)
 
-    - ***Select*** - your Resource Group **vwanXX-training**
-    - ***Enter*** - Virtual network name **Spoke3-vHub2_VNET**
-    - ***Select*** - Region "West US 3"
-    - ***Click*** - "Next" button
+You will be redirected to the **Create a virtual machine** template.
 
-        ![vnet4](../images/vnet4.jpg)
+- 3. Under the **Basics** tab, update the following fields:
+(Leave the default entry of the other fields not listed here)
+        - **Resource group**:  Confirm "**vwan12-training**"
+        - **Virtual machine name**:  "**Linux-Spoke3-VM**"
+        - **Region**: "**(US) West US**"
+        - **Availability options**:  "**No infrastructure redundancy required**"
+        - **Security type**:  "**Standard**"
+        - **Authentication type**:  "**Password**"
+        - **Username**:  "**fortixperts**"
+        - **Password**:  "**Fortixperts2024!**"
+        - **Confirm password**:  "**Fortixperts2024!**"
 
-    - ***Click*** - "Next" button on "Security" tab
+- 4. Confirm the changes and the other fields default entries match the following diagram.
+![](../images/6_3-deploy-vm-3.PNG)
+![](../images/6_3-deploy-vm-4.PNG)
+![](../images/6_3-deploy-vm-5.PNG)
 
-       ![vnet5](../images/vnet5.jpg)
+- 5. Select **Next: Disks >**.
 
-    - ***Enter*** - Address Space **192.168.3.0**
-    - ***Select*** - Netmask **/24**
-    - ***Click*** - "Pencil" button to edit subnet configuration
-    - ***Enter*** - Name **Subnet1-Spoke3_SUBNET**
-    - ***Enter*** - Starting address **192.168.3.0**
-    - ***Click*** - "Save" button
+- 6. On the **Disk** tab, keep the default settings and click **Next: Networking >**.
+Feel free to read through the available disk services that can be changed/enabled.
 
-       ![vnet6](../images/vnet6.jpg)
+- 7. Under the **Networking** tab, update the following fields: (Leave the default entry of the other fields not listed here)
+        - **Virtual network**:  "**Spoke3-vHub2_VNET**"
+        - **Subnet**:  "**Protected-A_Subnet (192.168.1.128/27)**"
+        - **Public IP**:  Select **Create new**
+    - On the new **Create public IP address** on the right, enter the following:
+        - **Name**:  "**Linux-A-VM_PIP**"
+        - **Routing preference**:  "**Internet**"
+        - Select **OK**
+    - **Delete public IP and NIC when VM is deleted**:  **Select**
 
-        - ***Click*** - "Next" button
+- 8. Confirm the changes and the other fields default entries match the following diagram.
+![](../Images/Azure-create-linux-vm-4.PNG)
+![](../Images/Azure-create-linux-vm-5.PNG)
 
-       ![vnet7](../images/vnet7.jpg)
+- 9. Select **Review + create >**.
 
-        - ***Click*** - "Next" button
+- 10. Feel free to read through the **Management**, **Monitoring**, **Advanced**, and **Tags** tabs for additional services that can be changed/enabled.
 
-       ![vnet8](../images/vnet8.jpg)
+- 11. Confirm the template validation has passed and select **Create**
+![](../Images/Azure-create-linux-vm-6.PNG)
 
-        - ***Click*** - "Create" button
+- 12. The **Deployment is in progress** notice is displayed.
+![](../Images/Azure-create-linux-vm-7.PNG)
 
-       ![vnet9](../images/vnet9.jpg)
+- 13. Once the **Your deployment is complete** notice is displayed, click on the **vwan12-training** link to be re-directed to your resource group.
+![](../Images/Azure-create-linux-vm-10.PNG)
 
-        - ***Click*** - your resource group name when the deployment is complete
+- 14. Verify the new **Linux-Spoke3-VM** and the associated componets are listed.
+![](../Images/Azure-create-linux-vm-11.PNG)
 
-       ![vnet10](../images/vnet10.jpg)
 
 Continue to ***Chapter 6 - Task 4: Peer the New VNET to the Second Hub***
