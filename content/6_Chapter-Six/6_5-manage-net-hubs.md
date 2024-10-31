@@ -30,8 +30,8 @@ Create the following addresses and firewall policies **on both** FortiGates.
 
 ***NOTE***:  Delete the existing port2_to_port2 policy first!
 
-    - ***Click*** Firewall Policy
-    - ***Click*** Create new
+        - ***Click*** Firewall Policy
+        - ***Click*** Create new
         Attribute | Value
         -|-
         Name | **Spoke1_to_Spoke3**
@@ -43,7 +43,7 @@ Create the following addresses and firewall policies **on both** FortiGates.
         Service | **ALL**
         NAT | **disabled**
         Enable this policy | **enabled**
-    - ***Click*** "OK"
+        - ***Click*** "OK"
 
 ![](../images/6_5-manage-net-hubs-4.PNG)
 ![](../images/6_5-manage-net-hubs-5.PNG)
